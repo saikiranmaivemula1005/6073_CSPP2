@@ -1,9 +1,11 @@
 import java.util.*;
-public class HelloWorld
+public class Add
 {
 	public static void main(String[] args)
-
 	{
-		System.out.println("hello world");
+		int a=5,b=5,c;
+		c=a+b;
+		System.out.println(c);
+
 	}
 }
