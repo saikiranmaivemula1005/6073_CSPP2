@@ -6,7 +6,7 @@ public class NameRollNumber
 		Scanner scan = new Scanner(System.in);
 		int rollnumber = scan.nextInt();
 		String name = scan.nextLine();
-		System.out.println(rollnumber);
-		System.out.println(name);
+		System.out.print("Roll number: ",rollnumber);
+		System.out.print("Name: ",name);
 	}
 }
