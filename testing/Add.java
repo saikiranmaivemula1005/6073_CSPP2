@@ -3,9 +3,12 @@ public class Add
 {
 	public static void main(String[] args)
 	{
-		int a=5,b=5,c;
-		c=a+b;
-		System.out.println(c);
+		int b = 10;
+		// a = a + 1.0;
+		// boolean c = b>9;
+		System.out.println(5/2.0);
+		// System.out.println(a == 5.0);
+		// System.out.println(a);
 
 	}
 }
