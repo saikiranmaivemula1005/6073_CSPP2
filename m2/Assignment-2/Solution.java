@@ -22,7 +22,9 @@ public class Solution {
     }
 /**
 *rootsOfQuadraticEquation function.
-*@param a,b,c are arguments.
+*@param a are arguments.
+*@param b are arguments.
+*@param c are arguments.
 */
     public static void rootsOfQuadraticEquation(final int a,
         final int b, final int c) {
