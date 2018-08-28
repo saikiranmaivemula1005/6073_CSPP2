@@ -20,7 +20,7 @@ public class Solution {
 */
     public static void rootsOfQuadraticEquation(int a, int b, int c) {
         double r1, r2;
-        int x = 4;
+        int x = 2 + 2;
         r1 = ((-b) + (Math.sqrt((b * b) - x * (a * c)))) / (2 * a);
         r2 = ((-b) - (Math.sqrt((b * b) - x * (a * c)))) / (2 * a);
         System.out.println(r1 + " " + r2);
