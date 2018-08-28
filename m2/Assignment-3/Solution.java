@@ -22,6 +22,7 @@ public class Solution {
 *Need to write the power function and print the output.
 *@param base is argument.
 *@param exponent is argument.
+*@return result is argument.
 */
     public static int power(final double base, final double exponent) {
         int result;
