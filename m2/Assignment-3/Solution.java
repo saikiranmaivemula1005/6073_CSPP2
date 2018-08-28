@@ -15,7 +15,7 @@ public class Solution {
         Scanner s = new Scanner(System.in);
         double base = s.nextDouble();
         double exponent = s.nextDouble();
-        int result = power(base, exponent);
+        double result = power(base, exponent);
         System.out.println(result);
     }
 /**
@@ -24,9 +24,9 @@ public class Solution {
 *@param exponent is argument.
 *@return result is argument.
 */
-    public static int power(final double base, final double exponent) {
-        int result;
-        result = (int) Math.pow(base, exponent);
+    public static double power(final double base, final double exponent) {
+        double result;
+        result = (double) Math.pow(base, exponent);
         return result;
     }
 }
