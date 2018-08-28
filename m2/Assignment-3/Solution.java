@@ -11,7 +11,7 @@ public class Solution {
 *Do not modify this main function.
 *@param args is argument.
 */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         double base = s.nextInt();
         double exponent = s.nextInt();
@@ -23,7 +23,7 @@ public class Solution {
 *@param base is argument.
 *@param exponent is argument.
 */
-    public static int power(double base, double exponent) {
+    public static int power(final double base, final double exponent) {
         int result;
         result = (int) Math.pow(base, exponent);
         return result;
