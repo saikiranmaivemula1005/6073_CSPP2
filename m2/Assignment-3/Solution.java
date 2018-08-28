@@ -25,9 +25,15 @@ public class Solution {
 *@return result is argument.
 */
     public static long power(final long base, final long exponent) {
-        long result;
-        result = (long) Math.pow(base, exponent);
-        return result;
+        if (exponent == 0) {
+            return 1;
+        } 
+        else if (exponent == 1) {
+            return base;
+        }
+        else{
+            return base * power(base, exponent - 1);
+        }
     }
 }
 
