@@ -24,6 +24,8 @@ public class Solution {
 *@param exponent is argument.
 */
     public static int power(double base, double exponent) {
-        return (int) Math.pow(base, exponent);
+        int result;
+        result = (int) Math.pow(base, exponent);
+        return result;
     }
 }
