@@ -12,12 +12,12 @@ public class Solution {
 		rootsOfQuadraticEquation(a, b, c);
 	}
 	/*
-	Need to write the rootsOfQuadraticEquation function and print the output.
+	rootsOfQuadraticEquation function.
 	*/
-	public static void rootsOfQuadraticEquation(int a, int b, int c){
+	public static void rootsOfQuadraticEquation(int a, int b, int c) {
 		double r1, r2;
-		r1 = (( - b) + (Math.sqrt((b * b) - 4 * (a * c)))) / (2 * a);
-		r2 = (( - b) - (Math.sqrt((b * b) - 4 * (a * c)))) / (2 * a);
+		r1 = ((-b) + (Math.sqrt((b * b) - 4 * (a * c)))) / (2 * a);
+		r2 = ((-b) - (Math.sqrt((b * b) - 4 * (a * c)))) / (2 * a);
 		System.out.println(r1 + " " + r2);
 	}
 }
