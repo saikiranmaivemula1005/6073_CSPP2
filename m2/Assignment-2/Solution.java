@@ -10,7 +10,9 @@ public class Solution {
     protected Solution() { }
 /**
 *Do not modify this main function.
+*@param args are arguments.
 */
+
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt();
