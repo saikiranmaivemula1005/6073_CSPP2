@@ -15,8 +15,13 @@ public class AreaOfCircle {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int r = scan.nextInt();
+        System.out.println(area(r));
+    }
+    public static double pi(){
+        return Math.PI;
+    }
+    public static double area(int r) {
         double area;
-        area = Math.PI * r * r;
-        System.out.println(area);
+        return area = pi() * r * r;
     }
 }
