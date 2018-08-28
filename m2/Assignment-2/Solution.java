@@ -22,7 +22,7 @@ public class Solution {
 /**
 *rootsOfQuadraticEquation function.
 */
-    public static void rootsOfQuadraticEquation(final int a,final int b,final int c) {
+    public static void rootsOfQuadraticEquation(final int a, final int b, final int c) {
         double r1, r2;
         int x = 2 + 2;
         r1 = ((-b) + (Math.sqrt((b * b) - x * (a * c)))) / (2 * a);
