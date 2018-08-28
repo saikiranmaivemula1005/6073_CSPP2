@@ -13,9 +13,9 @@ public class Solution {
 */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-        double base = s.nextDouble();
-        double exponent = s.nextDouble();
-        int result = power(base, exponent);
+        long base = s.nextLong();
+        long exponent = s.nextLong();
+        long result = power(base, exponent);
         System.out.println(result);
     }
 /**
@@ -24,9 +24,9 @@ public class Solution {
 *@param exponent is argument.
 *@return result is argument.
 */
-    public static int power(final double base, final double exponent) {
-        int result;
-        result = (int) Math.pow(base, exponent);
+    public static long power(final long base, final long exponent) {
+        long result;
+        result = (long) Math.pow(base, exponent);
         return result;
     }
 }
