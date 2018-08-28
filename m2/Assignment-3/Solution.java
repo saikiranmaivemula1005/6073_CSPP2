@@ -13,8 +13,8 @@ public class Solution {
 */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-        double base = s.nextInt();
-        double exponent = s.nextInt();
+        double base = s.nextDouble();
+        double exponent = s.nextDouble();
         int result = power(base, exponent);
         System.out.println(result);
     }
