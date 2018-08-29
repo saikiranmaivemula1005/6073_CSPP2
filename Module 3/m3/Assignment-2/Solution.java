@@ -15,15 +15,14 @@ public class Solution {
  * @param      args  The arguments
  */
     public static void main(String[] args) {
-
         Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
-        int count = 0,t,k;
-        for(int i = 7; i <= n; i++){
+        int count = 0, t, k;
+        for(int i = 7; i <= n; i++) {
         	t = i;
         	while (t != 0) {
         		k = t % 10;
-        		if (k == 7){
+        		if (k == 7) {
         		count = count + 1;
         	}
         	t /= 10;
