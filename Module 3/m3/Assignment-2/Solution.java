@@ -18,15 +18,16 @@ public class Solution {
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        int count = 0, t, k;
+        int count = 0, x = 7, y = 10, t, k ;
+        
         for (int i = 1; i <= n; i++) {
             t = i;
             while (t != 0) {
-                k = t % (2 + 2 + 2 + 2 + 2);
-                if (k == (2 + 2 + 2 + 1)) {
+                k = t % y;
+                if (k == x) {
                 count = count + 1;
             }
-            t /= (2 + 2 + 2 + 2 + 2);
+            t /= y;
             }
 
         }
