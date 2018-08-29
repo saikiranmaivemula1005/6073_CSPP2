@@ -22,7 +22,7 @@ public class Solution {
         	if(i % 7 == 0){
         		count = count + 1;
         	}
-        System.out.println(count);
         }
+        System.out.println(count);
     }
 }
