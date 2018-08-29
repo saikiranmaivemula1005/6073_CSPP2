@@ -19,7 +19,7 @@ public class Solution {
         int n = s.nextInt();
         int i, count = 0;
         for(i = 0; i <= n; i++){
-        	if(i % 7 == 0){
+        	if(i % 7 == 0 || i % 7 == 7){
         		count = count + 1;
         	}
         }
