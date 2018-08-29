@@ -18,16 +18,19 @@ public class Solution {
 
         Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
+        int count = 0,t,k;
+        for(int i = 7; i <= n; i++){
+        	t = i;
+        	while (t != 0) {
+        		k = t % 10;
+        		if (k == 7){
+        		count = count + 1;
+        	}
+        	t /= 10;
+        	}
 
-        int i = n, digits = 0, count = 0;
-        int[] a;
-    while(n != 0){
-    	n /= 10;
-    	digits = digits + 1;
-    }    	
-    // System.out.println(digits);
-    // System.out.println(i);
-    count = (digits * i) / 10;
-    System.out.println(count);
-	}
+        }
+        System.out.println(count);
+
+}
 }
