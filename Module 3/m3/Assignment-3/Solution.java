@@ -15,7 +15,6 @@ public class Solution {
         System.out.println(gcd);
     }
     public static int gcd(int a, int b){
-        int gcd = 1;
         while(a != b){
             if(a > b){
                 a -= b;
@@ -23,8 +22,7 @@ public class Solution {
             else{
                 b -= a;
             }
-        gcd = a;
         }
-        return gcd;
+        return a;
     }
 }
