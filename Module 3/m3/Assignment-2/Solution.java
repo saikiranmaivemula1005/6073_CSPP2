@@ -22,11 +22,11 @@ public class Solution {
         for (int i = 1; i <= n; i++) {
             t = i;
             while (t != 0) {
-                k = t % 10;
-                if (k == 7) {
+                k = t % (2 + 2 + 2+ 2 + 2);
+                if (k == (2 + 2 + 2 + 1)) {
                 count = count + 1;
             }
-            t /= 10;
+            t /= (2 + 2 + 2+ 2 + 2);
             }
 
         }
