@@ -11,15 +11,15 @@ public class Solution {
 */
     protected Solution() { }
 /**
- * { function_description }
+ * { function_description }.
  *
  * @param      args  The arguments
  */
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);      
+    public static void main(final String[] args) {
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0, t, k;
-        for(int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             t = i;
             while (t != 0) {
                 k = t % 10;
