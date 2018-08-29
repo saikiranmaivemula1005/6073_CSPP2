@@ -14,12 +14,16 @@ public class Solution {
         gcd(n1,n2);
         System.out.println(gcd);
     }
-    public static int gcd(final int a, final int b){
+    public static int gcd(int a, int b){
         int gcd = 1;
-        for(int i = 1; i<= a && i <= b; ++i){
-            if(a % i == 0 && b % i == 0){
-                gcd = i;
+        while(a != b){
+            if(a > b){
+                a -= b;
             }
+            else{
+                b -= a;
+            }
+        gcd = a;
         }
         return gcd;
     }
