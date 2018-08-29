@@ -20,7 +20,6 @@ public class Solution {
         int n = s.nextInt();
         int count = 0, t, k;
         final int x = 7, y = 10;
-        
         for (int i = 1; i <= n; i++) {
             t = i;
             while (t != 0) {
