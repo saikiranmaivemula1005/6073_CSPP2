@@ -2,6 +2,7 @@
  * { item_description }
  */
 import java.util.Scanner;
+import java.lang.*;
 /**
 *Do not modify this main function.
 */
@@ -17,12 +18,16 @@ public class Solution {
 
         Scanner s = new Scanner(System.in);      
         int n = s.nextInt();
-        int i, count = 0;
-        for(i = 0; i <= n; i++){
-        	if(i % 7 == 0 || i % 7 == 7){
-        		count = count + 1;
-        	}
-        }
-        System.out.println(count);
-    }
+
+        int i = n, digits = 0, count = 0;
+        int[] a;
+    while(n != 0){
+    	n /= 10;
+    	digits = digits + 1;
+    }    	
+    // System.out.println(digits);
+    // System.out.println(i);
+    count = (digits * i) / 10;
+    System.out.println(count);
+	}
 }
