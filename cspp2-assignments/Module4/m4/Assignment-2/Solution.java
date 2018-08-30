@@ -38,8 +38,7 @@ public class Solution {
 					System.out.print(" ");
 			}
 			System.out.print("\n");
-		}
-		}
+		}}
 		else {
 			System.out.println("not possible");
 		}
