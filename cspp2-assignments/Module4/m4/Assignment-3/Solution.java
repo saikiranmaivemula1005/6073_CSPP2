@@ -6,11 +6,10 @@ import java.util.Scanner;
  * class Solution.
  */
 public final class Solution {
-	private Solution() {
-		/**
-		 * { item_description }.
-		 */
-	}
+	/**
+ * class Solution.
+ */
+	protected Solution() { }
 	/**
 	 * main function.
 	 *
