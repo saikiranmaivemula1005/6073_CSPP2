@@ -15,7 +15,7 @@ public class Solution
 			arr[i] = sc.nextInt();
 		}
 		Arrays.sort(arr);
-		System.out.println(Arrays.toString(arr));
+		System.out.println(arr[n]);
 		
 
 	}
