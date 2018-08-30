@@ -20,7 +20,7 @@ public class Solution
 		char[] x = s.toCharArray();
 		String reverse = " ";
 		char[] y = new char[l];
-		for(int i = l; i <= 0; i--){
+		for(int i = l - 1; i >= 0; i--){
 			y[i] = x[i]; 
 			// System.out.println(y[i]);
 			reverse = reverse + y[i];
