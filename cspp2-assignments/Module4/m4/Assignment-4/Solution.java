@@ -16,8 +16,8 @@ public class Solution
 		
 	}
 	public static String reverseString(String s){
-		char[] x = s.toCharArray();
 		int l = s.length();
+		char[] x = s.toCharArray();
 		String reverse = " ";
 		char[] y = new char[l];
 		for(int i = l; i <= 0; i--){
