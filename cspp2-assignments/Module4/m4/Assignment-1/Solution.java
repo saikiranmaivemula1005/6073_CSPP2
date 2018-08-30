@@ -16,7 +16,5 @@ public class Solution
 		}
 		Arrays.sort(arr);
 		System.out.println(arr[n-1]);
-		
-
 	}
 }
