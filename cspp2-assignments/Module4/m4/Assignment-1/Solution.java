@@ -12,7 +12,7 @@ public class Solution
 		for (int i = 0; i <= n; i++){
 				arr[i] = sc.nextInt();
 		}
-		Arrays.sort(arr);
+		Arrays.sort(arr,0,n);
 		System.out.println(arr[n-1]);
 		
 
