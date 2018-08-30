@@ -35,14 +35,14 @@ public class Solution {
             for (int i = 0; i < r1; i++) {
                 for (int j = 0; j < c1; j++) {
                     m3[i][j] = m1[i][j] + m2[i][j];
-                    System.out.print(m3[i][j]);
-                    System.out.print(" ");
+                    System.out.print(m3[i][j] + " ");
+                    // System.out.print(" ");
             }
             System.out.print("\n");
         }
-            m3[r1][c1] = m1[r1][c1] + m2[r1][c1];
-            System.out.print(m3[r1][c1]);
-            
+            // m3[r1][c1] = m1[r1][c1] + m2[r1][c1];
+            // System.out.print(m3[r1][c1]);
+
     }
         else {
             System.out.println("not possible");
