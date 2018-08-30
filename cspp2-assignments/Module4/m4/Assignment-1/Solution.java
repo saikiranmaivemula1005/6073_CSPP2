@@ -1,5 +1,6 @@
 
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 public class Solution
 {/*
 	Fill this main function to print maximum of given array
