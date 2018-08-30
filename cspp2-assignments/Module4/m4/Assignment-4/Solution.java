@@ -16,7 +16,7 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         String reverse = reverseString(s);
-        System.out.println(reverse);   
+        System.out.println(reverse);
     }
     /**
      * { function_description }.
