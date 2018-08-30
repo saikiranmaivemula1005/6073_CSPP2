@@ -19,11 +19,10 @@ public class Solution
 		int l = s.length();
 		char[] x = s.toCharArray();
 		String reverse = "";
-		char[] y = new char[l];
+		// char[] y = new char[l];
 		for(int i = l - 1; i >= 0; i--){
-			y[i] = x[i]; 
 			// System.out.println(y[i]);
-			reverse = reverse + y[i];
+			reverse = reverse + x[i];
 		}
 			
 	return reverse;
