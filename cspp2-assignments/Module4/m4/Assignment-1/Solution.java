@@ -26,3 +26,4 @@ public class Solution {
         System.out.println(arr[n - 1]);
     }
 }
+
