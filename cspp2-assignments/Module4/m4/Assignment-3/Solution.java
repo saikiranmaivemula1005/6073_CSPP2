@@ -18,11 +18,13 @@ public class Solution
 		}
 	}
 	public static String binaryToDecimal(String s){
-		int l = s.length();
-		// System.out.println(l);
-		char[] c = s.toCharArray();
-		System.out.println(c);
-		return s;
+		int x = 1, sum = 0;
+		for(int i = s.length()-1; i >= 0; i--){
+			System.out.print(Character.getNumericValue(s.charAt(i)));
+			sum = sum + (x * Character.getNumericValue(s.charAt(i)));
+			x = x * 2;
+		}
+		return Integer.toString(sum);
 	}
 
 }
