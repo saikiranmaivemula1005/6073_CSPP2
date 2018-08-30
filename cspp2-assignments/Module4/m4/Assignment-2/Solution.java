@@ -39,8 +39,8 @@ public class Solution {
             }
             m3[i][c1 - 1] = m1[i][c1 - 1] + m2[i][c1 - 1];
             System.out.println(m3[i][c1 - 1]);
-        } }
-        else {
+        } 
+    }   else {
             System.out.println("not possible");
         }
     }
