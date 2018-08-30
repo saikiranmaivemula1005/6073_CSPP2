@@ -9,9 +9,9 @@ public class Solution
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		int arr[] = new int[n];
-		System.out.println(n);
+		// System.out.println(n);
 		for (int i = 0; i <= n; i++){
-				arr[i] = sc.nextInt();
+			arr[i] = sc.nextInt();
 		}
 		Arrays.sort(arr,0,n);
 		System.out.println(arr[n-1]);
