@@ -22,9 +22,9 @@ public class Solution
 		char[] y = new char[l];
 		for(int i = l; i <= 0; i++){
 			y[i] = x[i]; 
-			// reverse = reverse + y[i];
+		System.out.println(y[i]);
 		}
-		System.out.println("kk");	
+			
 	return s;
 	}
 }
