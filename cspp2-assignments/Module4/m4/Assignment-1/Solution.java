@@ -1,10 +1,16 @@
 
 import java.util.Scanner;
 import java.util.Arrays;
-public class Solution
-{/*
-	Fill this main function to print maximum of given array
+public class Solution {
+/**
+	*Fill this main function to print maximum of given array.
 	*/
+	protected Solution() { }
+	/**
+	 * { function_description }.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args)
 	{
 		Scanner sc = new Scanner(System.in);
@@ -16,6 +22,6 @@ public class Solution
 			arr[i] = sc.nextInt();
 		}
 		Arrays.sort(arr);
-		System.out.println(arr[n-1]);
+		System.out.println(arr[n - 1]);
 	}
 }
