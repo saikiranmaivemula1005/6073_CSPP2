@@ -12,12 +12,11 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         String reverse = reverseString(s);
-        System.out.println(reverse);
-        
+        System.out.println(reverse);   
     }
     /**
      * { function_description }.
@@ -26,11 +25,11 @@ public class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static String reverseString(String s) {
+    public static String reverseString(final String s) {
         int l = s.length();
         char[] x = s.toCharArray();
         String reverse = "";
-        for(int i = l - 1; i >= 0; i--) {
+        for (int i = l - 1; i >= 0; i--) {
             reverse = reverse + x[i];
         }
     return reverse;
