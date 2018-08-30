@@ -22,8 +22,9 @@ public class Solution
 		char[] y = new char[l];
 		for(int i = l; i <= 0; i++){
 			y[i] = x[i]; 
+			// reverse = reverse + y[i];
 		}
-		reverse = y.toString();
-	return reverse;
+		System.out.println(y);	
+	return s;
 	}
 }
