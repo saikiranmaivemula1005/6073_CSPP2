@@ -19,7 +19,9 @@ public class Solution
 	}
 	public static String binaryToDecimal(String s){
 		int l = s.length();
-		System.out.println(l);
+		// System.out.println(l);
+		char[] c = s.toCharArray();
+		System.out.println(c);
 		return s;
 	}
 
