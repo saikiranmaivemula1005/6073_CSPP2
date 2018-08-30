@@ -20,9 +20,9 @@ public class Solution
 		int l = s.length();
 		String reverse;
 		char[] y = new char[l];
-		for(int i = 0; i <= l; i++){
-			y[l] = x[i]; 
-		System.out.println(y[l]);
+		for(int i = l; i <= 0; i--){
+			y[i] = x[i]; 
+		System.out.println(y[i]);
 		}
 			
 	return s;
