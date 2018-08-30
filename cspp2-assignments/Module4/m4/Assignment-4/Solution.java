@@ -18,13 +18,14 @@ public class Solution
 	public static String reverseString(String s){
 		char[] x = s.toCharArray();
 		int l = s.length();
-		String reverse;
+		String reverse = " ";
 		char[] y = new char[l];
 		for(int i = l; i <= 0; i--){
 			y[i] = x[i]; 
-			System.out.println(y[i]);
+			// System.out.println(y[i]);
+			reverse = reverse + y[i];
 		}
 			
-	return s;
+	return reverse;
 	}
 }
