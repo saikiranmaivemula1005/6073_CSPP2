@@ -38,11 +38,11 @@ public class Solution {
                     System.out.print(m3[i][j]);
                     System.out.print(" ");
             }
-            
+            System.out.print("\n");
         }
             m3[r1][c1] = m1[r1][c1] + m2[r1][c1];
             System.out.print(m3[r1][c1]);
-            System.out.print("\n");
+            
     }
         else {
             System.out.println("not possible");
