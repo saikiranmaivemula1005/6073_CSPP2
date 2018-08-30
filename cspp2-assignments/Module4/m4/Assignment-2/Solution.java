@@ -32,17 +32,13 @@ public class Solution {
         }
         if (r1 == r2 && c1 == c2) {
             int[][] m3 = new int[r1][c1];
-            for (int i = 0; i < r1-1; i++) {
+            for (int i = 0; i < r1; i++) {
                 for (int j = 0; j < c1; j++) {
                     m3[i][j] = m1[i][j] + m2[i][j];
                     System.out.print(m3[i][j] + " ");
             }
             System.out.print("\n");
         }
-            m3[r1-3][c1-3] = m1[r1-3][c1-3] + m2[r1-3][c1-3];
-            System.out.print(m3[r1-3][c1-3]+" ");
-            m3[r1-2][c1-2] = m1[r1-2][c1-2] + m2[r1-2][c1-2];
-            System.out.print(m3[r1-2][c1-2] + " ");
             m3[r1-1][c1-1] = m1[r1-1][c1-1] + m2[r1-1][c1-1];
             System.out.print(m3[r1-1][c1-1]);
 
