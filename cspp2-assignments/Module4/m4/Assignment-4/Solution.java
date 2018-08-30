@@ -6,7 +6,7 @@ public class Solution {
 /**
     *Do not modify the main function.
     */
-    protected Solution(){ }
+    protected Solution() { }
     /**
      * { function_description }.
      *
