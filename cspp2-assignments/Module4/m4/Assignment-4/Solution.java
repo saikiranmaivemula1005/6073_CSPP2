@@ -24,7 +24,7 @@ public class Solution
 			y[i] = x[i]; 
 			// reverse = reverse + y[i];
 		}
-		System.out.println(y);	
+		System.out.println("kk");	
 	return s;
 	}
 }
