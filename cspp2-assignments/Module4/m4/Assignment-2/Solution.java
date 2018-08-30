@@ -40,7 +40,7 @@ public class Solution {
 			System.out.print("\n");
 		}
 		}
-		else{
+		else {
 			System.out.println("not possible");
 		}
 	}
