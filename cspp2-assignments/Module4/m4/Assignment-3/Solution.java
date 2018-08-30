@@ -21,15 +21,22 @@ public final class Solution {
 		int n = sc.nextInt();
 		for (int i = 0; i < n; i++) {
 			String s = sc.next();
-			String res=binaryToDecimal(s);
+			String res = binaryToDecimal(s);
 			System.out.println(res);
 		}
 	}
+	/**
+	 * main function.
+	 *
+	 * @param      s  The arguments
+	 *@return 
+	 */
 	static String binaryToDecimal(String s) {
 		int base = 1;
 		int sum = 0;
 		for(int i = s.length() - 1; i >= 0 ; i--) {
-			sum = sum + (base * Character.getNumericValue(s.charAt(i)));
+			sum = sum + (base * 
+				Character.getNumericValue(s.charAt(i)));
 			base *= 2;
 		}
 
