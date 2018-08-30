@@ -37,6 +37,10 @@ public class Solution {
                     m3[i][j] = m1[i][j] + m2[i][j];
                     System.out.print(m3[i][j] + " ");
             }
+            for (i = 0; i< r1;i++) {
+                m3[3][i] = m1[3][i] + m2[3][i];
+                System.out.print(m3[3][i] + " ");
+            }
 
             System.out.print("\n");
         }
