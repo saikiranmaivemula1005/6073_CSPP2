@@ -14,8 +14,8 @@ public class Solution {
 		int r2 = s.nextInt();
 		int c2 = s.nextInt();
 		int[][] m2 = new int[r2][c2];
-		for (int i = 0; i < r1; i++){
-			for (int j = 0; j < c1; j++){
+		for (int i = 0; i < r2; i++){
+			for (int j = 0; j < c2; j++){
 				m2[i][j] = s.nextInt();
 			}
 		}
