@@ -33,7 +33,7 @@ public class Solution {
         if (r1 == r2 && c1 == c2) {
             int[][] m3 = new int[r1][c1];
             for (int i = 0; i < r1; i++) {
-                for (int j = 0; j < c1-1; j++) {
+                for (int j = 0; j < c1; j++) {
                     m3[i][j] = m1[i][j] + m2[i][j];
                     System.out.print(m3[i][j]);
                     System.out.print(" ");
