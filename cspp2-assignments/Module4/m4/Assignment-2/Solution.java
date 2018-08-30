@@ -37,9 +37,7 @@ public class Solution {
                     m3[i][j] = m1[i][j] + m2[i][j];
                     System.out.print(m3[i][j] + " ");
             }
-            System.out.println(m3[i][c1 - 1] = m1[i][c1-1] + m2[i][c1-1]);
-
-           
+            System.out.println(m3[i][c1 - 1] = m1[i][c1 - 1] + m2[i][c1 - 1]);
         }
     }
         else {
