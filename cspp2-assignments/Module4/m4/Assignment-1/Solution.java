@@ -10,7 +10,7 @@ public class Solution
 		int n = sc.nextInt();
 		int arr[] = new int[n];
 		// System.out.println(n);
-		for (int i = 0; i <= n; i++){
+		for (int i = 0; i < n; i++){
 			// System.out.println("kk");
 			arr[i] = sc.nextInt();
 		}
