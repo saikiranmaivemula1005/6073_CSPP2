@@ -14,7 +14,7 @@ public class Solution
 			arr[i] = sc.nextInt();
 		}
 		Arrays.sort(arr,0,n);
-		System.out.println(arr[n-1]);
+		System.out.println("kk");
 		
 
 	}
