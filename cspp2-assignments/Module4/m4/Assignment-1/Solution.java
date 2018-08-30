@@ -11,11 +11,11 @@ public class Solution
 		int arr[] = new int[n];
 		// System.out.println(n);
 		for (int i = 0; i <= n; i++){
-			System.out.println("kk");
+			// System.out.println("kk");
 			arr[i] = sc.nextInt();
 		}
-		Arrays.sort(arr,0,n);
-		System.out.println("kk");
+		Arrays.sort(arr);
+		System.out.println(Arrays.toString(arr));
 		
 
 	}
