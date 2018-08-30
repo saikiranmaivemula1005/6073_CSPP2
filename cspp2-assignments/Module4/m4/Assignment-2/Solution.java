@@ -24,7 +24,7 @@ public class Solution {
 			for (int i = 0; i < r1; i++){
 				for (int j = 0; j < c1; j++){
 					System.out.print(m3[i][j] = m1[i][j] + m2[i][j]);
-					System.out.print(" ");
+					System.out.print("  ");
 			}
 			System.out.print("\n");
 		}
