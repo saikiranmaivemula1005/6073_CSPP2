@@ -13,7 +13,7 @@ public class Solution
 				arr[i] = sc.nextInt();
 		}
 		Arrays.sort(arr);
-		System.out.println(arr[n]);
+		System.out.println(arr[n-1]);
 		
 
 	}
