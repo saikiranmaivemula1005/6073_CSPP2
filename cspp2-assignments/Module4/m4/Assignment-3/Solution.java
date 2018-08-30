@@ -20,7 +20,7 @@ public class Solution
 	public static String binaryToDecimal(String s){
 		int x = 1, sum = 0;
 		for(int i = s.length()-1; i >= 0; i--){
-			System.out.print(Character.getNumericValue(s.charAt(i)));
+			// System.out.print(Character.getNumericValue(s.charAt(i)));
 			sum = sum + (x * Character.getNumericValue(s.charAt(i)));
 			x = x * 2;
 		}
