@@ -39,8 +39,8 @@ public class Solution {
             }
             System.out.print("\n");
         }
-            m3[r1-1][c1-1] = m1[r1-1][c1-1] + m2[r1-1][c1-1];
-            System.out.print(m3[r1-1][c1-1]);
+            m3[r1-2][c1-2] = m1[r1-2][c1-2] + m2[r1-2][c1-2];
+            System.out.print(m3[r1-2][c1-2]);
 
     }
         else {
