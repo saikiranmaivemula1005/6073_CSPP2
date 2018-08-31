@@ -34,7 +34,6 @@ public final class Solution {
         int base = 1;
         int sum = 0;
         for (int i = s.length() - 1; i >= 0; i--) {
-            System.out.println(Character.getNumericValue(s.charAt(i)));
             sum = sum + (base
              * Character.getNumericValue(s.charAt(i)));
             base *= 2;
