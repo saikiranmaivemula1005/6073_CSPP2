@@ -35,7 +35,7 @@ public final class Solution {
         int sum = 0;
         for (int i = s.length() - 1; i >= 0; i--) {
             sum = sum + (base
-             * Character.getNumericValue(s.charAt(i)));
+             * (s.charAt(i)));
             base *= 2;
         }
 
