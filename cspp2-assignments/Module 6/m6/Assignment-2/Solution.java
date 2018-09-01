@@ -24,7 +24,7 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a,
      final int rows, final int columns) {
-        final int x = 50, y = 3, z = 5, 
+        final int x = 50, y = 3, z = 5,
         k = 7, l = 9, m = 11, p = 4, q = 6, r = 8, s = 10;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
