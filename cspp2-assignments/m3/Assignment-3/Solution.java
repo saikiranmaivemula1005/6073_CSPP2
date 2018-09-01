@@ -1,15 +1,15 @@
 
 import java.util.Scanner;
 /**
-*Do not modify this main function.
+*Solution class.
 */
 public class Solution {
     /**
-     * { function_description }.
+     * To find gcd of given numbers.
      */
     protected Solution() { }
     /**
-     * { function_description }.
+     * Function to find gcd of given numbers.
      *
      * @param      args  The arguments.
      */
@@ -21,7 +21,7 @@ public class Solution {
         System.out.println(gcd(n1, n2));
     }
     /**
-     * { function_description }.
+     * To find gcd of given numbers.
      *
      * @param      a     { parameter_description }.
      * @param      b     { parameter_description }.
