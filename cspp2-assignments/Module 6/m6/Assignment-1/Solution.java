@@ -18,22 +18,17 @@ public final class Solution {
      * @param      n     n value
      */
     static void oddComposites(final int n) {
-    	for(int i = 0 ; i <= n; i++){
-    		if (i % 2 != 0){
-    			// System.out.println(i);
-    			for(int j = 1; j < n; j++){
-    			if (!(i % j == 0)){
-    				System.out.println(j);
-    			}
-    			// else{
-    			// 	System.out.println(i);
-    			// }
+    	for(int i = 2 ; i <= n/2; i++){
+    		if (n % i == 0){
+    			System.out.println(i);
+    			
+    			
     		}
     		}
 
     	}
 	
-    }
+   
     /**
     * main method as driver program.
     * @param args is the parameter for this method
@@ -44,4 +39,5 @@ public final class Solution {
         oddComposites(n);
     }
 }
+
 
