@@ -25,11 +25,12 @@ final class Solution {
     static int[][] roundHundred(final int[][] a,
      final int rows, final int columns) {
         final float variable = 100f;
+        final int variable2 = 100;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 float x = a[i][j] / variable;
                 int y = (int) Math.round(x);
-                a[i][j] = y * 100;
+                a[i][j] = y * variable2;
         }
 
     }
