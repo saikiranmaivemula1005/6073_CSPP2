@@ -11,7 +11,7 @@ public class Solution {
 */
     protected Solution() { }
 /**
- * Main function to print the number of 7's between 1 to n. 
+ * Main function to print the number of 7's between 1 to n.
  *
  * @param      args  The arguments
  */
