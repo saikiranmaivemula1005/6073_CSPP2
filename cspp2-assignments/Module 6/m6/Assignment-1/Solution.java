@@ -19,16 +19,23 @@ public final class Solution {
      */
     static void oddComposites(final int n) {
     	int count = 0,i=1;
-    	int[] a = new int[10000];
-    	for(i=0;i<n;i++){
-    		if(i%2 != 0){
-    			// System.out.println(i);
-    			a[i]=i;
-    			
-    			}
-    		}
-    		System.out.println(a);
-    	}
+    	int j=0,flag=0;
+    	for(i=2;i<=n;i++ ) {
+		 	flag=0;
+		for(j=2;j<i;j++) {
+		 	if(i % j == 0)
+		 		flag++;
+		 }
+		if(flag!=0){
+			if(i%2 != 0){
+				System.out.println(i);
+
+			}
+		}
+			
+		 }
+		 }
+
 
     	
     	
