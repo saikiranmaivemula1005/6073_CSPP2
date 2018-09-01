@@ -23,7 +23,7 @@ public final class Solution {
     			// System.out.println(i);
     			for(int j = 1; j < n; j++){
     			if (!(i % j == 0)){
-    				System.out.print(i);
+    				System.out.println(j);
     			}
     			// else{
     			// 	System.out.println(i);
