@@ -22,12 +22,12 @@ public final class Solution {
     		if (i % 2 != 0){
     			// System.out.println(i);
     			for(int j = 1; j < n; j++){
-    			if (i % j == 0){
-    				System.out.println();
+    			if (!(i % j == 0)){
+    				System.out.print(i);
     			}
-    			else{
-    				System.out.println(i);
-    			}
+    			// else{
+    			// 	System.out.println(i);
+    			// }
     		}
     		}
 
