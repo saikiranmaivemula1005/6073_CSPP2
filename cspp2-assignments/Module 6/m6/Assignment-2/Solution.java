@@ -24,7 +24,7 @@ final class Solution {
      */
     static int[][] roundHundred(final int[][] a,
      final int rows, final int columns) {
-        final int x = 50, y = 3;
+        final int x = 50, y = 3, z = 5;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 // for (x = 3; 0 < a[i][i] && a[i][j] < x; )
@@ -34,10 +34,10 @@ final class Solution {
                 if (x < a[i][j] && a[i][j] < x * y) {
                     a[i][j] = x * 2;
                 }
-                if ((x * y) + 1 <= a[i][j] && a[i][j] < x * 5) {
+                if ((x * y) + 1 <= a[i][j] && a[i][j] < x * z) {
                     a[i][j] = x * 4;
                 }
-                if ((x * 5) + 1 < a[i][j] && a[i][j] < x * 7) {
+                if ((x * z) + 1 < a[i][j] && a[i][j] < x * 7) {
                     a[i][j] = x * 6;
                 }
                 if ((x * 7) + 1 < a[i][j] && a[i][j] < x * 9) {
