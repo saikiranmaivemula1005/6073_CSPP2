@@ -30,10 +30,10 @@ final class Solution {
                 for (x = 3; x < 11; x = x + 2){
                     int y = 2;
                     if (0 < a[i][j] && a[i][j] < x) {
-                    a[i][j] = 0;
+                        a[i][j] = 0;
                     }
                     if (0 < a[i][j] && a[i][j] < x) {
-                    a[i][j] = x * y;
+                        a[i][j] = x * y;
                     }
                     y = y + 2;
 
