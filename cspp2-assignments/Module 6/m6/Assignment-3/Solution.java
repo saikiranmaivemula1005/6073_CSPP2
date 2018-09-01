@@ -27,13 +27,12 @@ final class Solution {
         final char oldChar, final char newChar) {
         int  l = charArray.length;
         // System.out.println(charArray.length);
-        for(int i = 0; i < l; i++){
-            if (charArray[i] == oldChar){
+        for (int i = 0; i < l; i++) {
+            if (charArray[i] == oldChar) {
                 charArray[i] = newChar;
             }
         }
-        
-	   return charArray;
+       return charArray;
     }
     /**
      * Main function.
