@@ -25,9 +25,9 @@ final class Solution {
      */
     static char[] replaceAll(final char[] charArray,
         final char oldChar, final char newChar) {
-        for (char c : charArray){
-            System.out.println(charArray[c]);
-        }
+        // int  l = charArray.length();
+        System.out.println(charArray.length); 
+        
 	   return charArray;
     }
     /**
