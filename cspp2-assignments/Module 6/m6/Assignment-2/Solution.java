@@ -29,10 +29,10 @@ final class Solution {
             for (int j = 0; j < columns; j++) {
                 for (int k = 3; k < 11; k = k + 2){
                     int y = 2;
-                    // if (0 < a[i][j] && a[i][j] < x) {
-                    //     a[i][j] = 0;
-                    // }
                     if (0 < a[i][j] && a[i][j] < x) {
+                        a[i][j] = 0;
+                    }
+                    if (x < a[i][j] && a[i][j] < x * k) {
                         a[i][j] = x * y;
                     }
                     y = y + 2;
