@@ -18,7 +18,7 @@ public final class Solution {
      * @param      n     n value
      */
     static void oddComposites(final int n) {
-    	for(int i = 2 ; i <= n/2; i++){
+    	for(int i = 2 ; i <= n; i++){
     		if (n % i == 0){
     			System.out.println(i);
     			
