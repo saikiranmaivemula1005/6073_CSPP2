@@ -29,15 +29,14 @@ final class Solution {
             for (int j = 0; j < columns; j++) {
                 float x = a[i][j] / variable;
                 int y = (int) Math.round(x);
-                a[i][j] = y * 100; 
+                a[i][j] = y * 100;
         }
-        
 
     }
     return a;
 }
     /**
-     * function .
+     * function to round off elements in matrix.
      *
      * @param      args  The arguments
      */
