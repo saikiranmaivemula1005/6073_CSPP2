@@ -27,30 +27,40 @@ final class Solution {
         int x = 50;
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                // for (x = 3; 0 < a[i][i] && a[i][j] < x; )
-                if (0 < a[i][j] && a[i][j] < x) {
+                for (x = 3; x < 11; x = x + 2){
+                    int y = 2;
+                    if (0 < a[i][j] && a[i][j] < x) {
                     a[i][j] = 0;
-                }
-                if (x < a[i][j] && a[i][j] < x * 3) {
-                    a[i][j] = x * 2;
-                }
-                if ((x * 3) + 1 <= a[i][j] && a[i][j] < x * 5) {
-                    a[i][j] = x * 4;
-                }
-                if ((x * 5) + 1 < a[i][j] && a[i][j] < x * 7) {
-                    a[i][j] = x * 6;
-                }
-                if ((x * 7) + 1 < a[i][j] && a[i][j] < x * 9) {
-                    a[i][j] = x * 8;
-                }
-                if ((x * 9) + 1 < a[i][j] && a[i][j] < x * 11) {
-                    a[i][j] = x * 10;
-                }
-                }
-        }
-        return a;
+                    }
+                    if (0 < a[i][j] && a[i][j] < x) {
+                    a[i][j] = x * y;
+                    }
+                    y = y + 2;
 
+                }
+                // if (0 < a[i][j] && a[i][j] < x) {
+                //     a[i][j] = 0;
+                // }
+                // if (x < a[i][j] && a[i][j] < x * 3) {
+                //     a[i][j] = x * 2;
+                // }
+                // if ((x * 3) + 1 <= a[i][j] && a[i][j] < x * 5) {
+                //     a[i][j] = x * 4;
+                // }
+                // if ((x * 5) + 1 < a[i][j] && a[i][j] < x * 7) {
+                //     a[i][j] = x * 6;
+                // }
+                // if ((x * 7) + 1 < a[i][j] && a[i][j] < x * 9) {
+                //     a[i][j] = x * 8;
+                // }
+                // if ((x * 9) + 1 < a[i][j] && a[i][j] < x * 11) {
+                //     a[i][j] = x * 10;
+                // }
+                // }
+        }
     }
+    return a;
+}
     /**
      * Main function.
      *
