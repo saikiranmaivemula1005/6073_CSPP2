@@ -24,12 +24,13 @@ final class Solution {
      * @return     Matrix of the rounded elements
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
+        int x = 50;
         for(int i = 0; i < rows; i++){
             for(int j = 0; j < columns; j++){
-                if (0 < a[i][j] && a[i][j]< 50){
+                if (0 < a[i][j] && a[i][j]< x){
                     a[i][j] = 0;
                 }
-                if (50 < a[i][j] && a[i][j] < 150){
+                if (x < a[i][j] && a[i][j] < 150){
                     a[i][j] = 100;
                 }
                 if (151 <= a[i][j] && a[i][j] < 250){
