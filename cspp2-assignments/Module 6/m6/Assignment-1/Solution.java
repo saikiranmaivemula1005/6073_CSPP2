@@ -18,13 +18,15 @@ public final class Solution {
      * @param      n     n value
      */
     static void oddComposites(final int n) {
+    	int count = 0;
     	for(int i = 2 ; i <= n; i++){
     		if (n % i == 0){
-    			System.out.println(i);
-    			
-    			
+    			count = count + 1;
     		}
+    	if (count>2){
+    		System.out.println(i);
     		}
+    	}
 
     	}
 	
