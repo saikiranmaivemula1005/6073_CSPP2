@@ -32,7 +32,7 @@ final class Solution {
                 if (50 < a[i][j] && a[i][j] < 150){
                     a[i][j] = 100;
                 }
-                if (151 < a[i][j] && a[i][j] < 250){
+                if (151 <= a[i][j] && a[i][j] < 250){
                     a[i][j] = 200;
                 }
                 if (251 < a[i][j] && a[i][j] < 350){
