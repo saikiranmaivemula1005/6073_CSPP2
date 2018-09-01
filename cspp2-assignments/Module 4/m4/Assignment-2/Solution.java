@@ -37,7 +37,7 @@ public class Solution {
                     matrixThree[i][j] = matrixOne[i][j] + matrixTwo[i][j];
                     System.out.print(matrixThree[i][j] + " ");
             }
-            matrixThree[i][column1 - 1] = 
+            matrixThree[i][column1 - 1] =
             matrixOne[i][column1 - 1] + matrixTwo[i][column1 - 1];
             System.out.println(matrixThree[i][column1 - 1]);
         }
