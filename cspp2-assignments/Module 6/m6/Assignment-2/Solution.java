@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.lang.*;
 /**
  * Write a java program to round the
  * elements of a matrix to the nearest 100.
@@ -27,7 +26,7 @@ final class Solution {
      final int rows, final int columns) {
         int x = 50;
         for (int i = 0; i < rows; i++) {
-            for(int j = 0; j < columns; j++) {
+            for (int j = 0; j < columns; j++) {
                 if (0 < a[i][j] && a[i][j] < x) {
                     a[i][j] = 0;
                 }
@@ -46,7 +45,6 @@ final class Solution {
                 if (451 < a[i][j] && a[i][j] < 550) {
                     a[i][j] = 500;
                 }
-                
                 }
         }
         return a;
