@@ -1,17 +1,17 @@
 /**
- * { item_description }
+ * Number of sevens.
  */
 import java.util.Scanner;
 /**
-*Do not modify this main function.
+*Solution class.
 */
 public class Solution {
 /**
-* Fill the main function to print the number of 7's between 1 to n.
+* Function to print the number of 7's between 1 to n.
 */
     protected Solution() { }
 /**
- * { function_description }.
+ * Main function to print the number of 7's between 1 to n. 
  *
  * @param      args  The arguments
  */
