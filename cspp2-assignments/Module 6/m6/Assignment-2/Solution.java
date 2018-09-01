@@ -30,19 +30,19 @@ final class Solution {
                 if (0 < a[i][j] && a[i][j] < x) {
                     a[i][j] = 0;
                 }
-                if (x < a[i][j] && a[i][j] < 150) {
+                if (x < a[i][j] && a[i][j] < x * 3) {
                     a[i][j] = 100;
                 }
-                if (151 <= a[i][j] && a[i][j] < 250) {
+                if ((x * 3) + 1 <= a[i][j] && a[i][j] < x * 5) {
                     a[i][j] = 200;
                 }
-                if (251 < a[i][j] && a[i][j] < 350) {
+                if ((x * 5) + 1 < a[i][j] && a[i][j] < x * 7) {
                     a[i][j] = 300;
                 }
-                if (351 < a[i][j] && a[i][j] < 450) {
+                if ((x * 7) + 1 < a[i][j] && a[i][j] < x * 9) {
                     a[i][j] = 400;
                 }
-                if (451 < a[i][j] && a[i][j] < 550) {
+                if ((x * 9) + 1 < a[i][j] && a[i][j] < x * 11) {
                     a[i][j] = 500;
                 }
                 }
