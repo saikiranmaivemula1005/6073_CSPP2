@@ -28,7 +28,7 @@ final class Solution {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
                 for (int k = 3; k < 11; k = k + 2){
-                    int y = 2;
+                    int y = 4;
                     if (0 < a[i][j] && a[i][j] < x) {
                         a[i][j] = 0;
                     }
