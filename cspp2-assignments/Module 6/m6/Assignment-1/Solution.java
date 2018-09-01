@@ -23,7 +23,9 @@ public final class Solution {
     			System.out.println(i);
     			if ((i % 1 == 0 && i % i == 0)){
     				System.out.println(i);
-
+    			}
+    			else{
+    				System.out.println("hello");
     			}
     		}
 
