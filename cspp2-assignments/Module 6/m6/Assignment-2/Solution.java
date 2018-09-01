@@ -23,8 +23,8 @@ final class Solution {
      * @return     Matrix of the rounded elements
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
-        for(int i = 0; i <= rows; i++){
-            for(int j = 0; j <= columns; j++){
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < columns; j++){
                 a[i][j] = Math.round(a[i][j]);
             }
         }
