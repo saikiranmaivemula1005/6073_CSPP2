@@ -23,10 +23,10 @@ public class Solution {
     /**
      * To find gcd of given numbers.
      *
-     * @param      a     { parameter_description }.
-     * @param      b     { parameter_description }.
+     * @param      a     variable a
+     * @param      b     variable b.
      *
-     * @return     { description_of_the_return_value }.
+     * @return     returns gcd of given numbers.
      */
     public static int gcd(final int a, final int b) {
         int gcd = 1;
