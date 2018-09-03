@@ -40,7 +40,7 @@ final  class Solution {
     /**
      * Constructor for solution.
      */
-    private Solution(){
+    private Solution() {
     }
     /**
      * main function.
