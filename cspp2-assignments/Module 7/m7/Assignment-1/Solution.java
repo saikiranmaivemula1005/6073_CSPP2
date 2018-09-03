@@ -38,6 +38,11 @@ InputValidator(final String input) {
  */
 final  class Solution {
     /**
+     * Constructor for solution.
+     */
+    private Solution(){
+    }
+    /**
      * main function.
      *
      * @param      args  The arguments
