@@ -21,7 +21,7 @@ InputValidator(final String input){
  */
 	boolean validateData(){
 		final int variable = 6;
-		if (length == variable) {
+		if (length >= variable) {
 			return true;
 		}
 	return false;
