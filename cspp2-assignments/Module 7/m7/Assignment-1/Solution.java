@@ -18,7 +18,7 @@ class InputValidator {
      */
 InputValidator(final String input) {
     data = input;
-    length = data.length();
+    length = input.length();
 }
 /**
  * function to return true/false based on input.
