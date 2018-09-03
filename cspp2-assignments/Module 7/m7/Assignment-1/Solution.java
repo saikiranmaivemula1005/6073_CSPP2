@@ -14,11 +14,11 @@ class InputValidator {
     /**
      * Constructor for input validator.
      *
-     * @param      input  is the input.
+     * @param      text  is the input.
      */
-InputValidator(final String input) {
-    data = input;
-    length = input.length();
+InputValidator(final String text) {
+    data = text;
+    length = text.length();
 }
 /**
  * function to return true/false based on input.
