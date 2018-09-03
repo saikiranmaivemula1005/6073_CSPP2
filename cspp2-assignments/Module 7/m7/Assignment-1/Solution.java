@@ -36,7 +36,7 @@ InputValidator(final String input) {
 /**
  * class named solution contains main method.
  */
-public class Solution {
+final  class Solution {
     /**
      * main function.
      *
