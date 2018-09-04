@@ -130,7 +130,7 @@ public class List {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) { 
+            for (int i = index; i < size - 1; i++) {
                     array[i] = array[i + 1];
             }
             array[size--] = 0;
@@ -197,7 +197,7 @@ public class List {
      * @param item is an agrument.
      * @return returns true if element is in array.
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         return indexOf(item) >= 0;
     }
@@ -207,6 +207,7 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      *  @param item is an agrument.
+     *  @return returns index of element.
      */
     public int indexOf(final int item) {
         // Replace the code below
