@@ -196,12 +196,7 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        for (int i = 0; i < size; i++) {
-            if (array[i] == item) {
-                return true;
-            }
-        }
-        return false;
+        return indexOf(item) >= 0;
     }
 
     /**
@@ -211,15 +206,14 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        if (contains(item)) {
             for(int i = 0; i < size; i++){
                 if (array[i] == item){
                     return i;
                 }
             }
+            return -1;
         }
-        return -1;
-    }
+        
     /**
      * main function.
      *
