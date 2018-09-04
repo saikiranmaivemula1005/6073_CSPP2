@@ -1,6 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.*;
+import java.lang.*;
 
 public class List {
 	//Implement all the methods mentioned to build a ListADT
@@ -129,6 +130,13 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
+        for(int i = 0; i < size; i++){
+            if (i == index){
+                array[i] = array[i+1];
+            }
+            break;
+        }
+        size = size - 1;
     }
 
     /*
@@ -144,6 +152,11 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
+        if (index < size + 1){
+            int value = array[index];
+            return value;
+        }
+
         return -1;
     }
 
@@ -169,7 +182,7 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        return "print the list";
+        return array.toString();
     } 
     
     /*
@@ -180,7 +193,12 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        return true;
+        for(int i = 0; i < size; i++){
+            if (array[i] == item) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /*
@@ -190,6 +208,11 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
+        for(int i = 0; i < size; i++){
+            if (array[item] == item){
+                return i;
+            }
+        }
         return -1;
     }
 
