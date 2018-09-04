@@ -1,10 +1,11 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+ * class named list.
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
     /**
-    
 
     /**
      * The goal for the list is to store items.
@@ -49,7 +50,6 @@ public class List {
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
      * to be accessed by the methods that are outside of the List class.
-     * 
      */
     private int size;
     // declare a private int size
@@ -62,7 +62,8 @@ public class List {
      */
     public List() {
         size = 0;
-        array = new int[10];
+        final int x = 10;
+        array = new int[x];
 
         // what are the two variables to be initialized here?
         // think about the private variables described above.
@@ -76,7 +77,6 @@ public class List {
         // That is the initial value to use for size.
 
     }
-    
     /**
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -88,7 +88,7 @@ public class List {
      *  @param item is an agrument.
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         array[size++] = item;
     }
@@ -97,20 +97,19 @@ public class List {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
      * The method returns an int. Empty list should return 0.
+     * @return returns the size of array.
      */
     public int size() {
         // replace the code below to implement the size method
         return size;
-        
     }
 
     /**
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -127,19 +126,18 @@ public class List {
      * The method returns void (nothing)
      *  @param index is an agrument.
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if (index >= 0 && index < size) {
-            for(int i = index; i < size - 1; i++) { 
-                    array[i] = array[i+1];
+            for (int i = index; i < size - 1; i++) { 
+                    array[i] = array[i + 1];
             }
             array[size--] = 0;
-        }
-        else {
+        } else {
             System.out.println("Invalid Position Exception");
         }
-    }       
+    }
 
     /**
      * Get method has to return the items that is
@@ -149,11 +147,12 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      *  @param index is an agrument.
+     *  @return returns the index of the given element.
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
             if (index > 0 && index < size) {
                 return array[index];
@@ -170,7 +169,6 @@ public class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -179,23 +177,25 @@ public class List {
      * Example: [1,2,3,0,0,0,0,0,0,0]
      * toString should only return the items in the list and
      * not all the elements of the array.
+     * @return returns the array.
      *
      */
     public String toString() {
         // Replace the code below
         String temp = "[";
-        for (int i = 0; i < size - 1; i++){
+        for (int i = 0; i < size - 1; i++) {
             temp += array[i] + ",";
         }
         temp += array[size - 1] + "]";
         return temp;
     }
-    /**ss
+    /**ss.
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      * @param item is an agrument.
+     * @return returns true if element is in array.
      */
     public boolean contains(int item) {
         // Replace the code below
@@ -208,9 +208,9 @@ public class List {
      * or -1 if this list does not contain the element.
      *  @param item is an agrument.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
-            for(int i = 0; i < size; i++) {
+            for (int i = 0; i < size; i++) {
                 if (array[i] == item) {
                     return i;
                 }
