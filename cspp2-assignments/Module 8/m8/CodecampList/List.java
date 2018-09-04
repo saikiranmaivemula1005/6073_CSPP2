@@ -150,12 +150,11 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      *  @param index is an agrument.
-     *  @return returns the index of the given element.
      */
     public void get(final int index) {
         // Replace the code below to write the code for get
             if (index > 0 && index < size) {
-                System.out.println(array[index]); 
+                System.out.println(array[index]);
         }
     }
 
