@@ -128,20 +128,11 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        try{
-             for(int i = 0; i < size; i++){
-            if (i == index){
-                array[i] = array[i+1];
+            for(int i = index; i < size - 1; i++){ 
+                    array[i] = array[i+1];
             }
-            break;
-        }
-        size = size - 1;
-
-        }
-        catch(Exception e){
-            System.out.println("Invalid Position Exception");
-        }
-    }
+            array[size--] = 0;
+        }        
 
     /**
      * Get method has to return the items that is
@@ -156,15 +147,8 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        try{
-            if (index < size + 1){
-            int value = array[index];
-            return value;
-        }
-
-        }
-        catch(Exception e){
-            System.out.println("IndexOutOfBoundsException");
+            if (index > 0 && index < size) {
+                return array[index];
         }
         return -1;
     }
@@ -217,9 +201,11 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        for (int i = 0; i < size; i++) {
-            if (array[item] == item) {
-                return i;
+        if (contains(item)) {
+            for(int i = 0; i < size; i++){
+                if (array[i] == item){
+                    return i;
+                }
             }
         }
         return -1;
