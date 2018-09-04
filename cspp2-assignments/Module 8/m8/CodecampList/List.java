@@ -84,7 +84,7 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *  @param item is an agrument.
      * The method returns void (nothing)
      */
     public void add(int item) {
@@ -124,6 +124,7 @@ public class List {
      * So, the new array looks like this.
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
+     *  @param index is an agrument.
      */
     public void remove(int index) {
         // write the logic for remove here.
@@ -149,6 +150,7 @@ public class List {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
+     *  @param index is an agrument.
      */
     public int get(int index) {
         // Replace the code below to write the code for get
@@ -192,6 +194,7 @@ public class List {
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
      * the item exists and otherwise false
+     * @param item is an agrument.
      */
     public boolean contains(int item) {
         // Replace the code below
@@ -199,14 +202,15 @@ public class List {
     }
 
     /**
-     * Returns the index of the first occurrence 
+     * Returns the index of the first occurrence.
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     *  @param item is an agrument.
      */
     public int indexOf(int item) {
         // Replace the code below
-            for(int i = 0; i < size; i++){
-                if (array[i] == item){
+            for(int i = 0; i < size; i++) {
+                if (array[i] == item) {
                     return i;
                 }
             }
@@ -218,7 +222,7 @@ public class List {
      * @param      args  The arguments
      */
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
