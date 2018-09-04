@@ -89,7 +89,8 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
-        Arrays.fill(array, item);
+        array[size] = item;
+        size++;
     }
 
     /*
