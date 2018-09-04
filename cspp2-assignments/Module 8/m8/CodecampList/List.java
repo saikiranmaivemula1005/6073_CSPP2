@@ -202,7 +202,7 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        for(int i = 0; i < size; i++){
+        for (int i = 0; i < size; i++) {
             if (array[i] == item) {
                 return true;
             }
@@ -217,8 +217,8 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
-        for(int i = 0; i < size; i++){
-            if (array[item] == item){
+        for (int i = 0; i < size; i++) {
+            if (array[item] == item) {
                 return i;
             }
         }
