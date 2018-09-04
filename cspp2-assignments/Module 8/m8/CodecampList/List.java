@@ -141,7 +141,7 @@ public class List {
 
         }
         catch(Exception e){
-            System.out.println("invalid position");
+            System.out.println("Invalid Position Exception");
         }
     }
 
@@ -158,11 +158,16 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        if (index < size + 1){
+        try{
+            if (index < size + 1){
             int value = array[index];
             return value;
         }
 
+        }
+        catch(Exception e){
+            System.out.println("IndexOutOfBoundsException");
+        }
         return -1;
     }
 
