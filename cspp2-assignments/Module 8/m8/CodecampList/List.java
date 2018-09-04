@@ -175,7 +175,12 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        return Arrays.toString(array);
+        String temp = "[";
+        for (int i = 0; i < size - 1; i++){
+            temp += array[i] + ",";
+        }
+        temp += array[size - 1] + "]";
+        return temp;
     } 
     
     /**
