@@ -186,8 +186,7 @@ public class List {
         }
         temp += array[size - 1] + "]";
         return temp;
-    } 
-    
+    }
     /**ss
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -213,7 +212,6 @@ public class List {
             }
             return -1;
         }
-        
     /**
      * main function.
      *
