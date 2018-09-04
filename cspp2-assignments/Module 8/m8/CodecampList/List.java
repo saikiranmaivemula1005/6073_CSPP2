@@ -1,12 +1,11 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.*;
-import java.lang.*;
+import java.util.Arrays;
 
 public class List {
 	//Implement all the methods mentioned to build a ListADT
 
-    /*
+    /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
@@ -32,7 +31,7 @@ public class List {
     // don't create the array yet using new
     // that's the job of the List constructor
 
-    /*
+    /**
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
      * If you add 2 items to the list then the size should be 2.
@@ -56,7 +55,7 @@ public class List {
     // again, don't initialize it here
     // variable initialization should be done in the constructor
 
-    /*
+    /**
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
@@ -77,7 +76,7 @@ public class List {
 
     }
     
-    /*
+    /**
      * The add method does what the name suggests.
      * Add an int item to the list.
      * The assumption is to store the item at the end of the list
@@ -90,11 +89,10 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
-        array[size] = item;
-        size++;
+        array[size++] = item;
     }
 
-    /*
+    /**
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
@@ -107,7 +105,7 @@ public class List {
         
     }
 
-    /*
+    /**
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
@@ -145,7 +143,7 @@ public class List {
         }
     }
 
-    /*
+    /**
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
      * If the item doesn't exist then return a -1 to indicate that
@@ -171,7 +169,7 @@ public class List {
         return -1;
     }
 
-    /*
+    /**
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
      * invoked when an object variable is used in println.
@@ -196,7 +194,7 @@ public class List {
         return Arrays.toString(array);
     } 
     
-    /*
+    /**
      * Contains return true if the list has
      * the item passed as an argument to the method
      * So, iterate through the list and return true if
@@ -212,7 +210,7 @@ public class List {
         return false;
     }
 
-    /*
+    /**
      * Returns the index of the first occurrence 
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
@@ -226,6 +224,11 @@ public class List {
         }
         return -1;
     }
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
 
 	public static void main(String[] args) {
         // create an object of the list to invoke methods on it
