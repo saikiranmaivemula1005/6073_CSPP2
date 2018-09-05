@@ -31,11 +31,11 @@ public class Fibonacci extends List{
         // todo - complete this method
         l.add(0);
         l.add(1);
-        int x = 0, y = 1;        
+        int variableOne = 0, variableTwo = 1;        
         for(int i = 1; i < n-1; i++){
-            int fib = x + y;
-            x = y;
-            y = fib;
+            int fib = variableOne + variableTwo;
+            variableOne = variableTwo;
+            variableTwo = fib;
             l.add(fib);
         }
         return l;
