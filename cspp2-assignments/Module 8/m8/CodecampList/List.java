@@ -1,6 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
+// import java.util.Arrays;
 /**
  * class named list.
  */
@@ -242,8 +242,7 @@ public class List {
     //     if (count > 0){
     //         return count;
     //     }
-    //     return -1;
-        
+    //     return -1;   
     // }
     /**
      * main function.
@@ -254,7 +253,7 @@ public class List {
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
-        int[] items = new int[] {4,5,6};
+        final int[] items = new int[] {4, 5, 6};
 
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
@@ -296,7 +295,8 @@ public class List {
                 // l.addAll(items);
                 // break;
                 // case "addAt":
-                // l.add(Integer.parseInt(tokens[1]),Integer.parseInt(tokens[2]));
+                // l.add(Integer.parseInt(tokens[1]),
+                // Integer.parseInt(tokens[2]));
                 // break;
                 // case "count":
                 // System.out.println(l.count(Integer.parseInt(tokens[1])));
