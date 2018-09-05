@@ -36,14 +36,13 @@ public class Fibonacci extends List{
      *
      * @return     { description_of_the_return_value }
      */
-    
-    public static List fib( final int n) {
+    public static List fib(final int n) {
         // todo - complete this method
         List l = new List(n);
         l.add(0);
         l.add(1);
         int variableOne = 0, variableTwo = 1;
-        for (int i = 1; i < n-1; i++) {
+        for (int i = 1; i < n - 1; i++) {
             int fib = variableOne + variableTwo;
             variableOne = variableTwo;
             variableTwo = fib;
@@ -57,7 +56,7 @@ public class Fibonacci extends List{
      * @param      args  The arguments
      */
 
-	public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
