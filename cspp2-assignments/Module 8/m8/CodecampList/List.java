@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * class named list.
  */
@@ -216,35 +217,34 @@ public class List {
             }
             return -1;
         }
-    public void addAll(int[] items){
-        for(int i= size; i< array.length; i++){
-            for(int j = 0; j < items.length; j++){
-                array[i] = items[j];
-            }
-        }
-
-    }
-    public void add(int index, int item){
-        for(int i = size; i > index; i--){
-            array[i] = array[i-1];
-        }
-        array[index] = item;
-        size++;
-
-    }
-    public int count(int item){
-        int count = 0;
-        for(int i = 0; i < array.length; i++){
-            if(array[i] == item){
-                count++;
-            }
-        }
-        if (count > 0){
-            return count;
-        }
-        return -1;
+    // public void addAll(int[] items){
+    //     int j = 0;
+    //     for(int i= size; i < (size + items.length); i++){
+    //             array[i] = items[j];
+    //             j++;
+    //         }
+    //     System.out.println(Arrays.toString(array));
+    //     }
+    // public void add(int index, int item){
+    //     for(int i = size; i > index; i--){
+    //         array[i] = array[i-1];
+    //     }
+    //     array[index] = item;
+    //     size++;
+    // }
+    // public int count(int item){
+    //     int count = 0;
+    //     for(int i = 0; i < array.length; i++){
+    //         if(array[i] == item){
+    //             count++;
+    //         }
+    //     }
+    //     if (count > 0){
+    //         return count;
+    //     }
+    //     return -1;
         
-    }
+    // }
     /**
      * main function.
      *
@@ -279,7 +279,7 @@ public class List {
                 // print the list (implement toString for this to work)
                 // expected format is [item-1,item-2,...,item-n]
                 // review the output testcase file
-                System.out.println(l);
+                System.out.println(l.toString());
                 break;
                 case "remove":
                 l.remove(Integer.parseInt(tokens[1]));
@@ -292,15 +292,16 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
-                case "addAll":
-                l.addAll(items);
-                break;
-                case "addAt":
-                l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
-                case "count":
-                System.out.println(l.count(Integer.parseInt(tokens[1])));
+                // case "addAll":
+                // l.addAll(items);
+                // break;
+                // case "addAt":
+                // l.add(Integer.parseInt(tokens[1]),Integer.parseInt(tokens[2]));
+                // break;
+                // case "count":
+                // System.out.println(l.count(Integer.parseInt(tokens[1])));
+                // break;
                 default:
-                System.out.print("");
             }
         }
     }
