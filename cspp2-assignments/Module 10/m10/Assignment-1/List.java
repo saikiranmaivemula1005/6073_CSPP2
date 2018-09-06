@@ -281,7 +281,7 @@ public class List {
         // System.out.println(Arrays.toString(list));
     }
     private int[] resize(){
-        return Arrays.copyOf(list, size * 2);
+        return Arrays.copyOf(list, list.length* 2);
     }
 
      /* 
