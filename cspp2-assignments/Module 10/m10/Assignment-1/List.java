@@ -360,7 +360,7 @@ public class List {
             size++;
         // break;
         }
-        if (index == 0 && size == 1) {
+        if (index == 0 && item == 0) {
             System.out.println("Invalid Position Exception");
         }
 
