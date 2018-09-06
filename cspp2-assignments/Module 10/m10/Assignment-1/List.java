@@ -275,7 +275,7 @@ public class List {
             j++;
             // size++;
         }
-        System.out.println(Arrays.toString(list));
+        // System.out.println(Arrays.toString(list));
     }
 
      /* 
