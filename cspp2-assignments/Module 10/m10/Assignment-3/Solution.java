@@ -36,6 +36,12 @@ import java.util.Scanner;
 */
 public class Solution {
     /**
+     * Constructor for solution class.
+     */
+    protected Solution() {
+
+    }
+    /**
      * main method for solution class.
      *
      * @param      args  The arguments
