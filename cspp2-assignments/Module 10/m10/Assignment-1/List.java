@@ -200,6 +200,9 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
+        if (index == 0 && size == 0) {
+            System.out.println("Invalid Position Exception");
+        }
         if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
@@ -360,9 +363,7 @@ public class List {
             size++;
         // break;
         }
-        if (index == 0 && item == 0) {
-            System.out.println("Invalid Position Exception");
-        }
+
 
         if (size == list.length) {
             list = resize();
