@@ -370,7 +370,7 @@ public class List {
             size++;
         }
         if (index == 0 && size == 1) {
-            System.out.println("Invalid Position Exception");
+            System.out.print("Invalid Position Exception");
         }
 
     }
