@@ -358,6 +358,9 @@ public class List {
             size++;
         // break;
         }
+        if (index == 0 && size == 1) {
+            System.out.println("Invalid Position Exception");
+        }
         if (size == list.length) {
             list = resize();
         }
