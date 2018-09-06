@@ -1,11 +1,13 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**
+ * class named list.
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
-    /*
+    /**
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
@@ -235,13 +237,13 @@ public class List {
     public String toString() {
         if(size == 0)
             return "[]";
-        String str = "[";
+        String resultantString = "[";
         int i = 0;
         for(i = 0; i < size - 1; i++) {
-            str = str + list[i] + ",";
+            resultantString = resultantString + list[i] + ",";
         }
-        str = str + list[i] + "]";
-        return str;
+        resultantString = resultantString + list[i] + "]";
+        return resultantString;
     }
     
     /*
@@ -290,7 +292,7 @@ public class List {
         The method returns void (nothing)
      */
     public void add(int index,int item) {
-        if (index < 0){
+        if (index < 0) {
             System.out.println("Negative Index Exception");
         }
         if (index == 0 && size == 0) {
