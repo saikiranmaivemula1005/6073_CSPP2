@@ -239,13 +239,13 @@ public class StringList implements StringListInterface{
     public String toString() {
        if(size == 0)
             return "[]";
-        String str = "[";
+        String resultantString = "[";
         int i = 0;
         for(i = 0; i < size - 1; i++) {
-            str = str + list[i] + ",";
+            resultantString = resultantString + list[i] + ",";
         }
-        str = str + list[i] + "]";
-        return str;
+        resultantString = resultantString + list[i] + "]";
+        return resultantString;
     }
     
     /*
