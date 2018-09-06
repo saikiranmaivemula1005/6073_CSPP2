@@ -140,10 +140,10 @@ public class StringList implements StringListInterface{
    
     public void addAll(String[] items) {
         int j = 0;
-        if ((size + items.length) > 10){
+        if ((size + items.length) > 10) {
             list = resize();
         }
-        for (int i = size; i < (size + items.length); i++){
+        for (int i = size; i < (size + items.length); i++) {
             list[i] = items[j];
             j++;
         }
