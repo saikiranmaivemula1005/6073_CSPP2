@@ -185,20 +185,22 @@ public class Solution {
                 }
             break;
 
-            case "C"://This case will be executed for Character type list
+            case "C"://This case will be 
+            // executed for Character type list
                 List<Character> listCharacter = new List();
                 while (stdin.hasNext()) {
                     // read the line
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list operation
+                     // invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listCharacter.add(tokens[1].charAt(0));
                         break;
                         case "addAll":
-                        if(tokens.length == 2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Character[] temp = new Character[t1.length];
                         for (int i = 0; i < t1.length ;  i++ ) {
@@ -224,13 +226,16 @@ public class Solution {
                         listCharacter.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listCharacter.indexOf(tokens[1].charAt(0)));
+                        System.out.println(
+                            listCharacter.indexOf(tokens[1].charAt(0)));
                         break;
                         case "get":
-                        System.out.println(listCharacter.get(Integer.parseInt(tokens[1])));
+                        System.out.println(
+                            listCharacter.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listCharacter.contains(tokens[1].charAt(0)));
+                        System.out.println(
+                            listCharacter.contains(tokens[1].charAt(0)));
                         break;
                     }
                 }
@@ -246,10 +251,11 @@ public class Solution {
                     // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
-                            listDouble.add(Double.parseDouble(tokens[1]));
+                            listDouble.add(
+                                Double.parseDouble(tokens[1]));
                         break;
                         case "addAll":
-                        if(tokens.length == 2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
                         for (int i = 0; i < t1.length ;  i++ ) {
@@ -265,9 +271,11 @@ public class Solution {
                         System.out.println(listDouble.size());
                         break;
                         case "print":
-                        // print the list (implement toString in StringList class
+                        // print the list (
+                        // implement toString in StringList class
                         //for this to work)
-                        // expected format is [item-1,item-2,...,item-n]
+                        // expected format is 
+                        // [item-1,item-2,...,item-n]
                         // review the output testcase file
                         System.out.println(listDouble);
                         break;
@@ -275,35 +283,40 @@ public class Solution {
                         listDouble.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listDouble.indexOf(Double.parseDouble(tokens[1])));
+                        System.out.println(
+                            listDouble.indexOf(Double.parseDouble(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
+                        System.out.println(
+                            listDouble.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
+                        System.out.println(
+                            listDouble.contains(Double.parseDouble(tokens[1])));
                         break;
                     }
                 }
             break;
 
-            case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+            case "O"://This case will be executed for
+             // Student type list i.e to store List of Student Objects
                 List<Student> listStudent = new List();
                 while (stdin.hasNext()) {
                     // read the line
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
+                    // based on the list 
+                    // operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listStudent.add(new Student(tokens[1]));
                         break;
                         case "addAll":
-                        if(tokens.length == 2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Student[] temp = new Student[t1.length];
-                        for (int i = 0; i < t1.length ; i++ ) {
+                        for (int i = 0; i < t1.length; i++) {
                             temp[i] = new Student(t1[i]);
                         }
                         listStudent.addAll(temp);
@@ -326,15 +339,18 @@ public class Solution {
                         listStudent.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listStudent.indexOf(new Student(tokens[1])));
+                        System.out.println(
+                            listStudent.indexOf(new Student(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listStudent.get(Integer.parseInt(tokens[1])));
+                        System.out.println(
+                            listStudent.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
                         System.out.println(
                             listStudent.contains(new Student(tokens[1])));
                         break;
+                        default:
                     }
                 }
                 break;
