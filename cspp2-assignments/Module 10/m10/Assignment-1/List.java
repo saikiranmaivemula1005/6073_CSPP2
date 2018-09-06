@@ -298,6 +298,9 @@ public class List {
             size++;
         // break;
         }
+        if (size == list.length){
+            list = resize();
+        }
         if (index > 0) {
             for (int i = size; i > index; i--) {
                 list[i] = list[i - 1];
