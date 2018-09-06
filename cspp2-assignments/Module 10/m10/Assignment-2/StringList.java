@@ -106,6 +106,10 @@ public class StringList implements StringListInterface{
      */
 
     // todo - add an overloaded constructor here
+    public StringList(int capacity) {
+        size = 0;
+        list = new String[capacity];
+    }
 
     
     /*
@@ -131,12 +135,12 @@ public class StringList implements StringListInterface{
     /*Inserts all the elements of specified int 
     array to the end of list*/
     public String[] resize() {
-        return Arrays.copyOf(list, size * 2);        
+        return Arrays.copyOf(list, list.length * 2);        
     }
    
     public void addAll(String[] items) {
         int j = 0;
-        if (size == list.length){
+        if ((size + items.length) > 10){
             list = resize();
         }
         for (int i = size; i < (size + items.length); i++){
