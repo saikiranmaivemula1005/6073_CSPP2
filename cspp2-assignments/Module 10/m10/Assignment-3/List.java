@@ -154,7 +154,11 @@ public class List<E> {
      */
     public boolean contains(E item) {
 		//Write logic for contains method
-        return indexOf(item) == -1;
+        for(int i = 0; i < size; i++) {
+            if(list[i].equals(item))
+                return true;
+        }
+        return false;
     }
     /*
      * Returns the index of the first occurrence 
