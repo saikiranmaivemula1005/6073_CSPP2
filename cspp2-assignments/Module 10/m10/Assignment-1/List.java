@@ -273,7 +273,7 @@ public class List {
         for (int i = size; i < (size + items.length); i++){
             list[i] = items[j];
             j++;
-            // size++;
+            size++;
         }
         // System.out.println(Arrays.toString(list));
     }
