@@ -270,7 +270,7 @@ public class List {
     array to the end of list*/
     public void addAll(int items[]) {
         int j = 0;
-        if ((size() + items.length) > list.length) {
+        if ((size() + items.length) > 10) {
             list = resize();
         }
         for (int i = size; i < (size + items.length); i++){
