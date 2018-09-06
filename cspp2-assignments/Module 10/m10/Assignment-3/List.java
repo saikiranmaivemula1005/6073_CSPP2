@@ -143,6 +143,8 @@ public class List<E> {
         }
         str = str + list[i] + "]";
         return str;
+       
+       
     }
     /*
      * Contains return true if the list has
@@ -152,12 +154,7 @@ public class List<E> {
      */
     public boolean contains(E item) {
 		//Write logic for contains method
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
-                return true;
-                // break;
-        }
-        return false;
+        return indexOf(item) == -1;
     }
     /*
      * Returns the index of the first occurrence 
