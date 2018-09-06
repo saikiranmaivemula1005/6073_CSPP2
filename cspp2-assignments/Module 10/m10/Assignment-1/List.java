@@ -353,6 +353,10 @@ public class List {
         if (index < 0) {
             System.out.println("Negative Index Exception");
         }
+        if (index == 0 && size == 1) {
+            System.out.println("Invalid Position Exception");
+        }
+
         if (index == 0 && size == 0) {
             list[index] = item;
             size++;
@@ -369,10 +373,7 @@ public class List {
             list[index] = item;
             size++;
         }
-        if (index == 0 && size == 1) {
-            System.out.println("Invalid Position Exception");
-        }
-
+        
     }
     /**
     * Returns the count of occurances of a given item in the list.
