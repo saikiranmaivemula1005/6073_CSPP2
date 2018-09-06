@@ -183,7 +183,7 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if(index >= 0 && index < size) {
+        if(index > 0 && index < size) {
             for(int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
@@ -292,13 +292,13 @@ public class List {
             size++;
         // break;
         }
-        // else {
-        //     for (int i = size; i > index; i--) {
-        //         list[i] = list[i - 1];
-        //     }
-        //     list[index] = item;
-        //     size++;
-        // }
+        else {
+            for (int i = size; i > index; i--) {
+                list[i] = list[i - 1];
+            }
+            list[index] = item;
+            size++;
+        }
 
     }
     
