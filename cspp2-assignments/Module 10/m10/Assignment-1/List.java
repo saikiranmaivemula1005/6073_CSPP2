@@ -57,12 +57,15 @@ public class List {
     // variable initialization should be done in the constructor
     /**
     * size variable.
-    */ 
+    */
     private int size;
 
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
+     */
+    /**
+     * Constructor for the object list.
      */
     public List() {
 
@@ -139,14 +142,15 @@ public class List {
      * Use java.util.Arrays.copyOf(...) methods which returns a bigger array,
      * with the contents of the original array.
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
+     * Create a method called
+     *  resize(). Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of 
+     * You know enough of
      * Object Oriented Programming to answer these questions :-)
      *
      */
@@ -312,7 +316,7 @@ public class List {
      *
      * @param      items  The items
      */
-    public void addAll(int[] items) {
+    public void addAll(final int[] items) {
         int j = 0;
         final int variable = 10;
         if ((size() + items.length) > variable) {
@@ -330,7 +334,7 @@ public class List {
      *
      * @return     { description_of_the_return_value }
      */
-    private int[] resize(){
+    private int[] resize() {
         return Arrays.copyOf(list, list.length * 2);
     }
 
@@ -365,9 +369,10 @@ public class List {
             size++;
         }
 
-    } 
+    }
     /**
     * Returns the count of occurances of a given item in the list.
+    *@param item is the argument. 
     */
     public int count(final int item) {
         int count = 0;
@@ -381,8 +386,11 @@ public class List {
         }
         return 0;
     }
-
-
+    /**
+     * main method.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
