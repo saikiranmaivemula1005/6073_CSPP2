@@ -155,7 +155,7 @@ public class List<E> {
         for(int i = 0; i < size; i++) {
             if(item == list[i])
                 return true;
-                break;
+                // break;
         }
         return false;
     }
