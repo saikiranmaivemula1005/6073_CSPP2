@@ -71,7 +71,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[20];
+        list = new int[1];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -270,12 +270,18 @@ public class List {
     array to the end of list*/
     public void addAll(int items[]) {
         int j = 0;
+        if (size == list.length){
+            list = resize();
+        }
         for (int i = size; i < (size + items.length); i++){
             list[i] = items[j];
             j++;
         }
         size = size + items.length;
         // System.out.println(Arrays.toString(list));
+    }
+    private int[] resize(){
+        return Arrays.copyOf(list, size * 2);
     }
 
      /* 
