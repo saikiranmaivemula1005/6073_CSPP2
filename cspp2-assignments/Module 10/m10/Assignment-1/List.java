@@ -289,6 +289,9 @@ public class List {
         }
         list[index] = item;
         size++;
+        if (index < 0){
+            System.out.println("Negative Index Exception");
+        }
     }
     
     /* Returns the count of occurances of a given item in the list*/
