@@ -372,7 +372,8 @@ public class List {
     }
     /**
     * Returns the count of occurances of a given item in the list.
-    *@param item is the argument. 
+    *@param item is the argument.
+    *@return returns the count.
     */
     public int count(final int item) {
         int count = 0;
