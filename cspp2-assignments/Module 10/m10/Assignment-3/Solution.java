@@ -9,8 +9,8 @@ import java.util.Scanner;
 //      this.name = name;
 //  }
 
-//  public String getName() 
-//  {//Getter method which returns 
+//  public String getName()
+//  {//Getter method which returns
 //  the value of instance variable
 //      return this.name;
 //  }
@@ -31,7 +31,9 @@ import java.util.Scanner;
 //      return this.name;
 //  }
 // }
-
+/**
+*Solution class.
+*/
 public class Solution {
     /**
      * main method for solution class.
