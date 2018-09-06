@@ -353,14 +353,15 @@ public class List {
         if (index < 0) {
             System.out.println("Negative Index Exception");
         }
-        if (index == 0 && size == 1) {
-            System.out.println("Invalid Position Exception");
-        }
+
 
         if (index == 0 && size == 0) {
             list[index] = item;
             size++;
         // break;
+        }
+        if (index == 0 && size == 1) {
+            System.out.println("Invalid Position Exception");
         }
 
         if (size == list.length) {
