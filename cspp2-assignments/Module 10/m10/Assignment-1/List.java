@@ -270,9 +270,10 @@ public class List {
     array to the end of list*/
     public void addAll(int items[]) {
         int j = 0;
-        for (int i = size; i < (size + items.length); i++){
+        for (int i = size; i < (size + items.length) - 1; i++){
             list[i] = items[j];
             j++;
+            size++;
         }
         System.out.println(Arrays.toString(list));
     }
