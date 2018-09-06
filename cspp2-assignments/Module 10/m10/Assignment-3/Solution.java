@@ -87,7 +87,7 @@ public final class Solution {
      * just for reducing main method lines work in d case.
      *@param stdin scanner obj
      */
-    static void dmethod(final Scanner stdin) {
+    static void doubleMethod(final Scanner stdin) {
         List<Double> listDouble = new List();
             while (stdin.hasNext()) {
                 String line = stdin.nextLine();
@@ -137,7 +137,7 @@ public final class Solution {
      * just for reducing main method lines work in o case.
      *@param stdin scanner obj
      */
-    static void omethod(final Scanner stdin) {
+    static void objectMethod(final Scanner stdin) {
         List<Student> listStudent = new List();
             while (stdin.hasNext()) {
                 String line = stdin.nextLine();
@@ -187,7 +187,7 @@ public final class Solution {
      * just for reducing main method lines work in c case.
      *@param stdin scanner obj
      */
-    static void cmethod(final Scanner stdin) {
+    static void charMethod(final Scanner stdin) {
         List<Character> listCharacter = new List();
             while (stdin.hasNext()) {
                 String line = stdin.nextLine();
@@ -374,13 +374,13 @@ public final class Solution {
             }
             break;
         case "C"://This case will be executed for Character type list
-            cmethod(stdin);
+            charMethod(stdin);
             break;
         case "D"://This case will be executed for Double type list
-            dmethod(stdin);
+            doubleMethod(stdin);
             break;
         case "O":
-            omethod(stdin);
+            objectMethod(stdin);
             break;
         default:
             break;
