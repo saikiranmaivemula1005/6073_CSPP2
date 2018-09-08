@@ -31,12 +31,12 @@ class Set {
        if (size == 0) {
             return "{}";
         }
-        String resultantString = "[";
+        String resultantString = "{";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
             resultantString = resultantString + array[i] + ",";
         }
-        resultantString = resultantString + array[i] + "]";
+        resultantString = resultantString + array[i] + "}";
         return resultantString;
     }
     public void add(final int variable){
