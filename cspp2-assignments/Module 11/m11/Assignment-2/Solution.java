@@ -26,15 +26,15 @@ class Student {
         return this.name;
     }
 
-    @Override
-    public boolean equals(final Object other) {
-        if (!(other instanceof Student)) {
-            return false;
-        }
+    // @Override
+    // public boolean equals(final Object other) {
+    //     if (!(other instanceof Student)) {
+    //         return false;
+    //     }
 
-        Student that = (Student) other;
-        return this.getName().equals(that.getName());
-    }
+    //     Student that = (Student) other;
+    //     return this.getName().equals(that.getName());
+    // }
     /**
      * Returns a string representation of the object.
      *
