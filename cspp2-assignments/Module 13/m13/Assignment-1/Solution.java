@@ -18,13 +18,13 @@ class Set {
     /**
      * Constructor for set object.
      */
-    public Set() {
+    Set() {
         size = 0;
         final int variable = 10;
         array = new int[variable];
     }
     /**
-     * size method
+     * size method.
      *
      * @return    returns the size of array.
      */
@@ -32,7 +32,7 @@ class Set {
         return size;
     }
     /**
-     * contains method
+     * contains method.
      *
      * @param      searchVariable  The search variable
      *
@@ -80,7 +80,7 @@ class Set {
         }
     }
     /**
-     * add the new array to old array. 
+     * add the new array to old array.
      *
      * @param      newArray  The new array
      */
@@ -108,6 +108,13 @@ class Set {
     public int[] resize() {
         return Arrays.copyOf(array, array.length * 2);
     }
+    /**
+     * intersection method.
+     *
+     * @param      inputSet  The input set
+     *
+     * @return returns the intersection set of two sets.
+     */
     public Set intersection(final Set inputSet) {
         Set outputSet = new Set();
     for (int i = 0; i < this.size; i++) {
