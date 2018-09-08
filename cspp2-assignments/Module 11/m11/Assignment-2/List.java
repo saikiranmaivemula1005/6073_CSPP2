@@ -9,16 +9,33 @@ import java.util.Arrays;
      * Here E is a type parameter, and it will be replaced with
         actual type when the object got created.
      */
+        /**
+         * class with name "list".
+         *
+         * @param      <E>   used to declare the data type.
+         */
 public class List<E> {
+    /**
+     * list variable, type array.
+     */
     private E[] list;
+    /**
+     * size variable of int type.
+     */
     private int size;
-    //Constructor
+    /**
+     * constructor for list class.
+     */
     public List() {
-        // Create a variable of the type Object[]
-        list = ((E[])new Object[10]);//Object is the base class for all the classes
+        
+        list = ((E[])new Object[10]);
         size = 0;
     }
-    //Overloaded Constructor
+    /**
+     * overloaded constructor.
+     *
+     * @param      param  The parameter
+     */
     public List(int param) {
         list = ((E[])new Object[param]);
         size = 0;
@@ -31,10 +48,12 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
+    /**
+     * add method.
+     *
+     * @param      item  variable named item.
+     */
     public void add(E item) {
-        //Inserts the specified element at the end of the list.
-        //You can modify the code in this method.
-        // list[(size++)] = item;
         if (size == list.length) {
             resize();
         }
@@ -42,6 +61,11 @@ public class List<E> {
     }
     /*Inserts all the elements of specified int
     array to the end of list*/
+    /**
+     * Adds all the elements of a new array into old array.
+     *
+     * @param      items  new array named items.
+     */
     public void addAll(E[] items) {
         //Write logic for addAll method
         for (E i : items) {
@@ -49,7 +73,7 @@ public class List<E> {
         }
     }
     /**
-     * { function_description }
+     * resize method. 
      */
     private void resize() {
         list = Arrays.copyOf(list, size * 2);
@@ -61,6 +85,11 @@ public class List<E> {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * size method.
+     *
+     * @return     returns the size of array.
      */
     public int size() {
         return size;
@@ -85,6 +114,11 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * remove method.
+     *
+     * @param      index  index of the element to be removed.
+     */
     public void remove(int index) {
         //Write logic for remove method
         if (index < 0 || index >= size) {
@@ -106,6 +140,13 @@ public class List<E> {
      * in the list then that would mean the item doesn't exist.
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
+     */
+    /**
+     * get index method.
+     *
+     * @param      index  The index
+     *
+     * @return returns the element at that index.
      */
     public E get(int index) {
         //Write logic for get method
@@ -136,6 +177,11 @@ public class List<E> {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return returns String representation of the object.
+     */
     public String toString() {
 
         if (size == 0) {
@@ -153,6 +199,13 @@ public class List<E> {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * contains method.
+     *
+     * @param      item  The item
+     *
+     * @return  returns true if the element is in array else false.
+     */
     public boolean contains(E item) {
         //Write logic for contains method
         return indexOf(item) != -1;
@@ -163,7 +216,13 @@ public class List<E> {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-
+    /**
+     * index method.
+     *
+     * @param      item  The item
+     *
+     * @return returns the index of the particular element.
+     */
     public int indexOf(E item) {
         //Write logic for indexOf method
         for (int i = 0; i < size; i++) {
@@ -176,6 +235,12 @@ public class List<E> {
 
     /* Removes all of its elements that
      * are contained in the specified int array.
+     */
+    /**
+     * Removes all of its elements that
+     * are contained in the specified int array
+     *
+     * @param      newArray  The new array
      */
     public void removeAll(E[] newArray) {
         for (E ele : newArray) {
@@ -193,6 +258,17 @@ public class List<E> {
      indicates the startIndex and the second parameter
      indicates the endIndex.
      */
+     /**Returns a list containing elements, including
+     *startIndex and excluding endIndex. The first parameter
+     *indicates the startIndex and the second parameter
+     *indicates the endIndex.
+      * 
+      *
+      * @param      start  The start index
+      * @param      end    The end index
+      *
+      * @return returns the sublist.
+      */
     public List subList(int start, int end) {
 
         if ( start > end || start < 0 || end < 0) {
@@ -209,6 +285,14 @@ public class List<E> {
     /*Returns a boolean indicating whether the parameter
       i.e a List object is exactly matching with the given list or not.
      */
+      /**
+       * equals method.
+       *
+       * @param      newlist  The newlist
+       *
+       * @return Returns a boolean indicating whether the parameter
+      *i.e a List object is exactly matching with the given list or not. 
+       */
     public boolean equals(List<E> newlist) {
         if (this.size() != newlist.size()) {
             return false;
@@ -221,6 +305,9 @@ public class List<E> {
         return true;
     }
     /*Removes all the elements from list*/
+    /**
+     * removes all the elements from array.
+     */
     public void clear() {
         // write the logic for clear.
         size = 0;
