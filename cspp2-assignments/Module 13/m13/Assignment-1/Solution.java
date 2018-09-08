@@ -1,6 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.*;
 
 /**
  * Class for set.
@@ -50,10 +51,10 @@ class Set {
             array = resize();
         }
         for (int i = size; i < (size + newArray.length); i++) {
-            if (array[i] != newArray[j]) {
-               array[i] = newArray[j];
+            if (!(Arrays.asList(array).contains(newArray[j]))){
+                array[i] = newArray[j];
                 j++;
-        }
+            } 
         }
         size = size + newArray.length;
     }
@@ -61,6 +62,7 @@ class Set {
         return Arrays.copyOf(array, array.length * 2);
     }
     // public Set intersection(Set outputSet) {
+
            
     // }
     // public Set retainAll(int[] newArray) {
@@ -161,8 +163,8 @@ public final class Solution {
                 // t.add(intArray);
                 // System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
                 // break;
-                // default:
-                // break;
+                default:
+                break;
             }
         }
     }
