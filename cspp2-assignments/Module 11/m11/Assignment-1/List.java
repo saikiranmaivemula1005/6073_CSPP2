@@ -5,54 +5,6 @@ import java.util.Arrays;
  * class list .
  */
 public class List {
-  //Implement all the methods mentioned to build a ListADT
-  /*
-   * The goal for the list is to store items.
-   * How are we going to store the items in the list?
-   * An array would be good. Right?
-   * So, assume we are only going to have ints in the list
-   * We need to create an array of ints to store the items
-   * added to the list.
-   * Create a variable of the type int[]
-   * Use the private access specifier
-   * Why private access specifier and why not public?
-   * Well, we don't want the array to be manipulated by
-   * methods that are outside the List class.
-   * If you allow methods outside the List class to manipulate
-   * the array then there is a possibility of having a corrupted
-   * list i.e., a list with incorrect items.
-   * This is not desirable and so having private access specifer
-   * will protect the array such corruption.
-   * This is a hard concept to understand. Discuss with your mentor.
-  */
-  // declare a private int[]
-  // don't create the array yet using new
-  // that's the job of the List constructor
-  /*
-   * What are the other class variables needed for creating a list?
-   * How about keeping track of the size of the list?
-   * If you add 2 items to the list then the size should be 2.
-   * Let's think about the size of the list by comparing it to the
-   * length of the array. Do they mean the same?
-   * No, Array length signifies the maximum number of items
-   * you can store in the list. Whereas, the size of the list
-   * denotes the number of items in the list. Makes sense?
-   * Here is an example:
-   * array = [1,2,3,0,0,0,0,0,0,0]
-   * The length of the array is 10 and size is 3.
-   * This means you can store 10 items in the list and
-   * currently it has 3 items.
-   * So, to keep track of the size we need a variable called size
-   * Again, we use private as we don't want that size variable
-   * to be accessed by the methods that are outside of the List class.
-   *
-   */
-  // declare a private int size
-  // again, don't initialize it here
-  // variable initialization should be done in the constructor
-  /**
-   * array to store int's.
-   */
   private int[] array;
   /**
    * array size.
@@ -339,11 +291,103 @@ public class List {
    *
    * @param   args The command line arguments
    */
-  public static void main(final String[] args) {
-    // create an object of the list to invoke methods on it
-    List l = new List();
-    // code to read the test cases input file
-    Scanner stdin = new Scanner(new BufferedInputStream(System.in));
-    // check if there is one more l...
+  
+
+    public static void main(String[] args) {
+        // create an object of the list to invoke methods on it
+        List l = new List();
+
+        // code to read the test cases input file
+        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+        // check if there is one more line to process
+        while (stdin.hasNext()) {
+            // read the line
+            String line = stdin.nextLine();
+            // split the line using space
+            String[] tokens = line.split(" ");
+            // based on the list operation invoke the corresponding method
+            switch (tokens[0]) {
+                case "add":
+                    if (tokens.length == 2){
+                        String[] t = tokens[1].split(",");
+                        if (t.length == 1) {
+                            l.add(Integer.parseInt(tokens[1]));
+                        }
+                    }
+                break;
+                case "size":
+                    System.out.println(l.size());
+                break;
+                case "print":
+                    System.out.println(l);
+                break;
+                case "remove":
+                    if (tokens.length == 2) {
+                        l.remove(Integer.parseInt(tokens[1]));
+                    }
+                break;
+                case "indexOf":
+                    if (tokens.length == 2) {
+                        System.out.println(l.indexOf(
+                            Integer.parseInt(tokens[1])));
+                    }
+                break;
+                case "get":
+                    if (tokens.length == 2) {
+                        System.out.println(l.get(
+                            Integer.parseInt(tokens[1])));
+                    }
+                break;
+                case "contains":
+                    if (tokens.length == 2) {
+                        System.out.println(l.contains(
+                            Integer.parseInt(tokens[1])));
+                    }
+                break;
+                case "addAll":
+                    if (tokens.length == 2) {
+                        String[] t1 = tokens[1].split(",");
+                        int[] temp = new int[t1.length];
+                        for(int i = 0; i < temp.length; i++) {
+                            temp[i]=Integer.parseInt(t1[i]);
+                        }
+                        l.addAll(temp);
+                    }
+                break;
+                case "removeAll":
+                    if (tokens.length == 2) {
+                        String[] t2 = tokens[1].split(",");
+                        int[] a = new int[t2.length];
+                        for(int i = 0; i < t2.length; i++)
+                            a[i] = Integer.parseInt(t2[i]);
+                        l.removeAll(a);
+                    }
+                break;
+                case "subList": {
+                    if (tokens.length != 2) break;
+                    String[] arrstring3 = tokens[1].split(",");
+                    List object = l.subList(Integer.parseInt(arrstring3[0]),
+                            Integer.parseInt(arrstring3[1]));
+                    if (object != null) 
+                        System.out.println(object);
+                    break;
+                }
+                case "equals":
+                    if (tokens.length == 2) {
+                        String[] lt = tokens[1].split(",");
+                        List l2 = new List();
+                        for (int k = 0; k < lt.length; k++ ) {
+                            l2.add(Integer.parseInt(lt[k]));
+                        }
+                        System.out.println(l.equals(l2));
+                    }
+                break;
+                case "clear":
+                    l.clear();
+                break;
+                default:
+                break;
+            }
+        }
     }
 }
