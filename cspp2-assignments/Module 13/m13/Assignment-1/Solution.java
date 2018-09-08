@@ -68,16 +68,16 @@ class Set {
     }
     public Set retainAll(int[] newArray) {
         Set s = new Set();
-        // for (int i = 0; i < newArray.length; i++) {
-        //     s.add(newArray[i]);
-        // }
-        for(int i = 0; i<newArray.length; i++){
-            for(int j=newArray.length; j>0; j--){
-                if (newArray[i] == newArray[j]){
-                    s.add(j);
-                }
-            }
+        for (int i = 0; i < newArray.length; i++) {
+            s.add(newArray[i]);
         }
+        // for(int i = 0; i<newArray.length; i++){
+        //     for(int j=newArray.length; j>0; j--){
+        //         if (newArray[i] == newArray[j]){
+        //             s.add(j);
+        //         }
+        //     }
+        // }
         return s;
      
 
