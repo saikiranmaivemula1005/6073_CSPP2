@@ -29,7 +29,7 @@ class Set {
     }
     public String toString() {
        if (size == 0) {
-            return "[]";
+            return "{}";
         }
         String resultantString = "[";
         int i = 0;
