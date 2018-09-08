@@ -439,19 +439,21 @@ public class Solution {
                         l.removeAll(students);
                     }
                 break;
-                case "subList": {
-                    if (tokens.length != 2) break;
+                case "subList": 
+                    if (tokens.length != 2) {
+                     break;
+                    }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    if (object != null) { 
                         System.out.println(object);
+                    }
                     break;
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
                         List l2 = new List();
-                        for (int k = 0; k < lt.length; k++ ) {
+                        for (int k = 0; k < lt.length; k++) {
                             l2.add((lt[k]));
                         }
                         System.out.println(l.equals(l2));
@@ -463,15 +465,20 @@ public class Solution {
                 default:
                 break;
             }
-        }   
+        }
     }
+    /**
+     * main method.
+     *
+     * @param      args  The arguments
+     */
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
 
-        switch(objectType) {
+        switch (objectType) {
             case "S"://This case will be executed for String type list
                 executeListString(stdin);
             break;
@@ -492,7 +499,7 @@ public class Solution {
                 executeListDouble(stdin);
             break;
 
-            case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+            case "O":
                 executeListStudent(stdin);
                 break;
             default:
