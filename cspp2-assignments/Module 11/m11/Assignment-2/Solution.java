@@ -22,12 +22,12 @@ class Student {
          *
          * @return returns name of string.
          */
-    public String getName() { //Getter method which returns the value of instance variable
+    public String getName() {
         return this.name;
     }
 
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
         if (!(other instanceof Student)) {
             return false;
         }
@@ -44,7 +44,9 @@ class Student {
         return this.name;
     }
 }
-
+    /**
+     * Class for solution.
+     */
 public class Solution {
     /**
      * solution constructor.
@@ -87,8 +89,8 @@ public class Solution {
                 break;
                 case "indexOf":
                     if (tokens.length == 2) {
-                        System.out.println
-                        (l.indexOf(Integer.parseInt(tokens[1])));
+                        System.out.println(
+                        l.indexOf(Integer.parseInt(tokens[1])));
                     }
                 break;
                 case "get":
@@ -98,8 +100,8 @@ public class Solution {
                 break;
                 case "contains":
                     if (tokens.length == 2) {
-                        System.out.println
-                        (l.contains(Integer.parseInt(tokens[1])));
+                        System.out.println(
+                        l.contains(Integer.parseInt(tokens[1])));
                     }
                 break;
                 case "addAll":
@@ -107,7 +109,7 @@ public class Solution {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
                         for (int i = 0; i < temp.length; i++) {
-                            temp[i]=Integer.parseInt(t1[i]);
+                            temp[i] = Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
                     }
@@ -127,8 +129,9 @@ public class Solution {
                         break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
-                    if (object != null) { 
+                    List object = l.subList(
+                        Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
+                    if (object != null) {
                         System.out.println(object);
                     }
                     break;
@@ -153,7 +156,7 @@ public class Solution {
     /**
      * execute list double method.
      *
-     * @param      stdin scanner variable. 
+     * @param      stdin scanner variable.
      */
     public static void executeListDouble(final Scanner stdin) {
         List<Double> l = new List();
@@ -185,8 +188,8 @@ public class Solution {
                 break;
                 case "indexOf":
                     if (tokens.length == 2) {
-                        System.out.println
-                        (l.indexOf(Double.parseDouble(tokens[1])));
+                        System.out.println(
+                        l.indexOf(Double.parseDouble(tokens[1])));
                     }
                 break;
                 case "get":
@@ -196,8 +199,8 @@ public class Solution {
                 break;
                 case "contains":
                     if (tokens.length == 2) {
-                        System.out.println
-                        (l.contains(Double.parseDouble(tokens[1])));
+                        System.out.println(
+                        l.contains(Double.parseDouble(tokens[1])));
                     }
                 break;
                 case "addAll":
@@ -225,7 +228,8 @@ public class Solution {
                         break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList(Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
+                    List object = l.subList
+                    (Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
                     if (object != null) {
                         System.out.println(object);
                     }
@@ -283,8 +287,8 @@ public class Solution {
                 break;
                 case "indexOf":
                     if (tokens.length == 2) {
-                        System.out.println
-                        (l.indexOf(Float.parseFloat(tokens[1])));
+                        System.out.println(
+                        l.indexOf(Float.parseFloat(tokens[1])));
                     }
                 break;
                 case "get":
@@ -294,8 +298,8 @@ public class Solution {
                 break;
                 case "contains":
                     if (tokens.length == 2) {
-                        System.out.println(l.contains
-                            (Float.parseFloat(tokens[1])));
+                        System.out.println(l.contains(
+                        Float.parseFloat(tokens[1])));
                     }
                 break;
                 case "addAll":
@@ -318,7 +322,7 @@ public class Solution {
                         l.removeAll(a);
                     }
                 break;
-                case "subList": 
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
