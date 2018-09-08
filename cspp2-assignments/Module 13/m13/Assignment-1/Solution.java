@@ -1,19 +1,21 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-import java.util.*;
+
 
 /**
  * Class for set.
- * @author : 
  */
 class Set {
     //your code goes here...
     //Good luck :-)
     /**
-    * private variable
+    * private variable size of int type.
     */
     private int size;
+    /**
+     * private array of int type.
+     */
     private int[] array;
     /**
      * Constructor for set object.
