@@ -43,6 +43,7 @@ class Set {
         System.out.println("hello");
         array[size] = variable;
         size++;
+        System.out.println("ok");
     }
     public void add(final int[] newArray) {
         int j = 0;
