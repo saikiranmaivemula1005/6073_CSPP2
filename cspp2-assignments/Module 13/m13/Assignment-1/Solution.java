@@ -62,9 +62,10 @@ class Set {
         return Arrays.copyOf(array, array.length * 2);
     }
     // public Set intersection(Set outputSet) {
-
+    //     s.retainAll(outputSet);
+    //     return s;
            
-    // }
+    }
     // public Set retainAll(int[] newArray) {
      
 
@@ -72,7 +73,7 @@ class Set {
     // public int[][] cartesianProduct(Set outputSet){
        
     // }
-}
+
 /**
  * Solution class for code-eval.
  */
@@ -137,16 +138,17 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-                // case "intersection":
-                // s = new Set();
-                // Set t = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // // System.out.println(s);
-                // intArray = intArray(tokens[2]);
-                // t.add(intArray);
+                case "intersection":
+                s = new Set();
+                Set t = new Set();
+                intArray = intArray(tokens[1]);
+                System.out.println(intArray);
+                s.add(intArray);
+                // System.out.println(s);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
                 // System.out.println(s.intersection(t));
-                // break;
+                break;
                 // case "retainAll":
                 // s = new Set();
                 // intArray = intArray(tokens[1]);
