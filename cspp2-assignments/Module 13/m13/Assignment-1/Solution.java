@@ -63,6 +63,11 @@ class Set {
         resultantString = resultantString + array[i] + "}";
         return resultantString;
     }
+    /**
+     * adds the new element to the array.
+     *
+     * @param      variable  The variable
+     */
     public void add(final int variable) {
          int count = 0;
         for (int i = 0; i < size; i++) {
@@ -74,6 +79,11 @@ class Set {
             array[size++] = variable;
         }
     }
+    /**
+     * add the new array to old array. 
+     *
+     * @param      newArray  The new array
+     */
     public void add(final int[] newArray) {
          if (newArray.length > array.length) {
             array = resize();
@@ -90,13 +100,15 @@ class Set {
             }
         }
     }
+    /**
+     * resize method.
+     *
+     * @return returns the resized array.
+     */
     public int[] resize() {
         return Arrays.copyOf(array, array.length * 2);
     }
     public Set intersection(final Set inputSet) {
-        // if (this.size == 0 || inputSet.size == 0) {
-        //     return "{}";
-        
         Set outputSet = new Set();
     for (int i = 0; i < this.size; i++) {
         for (int j = 0; j < inputSet.size; j++) {
@@ -105,12 +117,16 @@ class Set {
             }
         }
     }
-        return outputSet;      
+        return outputSet;
     }
-    public Set retainAll(int[] intArray) {
-       // if (this.size == 0 || intArray.length == 0) {
-       //    return "{}";
-        
+    /**
+     * retainall method.
+     *
+     * @param      intArray  The int array
+     *
+     * @return     returns the elements present in both sets.
+     */
+    public Set retainAll(final int[] intArray) {
         Set outputSet = new Set();
         for (int i : this.array) {
             for (int j = 0; j < intArray.length; j++) {
@@ -121,7 +137,14 @@ class Set {
         }
         return outputSet;
     }
-    public int[][] cartesianProduct(Set outputSet){
+    /**
+     * cartesian product method.
+     *
+     * @param      outputSet  The output set
+     *
+     * @return     returns the cartesian product.
+     */
+    public int[][] cartesianProduct(final Set outputSet) {
        int numberOfElements = this.size * outputSet.size;
         int[][] newArray;
         newArray = new int[numberOfElements][2];
