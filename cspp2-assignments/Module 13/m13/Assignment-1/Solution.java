@@ -41,6 +41,9 @@ class Set {
     }
     public void add(final int variable){
         array[size] = variable;
+        System.out.println(array);
+        System.out.println(variable);
+        System.out.println(array[size]);
         size++;
     }
     public void add(final int[] newArray) {
@@ -59,7 +62,7 @@ class Set {
         return Arrays.copyOf(array, array.length * 2);
     }
     // public Set intersection(Set outputSet) {
-    //       return 
+           
     // }
     // public Set retainAll(int[] newArray) {
      
@@ -133,12 +136,12 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-                case "intersection":
-                s = new Set();
-                Set t = new Set();
-                intArray = intArray(tokens[1]);
-                s.add(intArray);
-                System.out.println(s);
+                // case "intersection":
+                // s = new Set();
+                // Set t = new Set();
+                // intArray = intArray(tokens[1]);
+                // s.add(intArray);
+                // // System.out.println(s);
                 // intArray = intArray(tokens[2]);
                 // t.add(intArray);
                 // System.out.println(s.intersection(t));
