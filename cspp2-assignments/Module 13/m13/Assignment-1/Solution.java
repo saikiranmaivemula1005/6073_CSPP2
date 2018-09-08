@@ -10,24 +10,47 @@ import java.util.*;
 class Set {
     //your code goes here...
     //Good luck :-)
+    /**
+    * private variable
+    */
     private int size;
     private int[] array;
+    /**
+     * Constructor for set object.
+     */
     public Set() {
         size = 0;
         final int variable = 10;
         array = new int[variable];
     }
+    /**
+     * size method
+     *
+     * @return    returns the size of array.
+     */
     public int size() {
         return size;
     }
+    /**
+     * contains method
+     *
+     * @param      searchVariable  The search variable
+     *
+     * @return returns true if the element is in array.
+     */
     public boolean contains(final int searchVariable) {
-        for(int i = 0; i < size; i++){
-            if (array[i] == searchVariable){
+        for (int i = 0; i < size; i++) {
+            if (array[i] == searchVariable) {
                 return true;
             }
         }
         return false;
     }
+    /**
+     * Returns a string representation of the array.
+     *
+     * @return     String representation of the array.
+     */
     public String toString() {
        if (size == 0) {
             return "{}";
@@ -40,61 +63,80 @@ class Set {
         resultantString = resultantString + array[i] + "}";
         return resultantString;
     }
-    public void add(final int variable){
-        array[size] = variable;
-        size++;
+    public void add(final int variable) {
+         int count = 0;
+        for (int i = 0; i < size; i++) {
+            if (array[i] != variable) {
+                count++;
+            }
+        }
+        if (count == size) {
+            array[size++] = variable;
+        }
     }
     public void add(final int[] newArray) {
-        int j = 0;
-        final int variable = 10;
-        if ((size() + newArray.length) > variable) {
+         if (newArray.length > array.length) {
             array = resize();
         }
-        for (int i = size; i < (size + newArray.length); i++) {
-            if (!(Arrays.asList(array).contains(newArray[j]))){
-                array[i] = newArray[j];
-                j++;
-            } 
+           for (int i : newArray) {
+            int count = 0;
+            for (int j = 0; j < size; j++) {
+                if (array[j] != i) {
+                    count++;
+                }
+            }
+            if (count == size) {
+                array[size++] = i;
+            }
         }
-        size = size + newArray.length;
     }
     public int[] resize() {
         return Arrays.copyOf(array, array.length * 2);
     }
-    public Set intersection(Set setOne) {
-        setOne.retainAll(array);
-        return setOne;
-           
-    }
-    public Set retainAll(int[] newArray) {
-        Set s = new Set();
-        for (int i = 0; i < newArray.length; i++) {
-            s.add(newArray[i]);
+    public Set intersection(final Set inputSet) {
+        // if (this.size == 0 || inputSet.size == 0) {
+        //     return "{}";
+        
+        Set outputSet = new Set();
+    for (int i = 0; i < this.size; i++) {
+        for (int j = 0; j < inputSet.size; j++) {
+            if (this.array[i] == inputSet.array[j]) {
+               outputSet.add(array[i]);
+            }
         }
-        // for(int i = 0; i<newArray.length; i++){
-        //     for(int j=newArray.length; j>0; j--){
-        //         if (newArray[i] == newArray[j]){
-        //             s.add(j);
-        //         }
-        //     }
-        // }
-        return s;
-     
-
+    }
+        return outputSet;      
+    }
+    public Set retainAll(int[] intArray) {
+       // if (this.size == 0 || intArray.length == 0) {
+       //    return "{}";
+        
+        Set outputSet = new Set();
+        for (int i : this.array) {
+            for (int j = 0; j < intArray.length; j++) {
+                if (i == intArray[j]) {
+                    outputSet.add(i);
+                }
+            }
+        }
+        return outputSet;
     }
     public int[][] cartesianProduct(Set outputSet){
-        int[][] outputArray = new int[5][5];
-        System.out.println(outputSet);
-        // for (int i = 0; i<outputSet.length;i ++){
-        //     for(int j = 0; j <i; j++){
-        //         outputArray[i][j] = outputSet[i];
-        //     }
+       int numberOfElements = this.size * outputSet.size;
+        int[][] newArray;
+        newArray = new int[numberOfElements][2];
+        int i = 0;
+            for (int k = 0; k < this.size; k++) {
+                for (int j = 0; j < outputSet.size; j++) {
 
-            
-        
+                newArray[i][0] = this.array[k];
+                newArray[i][1] = outputSet.array[j];
+                i++;
 
+                }
+            }
 
-       return outputArray;
+    return newArray;
     }
 }
 /**
@@ -169,7 +211,7 @@ public final class Solution {
                 // System.out.println(s);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                System.out.println(s.intersection(t));
+                System.out.println(s.intersection(s));
                 break;
                 case "retainAll":
                 s = new Set();
