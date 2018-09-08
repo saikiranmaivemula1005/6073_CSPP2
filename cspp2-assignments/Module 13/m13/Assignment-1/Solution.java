@@ -61,19 +61,24 @@ class Set {
     public int[] resize() {
         return Arrays.copyOf(array, array.length * 2);
     }
-    // public Set intersection(Set outputSet) {
-    //     s.retainAll(outputSet);
-    //     return s;
+    public Set intersection(Set setOne) {
+        setOne.retainAll(array);
+        return setOne;
            
     }
-    // public Set retainAll(int[] newArray) {
+    public Set retainAll(int[] newArray) {
+        Set s = new Set();
+        for (int i = 0; i < newArray.length; i++) {
+            System.out.println(newArray[i]);
+        }
+        return s;
      
 
-    // }
-    // public int[][] cartesianProduct(Set outputSet){
+    }
+    // public int[][] cartesianProduct(Set setOne, Set setTwo){
        
     // }
-
+}
 /**
  * Solution class for code-eval.
  */
@@ -142,20 +147,19 @@ public final class Solution {
                 s = new Set();
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
-                System.out.println(Integer.toString(intArray[1]));
                 s.add(intArray);
                 // System.out.println(s);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                // System.out.println(s.intersection(t));
+                System.out.println(s.intersection(t));
                 break;
-                // case "retainAll":
-                // s = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // System.out.println(s.retainAll(intArray));
-                // break;
+                case "retainAll":
+                s = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
+                break;
                 // case "cartesianProduct":
                 // s = new Set();
                 // t = new Set();
