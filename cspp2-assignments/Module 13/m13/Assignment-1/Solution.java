@@ -9,12 +9,12 @@ import java.util.Arrays;
 class Set {
     //your code goes here...
     //Good luck :-)
-    public int size;
-    public int[] array;
+    private int size;
+    private int[] array;
     public Set() {
         size = 0;
         final int variable = 10;
-        int[] array = new int[variable];
+        array = new int[variable];
     }
     public int size() {
         return size;
@@ -41,9 +41,6 @@ class Set {
     }
     public void add(final int variable){
         array[size] = variable;
-        System.out.println(array);
-        System.out.println(variable);
-        System.out.println(array[size]);
         size++;
     }
     public void add(final int[] newArray) {
