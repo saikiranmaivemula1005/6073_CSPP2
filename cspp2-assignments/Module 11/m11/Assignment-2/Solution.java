@@ -25,7 +25,13 @@ class Student {
     public String getName() {
         return this.name;
     }
-
+    /**
+     * over ride equals method.
+     *
+     * @param      other  The other
+     *
+     * @return   returns true if equal else false.
+     */
     @Override
     public boolean equals(final Object other) {
         if (!(other instanceof Student)) {
