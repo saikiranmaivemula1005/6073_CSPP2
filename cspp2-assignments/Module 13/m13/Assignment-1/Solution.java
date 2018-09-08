@@ -132,6 +132,7 @@ public final class Solution {
                 break;
                 case "add":
                 int[] intArray = intArray(tokens[1]);
+                System.out.println(tokens[1]);
                 if (intArray.length == 1) {
                     s.add(intArray[0]);
                 } else {
