@@ -40,6 +40,7 @@ class Set {
         return resultantString;
     }
     public void add(final int variable){
+        System.out.println("hello");
         array[size] = variable;
         size++;
     }
