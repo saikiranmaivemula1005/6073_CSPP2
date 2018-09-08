@@ -72,7 +72,7 @@ class Set {
         //     s.add(newArray[i]);
         // }
         for(int i = 0; i<newArray.length; i++){
-            for(int j=0; j<newArray.length; j++){
+            for(int j=newArray.length; j>0; j--){
                 if (newArray[i] == newArray[j]){
                     s.add(j);
                 }
