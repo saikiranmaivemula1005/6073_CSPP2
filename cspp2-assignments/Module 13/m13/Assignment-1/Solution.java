@@ -43,16 +43,21 @@ class Set {
         array[size++] = variable;
     }
     public void add(final int[] newArray) {
-        int j = 0; 
-        final int variable = 10;
-        if ((size() + newArray.length) > variable) {
-            array = resize();
+        if (size == array.length || array.length - size < newArray.length) {
+            int[] temporaryArray = new int[array.length + array.length];
+            for (int i = 0; i < size; i++) {
+                temporaryArray[i] = array[i];
+            }
+            for (int i = 0; i < newArray.length; i++) {
+                temporaryArray[i + size] = newArray[i];
+            }
+        array = temporaryArray;
+        } else {
+            for (int i = 0; i < newArray.length; i++) {
+                array[i + size] = newArray[i];
+            }
         }
-        for(int i = size; i < (size + newArray.length); i++){
-            array[i] = newArray[j];
-            j++;
-        }
-        size = size + newArray.length;
+        size += newArray.length;
     }
     public int[] resize() {
         return Arrays.copyOf(array, array.length * 2);
