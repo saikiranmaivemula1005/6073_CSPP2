@@ -50,8 +50,10 @@ class Set {
             array = resize();
         }
         for (int i = size; i < (size + newArray.length); i++) {
-            array[i] = newArray[j];
-            j++;
+            if (array[i] != newArray[j]) {
+               array[i] = newArray[j];
+                j++;
+        }
         }
         size = size + newArray.length;
     }
