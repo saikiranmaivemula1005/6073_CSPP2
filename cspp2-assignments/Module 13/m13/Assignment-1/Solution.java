@@ -211,7 +211,7 @@ public final class Solution {
                 // System.out.println(s);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                System.out.println(s.intersection(s));
+                System.out.println(s.intersection(t));
                 break;
                 case "retainAll":
                 s = new Set();
