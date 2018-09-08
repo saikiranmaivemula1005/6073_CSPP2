@@ -12,7 +12,7 @@ class Set {
     private int size;
     private int[] array;
     protected Set() {
-        size = 1;
+        size = 0;
         final int variable = 10;
         int[] array = new int[variable];
     }
@@ -48,7 +48,7 @@ class Set {
         if ((size() + newArray.length) > variable) {
             array = resize();
         }
-        for (int i = size; i < (size + newArray.length); i++) {
+        for (int i = 0; i < (size + newArray.length); i++) {
             array[i] = newArray[j];
             j++;
         }
