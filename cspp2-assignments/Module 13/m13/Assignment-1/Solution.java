@@ -34,7 +34,7 @@ class Set {
         String resultantString = "{";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
-            resultantString = resultantString + array[i] + ",";
+            resultantString = resultantString + array[i] + ", ";
         }
         resultantString = resultantString + array[i] + "}";
         return resultantString;
