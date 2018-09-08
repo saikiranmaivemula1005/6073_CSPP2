@@ -9,8 +9,8 @@ import java.util.Arrays;
 class Set {
     //your code goes here...
     //Good luck :-)
-    private int size;
-    private int[] array;
+    public int size;
+    public int[] array;
     public Set() {
         size = 0;
         final int variable = 10;
