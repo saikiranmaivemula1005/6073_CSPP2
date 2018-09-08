@@ -225,9 +225,16 @@ public final class Solution {
                 t = new Set();
                 intArray = intArray(tokens[1]);
                 s.add(intArray);
+                int a = s.size();
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                int b = t.size();
+                if (a == 0 || b == 0) {
+                    System.out.println("null");
+                } else {
+    System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                }
+
                 break;
                 default:
                 break;
