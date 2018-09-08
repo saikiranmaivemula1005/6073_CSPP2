@@ -12,10 +12,10 @@ class Student {
     /**
      * constructor of student class.
      *
-     * @param      name  The name
+     * @param      n  The name
      */
-    Student(final String name) {
-        this.name = name;
+    Student(final String n) {
+        name = n;
         }
         /**
          * Gets the name of the string.
