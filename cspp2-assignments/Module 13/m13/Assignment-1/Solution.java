@@ -40,7 +40,6 @@ class Set {
         return resultantString;
     }
     public void add(final int variable){
-        System.out.println("hello");
         array[size] = variable;
         size++;
     }
@@ -59,16 +58,16 @@ class Set {
     public int[] resize() {
         return Arrays.copyOf(array, array.length * 2);
     }
-    public Set intersection(Set outputSet) {
-     return null;   
-    }
-    public Set[] retainAll(int[] newArray) {
-        return null;
+    // public Set intersection(Set outputSet) {
+    //       return 
+    // }
+    // public Set retainAll(int[] newArray) {
+     
 
-    }
-    public int[][] cartesianProduct(Set outputSet){
-        return null;
-    }
+    // }
+    // public int[][] cartesianProduct(Set outputSet){
+       
+    // }
 }
 /**
  * Solution class for code-eval.
@@ -139,28 +138,29 @@ public final class Solution {
                 Set t = new Set();
                 intArray = intArray(tokens[1]);
                 s.add(intArray);
-                intArray = intArray(tokens[2]);
-                t.add(intArray);
-                System.out.println(s.intersection(t));
-                break;
-                case "retainAll":
-                s = new Set();
-                intArray = intArray(tokens[1]);
-                s.add(intArray);
-                intArray = intArray(tokens[2]);
-                System.out.println(s.retainAll(intArray));
-                break;
-                case "cartesianProduct":
-                s = new Set();
-                t = new Set();
-                intArray = intArray(tokens[1]);
-                s.add(intArray);
-                intArray = intArray(tokens[2]);
-                t.add(intArray);
-                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-                break;
-                default:
-                break;
+                System.out.println(s);
+                // intArray = intArray(tokens[2]);
+                // t.add(intArray);
+                // System.out.println(s.intersection(t));
+                // break;
+                // case "retainAll":
+                // s = new Set();
+                // intArray = intArray(tokens[1]);
+                // s.add(intArray);
+                // intArray = intArray(tokens[2]);
+                // System.out.println(s.retainAll(intArray));
+                // break;
+                // case "cartesianProduct":
+                // s = new Set();
+                // t = new Set();
+                // intArray = intArray(tokens[1]);
+                // s.add(intArray);
+                // intArray = intArray(tokens[2]);
+                // t.add(intArray);
+                // System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                // break;
+                // default:
+                // break;
             }
         }
     }
