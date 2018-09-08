@@ -14,11 +14,11 @@ class Student {
      *
      * @param      name  The name
      */
-    Student(String name) {
+    Student(final String name) {
         this.name = name;
         }
         /**
-         * Gets the name of the string
+         * Gets the name of the string.
          *
          * @return returns name of string.
          */
@@ -130,7 +130,8 @@ public class Solution {
                     }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(
-                        Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
+                        Integer.parseInt(
+                        arrstring3[0]), Integer.parseInt(arrstring3[1]));
                     if (object != null) {
                         System.out.println(object);
                     }
@@ -228,8 +229,8 @@ public class Solution {
                         break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList
-                    (Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
+                    List object = l.subList(
+                    Integer.parseInt(arrstring3[0]), Integer.parseInt(arrstring3[1]));
                     if (object != null) {
                         System.out.println(object);
                     }
