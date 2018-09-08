@@ -11,7 +11,7 @@ class Set {
     //Good luck :-)
     private int size;
     private int[] array;
-    protected Set() {
+    public Set() {
         size = 0;
         final int variable = 10;
         int[] array = new int[variable];
@@ -43,7 +43,6 @@ class Set {
         System.out.println("hello");
         array[size] = variable;
         size++;
-        System.out.println("ok");
     }
     public void add(final int[] newArray) {
         int j = 0;
