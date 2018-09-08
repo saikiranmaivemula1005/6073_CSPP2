@@ -84,8 +84,9 @@ class Set {
     }
     public int[][] cartesianProduct(Set outputSet){
         int[][] outputArray = new int[5][5];
-        for (int i=0; i<5;i++) {
-            System.out.println(outputSet);
+        for (int i=0; i< 5;i++) {
+           System.out.println(outputSet);
+            
         }
 
 
