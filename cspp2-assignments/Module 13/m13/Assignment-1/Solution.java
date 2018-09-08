@@ -21,7 +21,7 @@ class Set {
     }
     public boolean contains(final int searchVariable) {
         for(int i = 0; i < size; i++){
-            if (array.equals(searchVariable)){
+            if (array[i] == searchVariable){
                 return true;
             }
         }
