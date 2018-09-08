@@ -40,7 +40,8 @@ class Set {
         return resultantString;
     }
     public void add(final int variable){
-        array[size++] = variable;
+        array[size] = variable;
+        size++;
     }
     public void add(final int[] newArray) {
         int j = 0;
@@ -48,7 +49,7 @@ class Set {
         if ((size() + newArray.length) > variable) {
             array = resize();
         }
-        for (int i = 0; i < (size + newArray.length); i++) {
+        for (int i = size; i < (size + newArray.length); i++) {
             array[i] = newArray[j];
             j++;
         }
