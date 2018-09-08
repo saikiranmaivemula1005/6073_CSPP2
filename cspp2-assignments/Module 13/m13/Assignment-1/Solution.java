@@ -69,7 +69,7 @@ class Set {
     public Set retainAll(int[] newArray) {
         Set s = new Set();
         for (int i = 0; i < newArray.length; i++) {
-            System.out.println("array elements");
+            s.add(i);
         }
         return s;
      
