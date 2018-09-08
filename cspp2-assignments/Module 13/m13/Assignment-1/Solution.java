@@ -12,7 +12,7 @@ class Set {
     private int size;
     private int[] array;
     protected Set() {
-        size = 0;
+        size = 1;
         final int variable = 10;
         int[] array = new int[variable];
     }
