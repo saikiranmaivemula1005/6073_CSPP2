@@ -149,15 +149,7 @@ class SortedSet extends Set {
      * less than the given value in the set.
      */
     public int[] headSet(final int toElement) {
-        int[] resultSet = new int[variable];
-        int subsetSize = 0;
-        for (int i = 0; i < size; i++) {
-            if (set[i] < toElement) {
-                resultSet[subsetSize++] = set[i];
-            }
-        }
-        resultSet = Arrays.copyOf(resultSet, subsetSize);
-        return resultSet;
+        return subSet(set[0], toElement);
     }
     /**
      * method to return the last element in the set.
