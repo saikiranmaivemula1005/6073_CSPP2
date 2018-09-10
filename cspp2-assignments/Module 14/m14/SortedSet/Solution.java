@@ -42,7 +42,7 @@ class Set {
      */
     public boolean contains(final int searchvariable) {
         for (int i = 0; i < size; i++) {
-            if (set[i] == variable) {
+            if (set[i] == searchvariable) {
                 return true;
             }
         }
@@ -135,7 +135,8 @@ class Set {
      *
      * @param toElement variable to the set.
      *
-     * @return returns the array of elements less than the given value in the set.
+     * @return returns the array of elements 
+     * less than the given value in the set.
      */
     public int[] headSet(final int toElement) {
         int[] resultSet = new int[variable];
