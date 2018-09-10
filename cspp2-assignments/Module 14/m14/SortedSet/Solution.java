@@ -282,11 +282,11 @@ public final class Solution {
                 }
 
                 break;
-                // case "subSet":
-                // intArray1 = intArray(tokens[1]);
-                // intArray2 = intArray(tokens[2]);
-                // s = new Set();
-                // s.subSet(intArray1, intArray2);
+                case "subSet":
+                // int intArray1;
+                // int intArray2;
+                s = new Set();
+                s.subSet(Integer.parseInt(tokens[1]),Integer.parseInt(tokens[2]));
                 default:
                 break;
             }
