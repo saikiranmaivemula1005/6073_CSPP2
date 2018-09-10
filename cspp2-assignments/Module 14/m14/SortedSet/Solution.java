@@ -139,13 +139,13 @@ class Set {
      */
     public int[] headSet(final int toElement) {
         int[] resultSet = new int[variable];
-        int s = 0;
+        int subsetSize = 0;
         for (int i = 0; i < size; i++) {
             if (set[i] < toElement) {
-                resultSet[s++] = set[i];
+                resultSet[subsetSize++] = set[i];
             }
         }
-        resultSet = Arrays.copyOf(resultSet, s);
+        resultSet = Arrays.copyOf(resultSet, subsetSize);
         return resultSet;
     }
     /**
