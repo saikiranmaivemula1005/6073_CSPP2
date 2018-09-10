@@ -26,12 +26,12 @@ class SortedSet extends Set {
         size = 0;
     }
     /**
-     * constructor for object "SortedSet"
+     * constructor for object "SortedSet".
      *
-     * @param  items int array for the constructor
+     * @param  items int array for the constructor.
      */
-    SortedSet(int[] items) {
-        set = new int[10];
+    SortedSet(final int[] items) {
+        set = new int[variable];
         size = 0;
         addAll(items);
   }
