@@ -5,7 +5,7 @@ import java.util.Arrays;
  * Class for set.
  * @author :
  */
-class Set {
+class SortedSet extends Set {
     /**
      * integer array named set.
      */
@@ -19,12 +19,22 @@ class Set {
      */
     private final int variable = 10;
     /**
-     * Constructor for the object "set".
+     * Constructor for the object "Sortedset".
      */
-    Set() {
+    SortedSet() {
         set = new int[variable];
         size = 0;
     }
+    /**
+     * constructor for object "SortedSet"
+     *
+     * @param  items int array for the constructor
+     */
+    SortedSet(int[] items) {
+        set = new int[10];
+        size = 0;
+        addAll(items);
+  }
     /**
      * method to return size of set.
      *
@@ -135,7 +145,7 @@ class Set {
      *
      * @param toElement variable to the set.
      *
-     * @return returns the array of elements 
+     * @return returns the array of elements
      * less than the given value in the set.
      */
     public int[] headSet(final int toElement) {
