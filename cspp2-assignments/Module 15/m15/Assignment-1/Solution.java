@@ -140,6 +140,11 @@ class List extends Exception {
             size++;
         }
     }
+    /**
+     * method to add the given list
+     *  to the existing list.
+     * @param      items  new integer list.
+     */
     public void addAll(final int[] items) {
        int j = 0;
        final int variable = 10;
@@ -152,9 +157,20 @@ class List extends Exception {
        }
        size = size + items.length;
     }
+    /**
+     * method to resize the list.
+     *
+     * @return returns the resized list.
+     */
     private int[] resize() {
         return Arrays.copyOf(list, list.length * 2);
     }
+    /**
+     * method to return the count of 
+     * given element in the list.
+     * @param      item  The item variable.
+     * @return returns the count of the given element.
+     */
     public int count(final int item) {
         int count = 0;
         for (int i = 0; i < list.length; i++) {
@@ -167,6 +183,10 @@ class List extends Exception {
         }
         return 0;
     }
+    /**
+     * remove the given list from the original list.
+     * @param      newList  The new list.
+     */
     public void removeAll(final int[] newList) {
         if (size == 0) {
             System.out.println("[]");
@@ -181,6 +201,13 @@ class List extends Exception {
             }
         }
     }
+    /**
+     * return the sub-list of the main list.
+     * @param      start      The start variable.
+     * @param      end        The end variable.
+     * @return returns the sub-list of the main list.
+     * @throws Exception throws index out of bounds exception.  
+     */
     public List subList(final int start, final int end) throws Exception {
         if (start >= end || (start < 0 || end < 0) || size == 0) {
             throw new Exception("Index Out of Bounds Exception");
@@ -191,6 +218,13 @@ class List extends Exception {
         }
         return subList;
     }
+    /**
+     * returns true if the given list
+     *  is equal to the existing list.
+     * @param      newList  The new list.
+     * @return returns true if the given list is
+     * equal to the existing list.
+     */
     public boolean equals(final List newList) {
         if (this.size != newList.size) {
             return false;
@@ -202,16 +236,29 @@ class List extends Exception {
         }
         return true;
     }
+    /**
+     * method to clear all the elements in the list.
+     */
     public void clear() {
         final int defaultSize = 10;
         this.list = new int[defaultSize];
         this.size = 0;
     }
 }
+/**
+ * main class named "solution".
+ */
 public class Solution {
+    /**
+     * constructor for the class solution.
+     */
     Solution() {
 
     }
+    /**
+     * main method for the class "solution".
+     * @param args  The arguments
+     */
     public static void main(final String[] args) {
         List l = new List();
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
