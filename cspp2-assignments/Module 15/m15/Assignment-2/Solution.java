@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 /**
  * Class for set.
- * @author :
+ * @author : Sai kiranmai.
  */
 class SortedSet extends SolutionSet{
     /**
@@ -157,12 +157,22 @@ class SortedSet extends SolutionSet{
      * @return returns the last element in the set.
      */
     public void last() {
-    if (size != 0) {
-        System.out.println(set[size - 1]);
-    } else{
-        System.out.println("Set Empty Exception");
+        try{
+        if (size != 0) {
+            System.out.println(set[size - 1]);
+        } else{
+            throw new Exception("Set Empty Exception");
+        }
+    } catch(Exception e) {
+        System.out.println(e.getMessage());
     }
-    }
+}
+/**
+ * method to find intersection of two sets.
+ *
+ * @param t new set "t".
+ * @return returns the intersection of two sets.
+ */
     public String intersection(final Set t) {
         if (this.size == 0 || t.size == 0) {
             return "{}";
