@@ -38,11 +38,16 @@ class List {
         return -1;
     }
     public String toString() {
-        int[] temporaryList = new int[size];
-        for (int i = 0; i < size; i++) {
-            temporaryList[i] = list[i];
+       if (size == 0) {
+            return "[]";
         }
-        return Arrays.toString(temporaryList).replace(" ", "");
+        String resultantString = "[";
+        int i = 0;
+        for (i = 0; i < size - 1; i++) {
+            resultantString = resultantString + list[i] + ",";
+        }
+        resultantString = resultantString + list[i] + "]";
+        return resultantString;
     }
     public boolean contains(final int item) {
         for (int i = 0; i < size; i++) {
@@ -175,12 +180,16 @@ public class Solution {
                 break;
                 case "get":
                 System.out.println(l.get(Integer.parseInt(tokens[1])));
+                break;
                 case "print":
                 System.out.println(l);
+                break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
                 case "indexOf":
                 System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
+                break;
                 case "addAll":
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
@@ -193,6 +202,7 @@ public class Solution {
                 break;
                 case "count":
                 System.out.println(l.count(Integer.parseInt(tokens[1])));
+                break;
                 case "removeAll":
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
