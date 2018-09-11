@@ -200,7 +200,7 @@ class List extends Exception {
      * @param      start      The start variable.
      * @param      end        The end variable.
      * @return returns the sub-list of the main list.
-     * @throws Exception throws index out of bounds exception.  
+     * @throws Exception throws index out of bounds exception.
      */
     public List subList(final int start, final int end) throws Exception {
         if (start >= end || (start < 0 || end < 0) || size == 0) {
