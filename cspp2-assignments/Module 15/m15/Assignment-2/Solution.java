@@ -159,12 +159,11 @@ class SortedSet extends SolutionSet {
      *
      * @return returns the last element in the set.
      */
-    public int last() {
+    public void last() {
     if (size != 0) {
-        return set[size - 1];
+        System.out.println(set[size - 1]);
     }
     System.out.println("Set Empty Exception");
-    return -1;
     }
 }
     /**
@@ -260,7 +259,7 @@ public class Solution {
                 }
                 break;
             case "last":
-                System.out.println(s.last());
+                s.last();
                 break;
             default:
                 break;
