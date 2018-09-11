@@ -1,20 +1,47 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * class named "list".
+ */
 class List extends Exception {
+    /**
+     * integer array named "list".
+     */
     private int[] list;
+    /**
+     * integer variable named "size".
+     */
     private int size;
+    /**
+     * constructor for class list.
+     */
     List() {
         final int variable = 10;
         list = new int[variable];
         size = 0;
     }
+    /**
+     * method to add the given variable.
+     *
+     * @param item integer variable.
+     */
     public void add(final int item) {
         list[size++] = item;
     }
+    /**
+     * method to return the size of list.
+     *
+     * @return returns the size of the list.
+     */
     public int size() {
         return size;
     }
+    /**
+     * method to remove the element at given index.
+     *
+     * @param index integer variable "index".
+     */
     public void remove(final int index) {
         try {
         if (index >= 0 && index < size) {
@@ -31,12 +58,24 @@ class List extends Exception {
     }
         
     }
+    /**
+     * method to get the element at given index.
+     *
+     * @param index integer variable "index".
+     *
+     * @return returns the element at that index.
+     */
     public int get(final int index) {
         if (index < size && index > 0) {
             return list[index];
         }
         return -1;
     }
+    /**
+     * Returns a string representation of the list.
+     *
+     * @return returns string representation of the list.
+     */
     public String toString() {
        if (size == 0) {
             return "[]";
@@ -49,6 +88,14 @@ class List extends Exception {
         resultantString = resultantString + list[i] + "]";
         return resultantString;
     }
+    /**
+     * method which returns true 
+     * if the element is in the list.
+     *
+     * @param item integer variable.
+     *
+     * @return returns true if item is in the list.
+     */
     public boolean contains(final int item) {
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -57,6 +104,13 @@ class List extends Exception {
         }
         return false;
     }
+    /**
+     * method to return the index of the given element.
+     *
+     * @param item  integer variable.
+     *
+     * @return returns the index of the given element.
+     */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -65,6 +119,12 @@ class List extends Exception {
         }
         return -1;
     }
+    /**
+     * method to add the given element at given index.
+     *
+     * @param      index  The index variable.
+     * @param      item   The item variable.
+     */
     public void add(final int index, final int item) {
         if (index < 0) {
             System.out.println("Negative Index Exception");
