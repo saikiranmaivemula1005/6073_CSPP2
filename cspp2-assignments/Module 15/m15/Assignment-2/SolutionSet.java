@@ -226,7 +226,7 @@ public class SolutionSet {
     /**
      * helper function to convert string input to int array.
      *
-     * @param      s     { string input from test case file }
+     * @param      s string input from test case file.
      *
      * @return     { int array from the given string }
      */

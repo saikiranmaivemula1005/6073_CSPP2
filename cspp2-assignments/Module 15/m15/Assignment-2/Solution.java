@@ -77,7 +77,6 @@ class SortedSet extends SolutionSet{
     }
     /**
      * method to add the given set of elements into set.
-     *
      * @param  newArray integer array to be inserted into set.
      */
     public void addAll(final int[] newArray) {
@@ -89,7 +88,6 @@ class SortedSet extends SolutionSet{
     }
     /**
      * method to add the given element into set.
-     *
      * @param  element variable to be inserted into set.
      */
     public void add(final int element) {
@@ -142,9 +140,7 @@ class SortedSet extends SolutionSet{
     }
     /**
      * method to return the elements in the set lessthan given value.
-     *
      * @param toElement variable to the set.
-     *
      * @return returns the array of elements
      * less than the given value in the set.
      */
@@ -153,7 +149,6 @@ class SortedSet extends SolutionSet{
     }
     /**
      * method to return the last element in the set.
-     *
      * @return returns the last element in the set.
      */
     public void last() {
@@ -163,13 +158,12 @@ class SortedSet extends SolutionSet{
         } else{
             throw new Exception("Set Empty Exception");
         }
-    } catch(Exception e) {
+    } catch (Exception e) {
         System.out.println(e.getMessage());
     }
 }
 /**
  * method to find intersection of two sets.
- *
  * @param t new set "t".
  * @return returns the intersection of two sets.
  */
@@ -187,10 +181,13 @@ class SortedSet extends SolutionSet{
             }
         }
     }
-
-        return i.toString();
-        // System.out.println(t.toString());
+    return i.toString();
     }
+    /**
+     * method to retain the elements in two sets.
+     * @param intArray  The integer array.
+     * @return returns the retained set of given sets.
+     */
     public SortedSet retainAll(final int[] intArray) {
         SortedSet outputSet = new SortedSet();
         for (int i : this.set) {
