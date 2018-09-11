@@ -55,7 +55,6 @@ class List extends Exception {
     } catch (Exception e) {
         System.out.println(e.getMessage());
     }
-        
     }
     /**
      * method to get the element at given index.
@@ -87,7 +86,7 @@ class List extends Exception {
         return resultantString;
     }
     /**
-     * method which returns true 
+     * method which returns true
      * if the element is in the list.
      * @param item integer variable.
      *
@@ -246,7 +245,7 @@ public class Solution {
     /**
      * constructor for the class solution.
      */
-    Solution() {
+    protected Solution() {
 
     }
     /**
