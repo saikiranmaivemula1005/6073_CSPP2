@@ -5,7 +5,7 @@ import java.util.Arrays;
  * Class for set.
  * @author : Sai kiranmai.
  */
-class SortedSet extends SolutionSet{
+class SortedSet extends SolutionSet {
     /**
      * integer array named set.
      */
