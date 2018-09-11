@@ -124,7 +124,7 @@ class List extends Exception {
     }
     public List subList(final int start, final int end) throws Exception {
         if (start >= end || (start < 0 || end < 0) || size == 0) {
-            throw new Exception("Index Out Of Bounds Exception");
+            throw new Exception("Index Out of Bounds Exception");
         }
         List subList = new List();
         for (int i = start; i < end; i++) {
