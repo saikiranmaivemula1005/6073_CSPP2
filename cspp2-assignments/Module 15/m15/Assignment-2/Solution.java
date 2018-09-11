@@ -5,7 +5,7 @@ import java.util.Arrays;
  * Class for set.
  * @author :
  */
-class SortedSet {
+class SortedSet extends SolutionSet{
     /**
      * integer array named set.
      */
@@ -165,6 +165,35 @@ class SortedSet {
     }
     System.out.println("Set Empty Exception");
     }
+    public String intersection(final Set t) {
+        if (this.size == 0 || t.size == 0) {
+            return "{}";
+        }
+
+        Set i = new Set();
+
+    for (int k = 0; k < this.size; k++) {
+        for (int j = 0; j < t.size; j++) {
+            if (this.set[k] == t.list[j]) {
+               i.add(set[k]);
+            }
+        }
+    }
+
+        return i.toString();
+        // System.out.println(t.toString());
+    }
+    public SortedSet retainAll(final int[] intArray) {
+        SortedSet outputSet = new SortedSet();
+        for (int i : this.set) {
+            for (int j = 0; j < intArray.length; j++) {
+                if (i == intArray[j]) {
+                    outputSet.add(i);
+                }
+            }
+        }
+        return outputSet;
+    }
 }
 
     /**
@@ -228,13 +257,30 @@ public class Solution {
             case "print":
                 System.out.println(s);
                 break;
-            case "addAll":
+            case "intersection":
+                s = new SortedSet();
+                Set t = new Set();
                 int[] intArray = intArray(tokens[1]);
+                s.addAll(intArray);
+                // System.out.println(s);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(s.intersection(t));
+                break;
+            case "addAll":
+                intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
                     s.add(intArray[0]);
                 } else {
                     s.addAll(intArray);
                 }
+                break;
+            case "retainAll":
+                s = new SortedSet();
+                intArray = intArray(tokens[1]);
+                s.addAll(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
                 break;
             case "subSet":
                 String[] arrstring = tokens[1].split(",");
