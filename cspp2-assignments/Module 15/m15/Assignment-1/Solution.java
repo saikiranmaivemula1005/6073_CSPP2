@@ -52,8 +52,7 @@ class List extends Exception {
         } else {
             throw new Exception("Invalid Position Exception");
         }
-    }
-    catch (Exception e) {
+    } catch (Exception e) {
         System.out.println(e.getMessage());
     }
         
@@ -73,7 +72,6 @@ class List extends Exception {
     }
     /**
      * Returns a string representation of the list.
-     *
      * @return returns string representation of the list.
      */
     public String toString() {
@@ -91,7 +89,6 @@ class List extends Exception {
     /**
      * method which returns true 
      * if the element is in the list.
-     *
      * @param item integer variable.
      *
      * @return returns true if item is in the list.
@@ -106,9 +103,7 @@ class List extends Exception {
     }
     /**
      * method to return the index of the given element.
-     *
      * @param item  integer variable.
-     *
      * @return returns the index of the given element.
      */
     public int indexOf(final int item) {
@@ -121,7 +116,6 @@ class List extends Exception {
     }
     /**
      * method to add the given element at given index.
-     *
      * @param      index  The index variable.
      * @param      item   The item variable.
      */
