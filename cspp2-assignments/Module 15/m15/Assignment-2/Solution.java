@@ -303,7 +303,7 @@ public class Solution {
             case "headSet":
                 
                 try {
-                    if (Integer.parseInt(tokens[1]) < s.get(0)) {
+                    if (Integer.parseInt(tokens[1]) <= s.get(0)) {
                         throw new Exception("Set Empty Exception");
                     } else {
                         int[] headarray = s.headSet(Integer.parseInt(tokens[1]));
