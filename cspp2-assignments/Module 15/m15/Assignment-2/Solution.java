@@ -149,9 +149,6 @@ class SortedSet extends SolutionSet{
      * less than the given value in the set.
      */
     public int[] headSet(final int toElement) {
-        if (toElement < set[0]) {
-            System.out.println("Set Empty Exception");
-        }
         return subSet(set[0], toElement);
     }
     /**
@@ -284,9 +281,10 @@ public class Solution {
                 break;
             case "subSet":
                 String[] arrstring = tokens[1].split(",");
+                try{
                 if (Integer.parseInt(arrstring[0])
                       > Integer.parseInt(arrstring[1])) {
-                    System.out.println("Invalid Arguments to Subset Exception");
+                    throw new Exception("Invalid Arguments to Subset Exception");
                 } else {
                     int[] subarray = s.subSet(Integer.parseInt(arrstring[0]),
                             Integer.parseInt(arrstring[1]));
@@ -296,14 +294,27 @@ public class Solution {
                         System.out.println(subset);
                     }
                 }
+            } catch(Exception e) {
+                System.out.println(e.getMessage());
+            }
+
                 break;
             case "headSet":
-                int[] headarray = s.headSet(Integer.parseInt(tokens[1]));
-                SortedSet headset = new SortedSet();
-                headset.addAll(headarray);
-                if (headset != null) {
-                    System.out.println(headset);
-                }
+                
+                try {
+                    if (Integer.parseInt(tokens[1]) < s.get(0)) {
+                        throw new Exception("Set Empty Exception");
+                    } else {
+                        int[] headarray = s.headSet(Integer.parseInt(tokens[1]));
+                        SortedSet headset = new SortedSet();
+                        headset.addAll(headarray);
+                        if (headset != null) {
+                        System.out.println(headset);
+                        }
+                    }
+                    } catch(Exception e) {
+                        System.out.println(e.getMessage());
+                    }
                 break;
             case "last":
                 s.last();
