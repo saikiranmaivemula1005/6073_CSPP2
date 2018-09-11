@@ -22,8 +22,7 @@ class List extends Exception {
                 list[i] = list[i + 1];
             }
             size--;
-        }
-        else {
+        } else {
             throw new Exception("Invalid Position Exception");
         }
     }
@@ -153,10 +152,10 @@ public class Solution {
     Solution() {
 
     }
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         List l = new List();
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
-        while(stdin.hasNext()) {
+        while (stdin.hasNext()) {
             String line = stdin.nextLine();
             String[] tokens = line.split(" ");
             switch (tokens[0]) {
@@ -167,7 +166,8 @@ public class Solution {
                         l.add(Integer.parseInt(tokens[1]));
                     } else {
                         if (t.length > 1) {
-                            l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
+                            l.add(Integer.parseInt(t[0]),
+                                Integer.parseInt(t[1]));
                         }
                     }
                 }
@@ -208,7 +208,7 @@ public class Solution {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
                     for (int i = 0; i < t2.length; i++) {
-                        a[i] =Integer.parseInt(t2[i]);
+                        a[i] = Integer.parseInt(t2[i]);
                     }
                     l.removeAll(a);
                 }
@@ -224,8 +224,7 @@ public class Solution {
                 if (object != null) {
                     System.out.println(object);
                 }
-                }
-                catch (Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
