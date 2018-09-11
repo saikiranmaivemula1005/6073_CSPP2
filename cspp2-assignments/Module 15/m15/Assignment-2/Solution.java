@@ -159,8 +159,9 @@ class SortedSet extends SolutionSet{
     public void last() {
     if (size != 0) {
         System.out.println(set[size - 1]);
+    } else{
+        System.out.println("Set Empty Exception");
     }
-    System.out.println("Set Empty Exception");
     }
     public String intersection(final Set t) {
         if (this.size == 0 || t.size == 0) {
