@@ -149,6 +149,9 @@ class SortedSet extends SolutionSet {
      * less than the given value in the set.
      */
     public int[] headSet(final int toElement) {
+        if (toElement < set[0]) {
+            System.out.println("Set Empty Exception");
+        }
         return subSet(set[0], toElement);
     }
     /**
