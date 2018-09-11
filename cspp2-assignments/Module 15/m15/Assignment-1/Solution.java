@@ -103,6 +103,9 @@ class List {
         return 0;
     }
     public void removeAll(final int[] newList) {
+        if (size == 0) {
+            System.out.println("[]");
+        }
         int[] temporaryList = Arrays.copyOf(list, list.length);
         for (int i : newList) {
             for (int j = 0; j < size; j++) {
@@ -114,7 +117,7 @@ class List {
         }
     }
     public List subList(final int start, final int end) {
-        if (start >= end || (start < 0 || end < 0) || size ==0) {
+        if (start >= end || (start < 0 || end < 0) || size == 0) {
             System.out.println("Index Out Of Bounds Exception");
             return null;
         }
