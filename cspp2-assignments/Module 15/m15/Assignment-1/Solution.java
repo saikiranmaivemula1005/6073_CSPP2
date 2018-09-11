@@ -1,7 +1,7 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-class List {
+class List extends Exception {
     private int[] list;
     private int size;
     List() {
@@ -16,20 +16,21 @@ class List {
         return size;
     }
     public void remove(final int index) {
-        if (index >= size || index <= -1) {
-            System.out.println("Invalid Position Exception");
-        }
-        else if (index == list.length - 1) {
-            list[index] = 0;
-            size--;
-        } else {
-            list[index] = list[index + 1];
-            for (int i = index + 1; i < list.length - 1; i++) {
+        try {
+        if (index >= 0 && index < size) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            list[list.length - 1] = 0;
             size--;
         }
+        else {
+            throw new Exception("Invalid Position Exception");
+        }
+    }
+    catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
+        
     }
     public int get(final int index) {
         if (index < size && index > 0) {
@@ -121,10 +122,9 @@ class List {
             }
         }
     }
-    public List subList(final int start, final int end) {
+    public List subList(final int start, final int end) throws Exception {
         if (start >= end || (start < 0 || end < 0) || size == 0) {
-            System.out.println("Index Out Of Bounds Exception");
-            return null;
+            throw new Exception("Index Out Of Bounds Exception");
         }
         List subList = new List();
         for (int i = start; i < end; i++) {
@@ -214,6 +214,7 @@ public class Solution {
                 }
                 break;
                 case "subList":
+                try {
                 if (tokens.length != 2) {
                     break;
                 }
@@ -222,6 +223,10 @@ public class Solution {
                                 Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
+                }
+                }
+                catch (Exception e) {
+                    System.out.println(e.getMessage());
                 }
                 break;
                 case "equals":
