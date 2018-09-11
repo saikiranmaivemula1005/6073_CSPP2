@@ -34,7 +34,7 @@ class SortedSet {
         set = new int[variable];
         size = 0;
         addAll(items);
-  }
+    }
     /**
      * method to return size of set.
      *
@@ -166,6 +166,7 @@ class SortedSet {
     System.out.println("Set Empty Exception");
     }
 }
+
     /**
      * sorted set.
      */
