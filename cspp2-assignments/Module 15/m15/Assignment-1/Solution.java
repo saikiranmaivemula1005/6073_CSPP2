@@ -159,7 +159,7 @@ class List extends Exception {
         return Arrays.copyOf(list, list.length * 2);
     }
     /**
-     * method to return the count of 
+     * method to return the count of
      * given element in the list.
      * @param      item  The item variable.
      * @return returns the count of the given element.
