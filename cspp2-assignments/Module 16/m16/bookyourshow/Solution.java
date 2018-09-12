@@ -84,26 +84,50 @@ class Patron {
 		this.patronName = n;
 		this.mobileNumber = mbnum;
 	}
+	/**
+	 * Gets the name of the user.
+	 *
+	 * @return returns the name of the user.
+	 */
 	public String getName() {
 		return this.patronName;
 	}
+	/**
+	 * Gets the mobile number of the user.
+	 *
+	 * @return returns the mobile number of the user.
+	 */
 	public String getMobileNumber() {
 		return this.mobileNumber;
 	}
 }
-
-
+/**
+ * Class for book your show.
+ */
 class BookYourShow {
 	List<Show> showDetails;
 	List<String> bookedTickets;
+	/**
+	 * constructor for book your show class.
+	 */
 	public BookYourShow() {
 		//constructor
 		showDetails = new List<Show>();
 		bookedTickets = new List<String>();
 	}
+	/**
+	 * Adds a show to the show details.
+	 * @param obj object for "show" class.
+	 */
 	public void addAShow(Show obj) {
 		showDetails.add(obj);
 	}
+	/**
+	 * Gets a show and prints the details of the show.
+	 * @param  movieName  movie name.
+	 * @param  dateAndTime date and time.
+	 * @return    returns the details of the show.
+	 */
 	public Show getAShow(String movieName, String dateAndTime) {
 		for (int i = 0; i < showDetails.size(); i++) {
 			if (showDetails.get(i).getMovieName().equals(movieName)&&
@@ -113,6 +137,14 @@ class BookYourShow {
 		}
 		return null;
 	}
+	/**
+	 * method to book a show.
+	 *
+	 * @param movieName  movie name
+	 * @param dateAndTime  date and time
+	 * @param obj  object for patron class.
+	 * @param seats seats
+	 */
 	public void bookAShow(String movieName, String dateAndTime, Patron obj, String[] seats) {
 		Show movieData = getAShow(movieName, dateAndTime);
 		if (movieData != null) {
@@ -128,6 +160,12 @@ class BookYourShow {
 			System.out.println("No show");
 		}
 	}
+	/**
+	 * print the booked tickets.
+	 * @param  movieName   movie name
+	 * @param  dateAndTime date and time
+	 * @param  mobileNumber mobile number
+	 */
 	public void printTickets(String movieName, String dateAndTime, String mobileNumber) {
 		//print the tickets
 		for (int i = 0; i < bookedTickets.size(); i++) {
@@ -139,6 +177,9 @@ class BookYourShow {
 		System.out.println("Invalid");
 		return;
 	}
+	/**
+	 * method to display all the available shows.
+	 */
 	public void showAll() {
 		//print all the available shows
 		for (int i = 0; i < showDetails.size(); i++) {
