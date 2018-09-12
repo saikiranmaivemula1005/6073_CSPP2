@@ -144,8 +144,8 @@ class BookYourShow {
 	 */
 	public Show getAShow(final String movieName, final String dateAndTime) {
 		for (int i = 0; i < showDetails.size(); i++) {
-			if (showDetails.get(i).getMovieName().equals(movieName) &&
-				showDetails.get(i).getDateAndTime().equals(dateAndTime)) {
+			if (showDetails.get(i).getMovieName().equals(movieName)
+			 &&	showDetails.get(i).getDateAndTime().equals(dateAndTime)) {
 				return showDetails.get(i);
 			}
 		}
@@ -201,9 +201,8 @@ class BookYourShow {
 	public void showAll() {
 		//print all the available shows
 		for (int i = 0; i < showDetails.size(); i++) {
-
-			System.out.println(showDetails.get(i).toString() + "," +
-				Arrays.toString(showDetails.get(i).getSeatNumbers()).replace(" ",""));
+			System.out.println(showDetails.get(i).toString() + ","
+			+ Arrays.toString(showDetails.get(i).getSeatNumbers()).replace(" ",""));
 		}
 	}
 }
