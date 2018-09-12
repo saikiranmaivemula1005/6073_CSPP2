@@ -23,7 +23,7 @@ class Show {
 		seatNumbers[index] = set;
 	}
 	public String toString() {
-		return this.nameOfTheMovie + "," + this.dateAndTime + "," + Arrays.toString(seatNumbers);
+		return this.nameOfTheMovie + "," + this.dateAndTime + "," + Arrays.toString(seatNumbers).replace(" ","");
 	}
 }
 class Patron {
