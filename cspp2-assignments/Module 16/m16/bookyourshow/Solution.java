@@ -133,7 +133,7 @@ class BookYourShow {
      * Adds a show to the show details.
      * @param obj object for "show" class.
      */
-    public void addAShow(Show obj) {
+    public void addAShow(final Show obj) {
         showDetails.add(obj);
     }
     /**
