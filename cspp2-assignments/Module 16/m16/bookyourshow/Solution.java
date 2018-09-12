@@ -53,13 +53,33 @@ class Show {
 	public void setSeat(int index, String set) {
 		seatNumbers[index] = set;
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return returns string representation of the object.
+	 */
 	public String toString() {
 		return this.nameOfTheMovie + "," + this.dateAndTime;
 	}
 }
+/**
+ * Class for user details.
+ */
 class Patron {
+	/**
+	 * username variable.
+	 */
 	private String patronName;
+	/**
+	 * mobile number variable.
+	 */
 	private String mobileNumber;
+	/**
+	 * constructor for patron class.
+	 *
+	 * @param n name of the user.
+	 * @param mbnum mobilenumber of the user.
+	 */
 	Patron(String n, String mbnum) {
 		this.patronName = n;
 		this.mobileNumber = mbnum;
