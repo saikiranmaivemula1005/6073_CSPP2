@@ -1,4 +1,3 @@
-import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 /**
@@ -25,17 +24,8 @@ class Show {
 	 * @param      s  seats string.
 	 */
 	Show(final String m, final String dt, final String[] s) {
-		/**
-		 * { item_description }
-		 */
 		this.nameOfTheMovie = m;
-		/**
-		 * { item_description }
-		 */
 		this.dateAndTime = dt;
-		/**
-		 * { item_description }
-		 */
 		this.seatNumbers = s;
 	}
 	/**
@@ -124,11 +114,11 @@ class Patron {
  */
 class BookYourShow {
 	/**
-	 * { var_description }
+	 * creating variable type object.
 	 */
 	private List<Show> showDetails;
 	/**
-	 * { var_description }
+	 *creating variable type object.
 	 */
 	private List<String> bookedTickets;
 	/**
