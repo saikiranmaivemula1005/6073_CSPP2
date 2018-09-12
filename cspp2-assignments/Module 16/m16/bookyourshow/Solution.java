@@ -11,7 +11,7 @@ class Show {
 	/**
 	 * Constructor for the class show.
 	 *
-	 * @param      m     variable m
+	 * @param      m  moviename.
 	 * @param      dt    { parameter_description }
 	 * @param      s     { parameter_description }
 	 */
@@ -33,7 +33,7 @@ class Show {
 		seatNumbers[index] = set;
 	}
 	public String toString() {
-		return this.nameOfTheMovie + "," + this.dateAndTime + "," + Arrays.toString(seatNumbers).replace(" ","");
+		return this.nameOfTheMovie + "," + this.dateAndTime;
 	}
 }
 class Patron {
@@ -91,14 +91,17 @@ class BookYourShow {
 		for (int i = 0; i < bookedTickets.size(); i++) {
 			if ((mobileNumber + " " + movieName + " " + dateAndTime).equals(bookedTickets.get(i))) {
 				System.out.println(mobileNumber + " " + movieName + " " + dateAndTime);
-				break;
-			}
+				return;
+			} 
 		}
+		System.out.println("Invalid");
+		return;
 	}
 	public void showAll() {
 		//print all the available shows
 		for (int i = 0; i < showDetails.size(); i++) {
-			System.out.println(showDetails.get(i).toString());
+
+			System.out.println(showDetails.get(i).toString()+ Arrays.toString(showDetails.get(i).getSeatNumbers()).replace(" ",""));
 		}
 	}
 }
