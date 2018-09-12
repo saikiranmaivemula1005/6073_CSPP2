@@ -1,10 +1,20 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for show.
+ */
 class Show {
 	private String nameOfTheMovie;
 	private String dateAndTime;
 	private String[] seatNumbers;
+	/**
+	 * Constructor for the class show.
+	 *
+	 * @param      m     variable m
+	 * @param      dt    { parameter_description }
+	 * @param      s     { parameter_description }
+	 */
 	Show(String m, String dt, String[] s) {
 		this.nameOfTheMovie = m;
 		this.dateAndTime = dt;
@@ -58,10 +68,6 @@ class BookYourShow {
 			if (showDetails.get(i).getMovieName().equals(movieName)&&
 				showDetails.get(i).getDateAndTime().equals(dateAndTime)) {
 				return showDetails.get(i);
-			}
-			else{
-				System.out.println("Invalid");
-				break;
 			}
 		}
 		return null;
