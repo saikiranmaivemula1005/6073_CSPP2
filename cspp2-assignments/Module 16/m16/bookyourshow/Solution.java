@@ -59,6 +59,9 @@ class BookYourShow {
 				showDetails.get(i).getDateAndTime().equals(dateAndTime)) {
 				return showDetails.get(i);
 			}
+			else{
+				System.out.println("Invalid");
+			}
 		}
 		return null;
 	}
