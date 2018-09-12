@@ -91,6 +91,7 @@ class BookYourShow {
 			System.out.println(showDetails.get(i).toString());
 		}
 	}
+}
 public class Solution {
    public  void main(final String[] args) {
         BookYourShow bys = new BookYourShow();
@@ -143,4 +144,4 @@ public class Solution {
         }
     }
 }
-}
+
