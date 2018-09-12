@@ -82,6 +82,8 @@ class BookYourShow {
 			if ((mobileNumber + " " + movieName + " " + dateAndTime).equals(bookedTickets.get(i))) {
 				System.out.println(mobileNumber + " " + movieName + " " + dateAndTime);
 				break;
+			} else {
+				System.out.println("Invalid");
 			}
 		}
 	}
