@@ -186,7 +186,7 @@ class BookYourShow {
 		String dateAndTime, final String mobileNumber) {
 		//print the tickets
 		for (int i = 0; i < bookedTickets.size(); i++) {
-			if ((mobileNumber + " " + movieName + " " 
+			if ((mobileNumber + " " + movieName + " "
 				+ dateAndTime).equals(bookedTickets.get(i))) {
 				System.out.println(mobileNumber + " " + movieName + " " + dateAndTime);
 				return;
@@ -210,6 +210,12 @@ class BookYourShow {
  * Class for solution.
  */
 public class Solution {
+	/**
+	 * Constructor for solution class.
+	 */
+	protected Solution() {
+
+	}
 	/**
 	 * main method for class solution.
 	 *
