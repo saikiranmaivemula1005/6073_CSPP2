@@ -72,7 +72,7 @@ class BookYourShow {
 		}
 		return null;
 	}
-	public String bookAShow(String movieName, String dateAndTime, Patron obj, String[] seats) {
+	public void bookAShow(String movieName, String dateAndTime, Patron obj, String[] seats) {
 		Show movieData = getAShow(movieName, dateAndTime);
 		if (movieData != null) {
 			for (int i = 0; i < movieData.getSeatNumbers().length; i++) {
@@ -84,7 +84,9 @@ class BookYourShow {
 				}
 			}
 		}
-		return "";
+		else{
+			System.out.println("No show");
+		}
 	}
 	public void printTickets(String movieName, String dateAndTime, String mobileNumber) {
 		//print the tickets
