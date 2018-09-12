@@ -103,7 +103,7 @@ class BookYourShow {
 		//print all the available shows
 		for (int i = 0; i < showDetails.size(); i++) {
 
-			System.out.println(showDetails.get(i).toString()+ Arrays.toString(showDetails.get(i).getSeatNumbers()).replace(" ",""));
+			System.out.println(showDetails.get(i).toString()+ ","+Arrays.toString(showDetails.get(i).getSeatNumbers()).replace(" ",""));
 		}
 	}
 }
