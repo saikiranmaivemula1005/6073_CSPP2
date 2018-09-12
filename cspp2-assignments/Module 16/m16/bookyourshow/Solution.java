@@ -61,6 +61,7 @@ class BookYourShow {
 			}
 			else{
 				System.out.println("Invalid");
+				break;
 			}
 		}
 		return null;
