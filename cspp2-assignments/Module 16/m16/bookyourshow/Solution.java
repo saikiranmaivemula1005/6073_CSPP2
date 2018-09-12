@@ -163,12 +163,15 @@ class BookYourShow {
 		dateAndTime, final Patron obj, final String[] seats) {
 		Show movieData = getAShow(movieName, dateAndTime);
 		if (movieData != null) {
-			for (int i = 0; i < movieData.getSeatNumbers().length; i++) {
+			for (int i = 0; i < movieData.
+				getSeatNumbers().length; i++) {
 				for (int j = 0; j < seats.length; j++) {
-					if (seats[j].equals(movieData.getSeatNumbers()[i])) {
+					if (seats[j].equals(movieData.
+						getSeatNumbers()[i])) {
 						movieData.setSeat(i, "N/A");
-						bookedTickets.add(obj.getMobileNumber() 
-							+ " " + movieName + " " + dateAndTime);
+						bookedTickets.add(obj.getMobileNumber()
+							+ " " + movieName
+							 + " " + dateAndTime);
 					}
 				}
 			}
@@ -182,15 +185,16 @@ class BookYourShow {
 	 * @param  dateAndTime date and time
 	 * @param  mobileNumber mobile number
 	 */
-	public void printTickets(final String movieName, final 
+	public void printTickets(final String movieName, final
 		String dateAndTime, final String mobileNumber) {
 		//print the tickets
 		for (int i = 0; i < bookedTickets.size(); i++) {
 			if ((mobileNumber + " " + movieName + " "
 				+ dateAndTime).equals(bookedTickets.get(i))) {
-				System.out.println(mobileNumber + " " + movieName + " " + dateAndTime);
+				System.out.println(mobileNumber + " " + movieName
+				 + " " + dateAndTime);
 				return;
-			} 
+			}
 		}
 		System.out.println("Invalid");
 		return;
@@ -202,7 +206,8 @@ class BookYourShow {
 		//print all the available shows
 		for (int i = 0; i < showDetails.size(); i++) {
 			System.out.println(showDetails.get(i).toString() + ","
-			+ Arrays.toString(showDetails.get(i).getSeatNumbers()).replace(" ",""));
+			+ Arrays.toString(showDetails.get(i).
+				getSeatNumbers()).replace(" ", ""));
 		}
 	}
 }
