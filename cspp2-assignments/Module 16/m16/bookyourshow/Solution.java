@@ -91,7 +91,7 @@ class BookYourShow {
 			System.out.println(showDetails.get(i).toString());
 		}
 	}
-class Solution{
+public class Solution{
    public void main(final String[] args) {
         BookYourShow bys = new BookYourShow();
         Scanner scan = new Scanner(System.in);
