@@ -142,10 +142,13 @@ class BookYourShow {
 	 * @param  dateAndTime date and time.
 	 * @return    returns the details of the show.
 	 */
-	public Show getAShow(final String movieName, final String dateAndTime) {
+	public Show getAShow(final String movieName,
+	 String dateAndTime) {
 		for (int i = 0; i < showDetails.size(); i++) {
-			if (showDetails.get(i).getMovieName().equals(movieName)
-			 &&	showDetails.get(i).getDateAndTime().equals(dateAndTime)) {
+			if (showDetails.get(i).
+				getMovieName().equals(movieName)
+			 &&	showDetails.get(i).
+			 getDateAndTime().equals(dateAndTime)) {
 				return showDetails.get(i);
 			}
 		}
