@@ -92,7 +92,7 @@ class BookYourShow {
 		}
 	}
 public class Solution{
-   public void main(final String[] args) {
+   public  void main(final String[] args) {
         BookYourShow bys = new BookYourShow();
         Scanner scan = new Scanner(System.in);
         int testCases = Integer.parseInt(scan.nextLine());
