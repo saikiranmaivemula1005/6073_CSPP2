@@ -12,23 +12,44 @@ class Show {
 	 * Constructor for the class show.
 	 *
 	 * @param      m  moviename.
-	 * @param      dt    { parameter_description }
-	 * @param      s     { parameter_description }
+	 * @param      dt date and time.
+	 * @param      s  seats string.
 	 */
 	Show(String m, String dt, String[] s) {
 		this.nameOfTheMovie = m;
 		this.dateAndTime = dt;
 		this.seatNumbers = s;
 	}
+	/**
+	 * Gets the movie name.
+	 *
+	 * @return returns the movie name.
+	 */
 	public String getMovieName() {
 		return this.nameOfTheMovie;
 	}
+	/**
+	 * Gets the date and time.
+	 *
+	 * @return returns date and time.
+	 */
 	public String getDateAndTime() {
 		return this.dateAndTime;
 	}
+	/**
+	 * Gets the seat numbers.
+	 *
+	 * @return returns the seat numbers.
+	 */
 	public String[] getSeatNumbers() {
 		return this.seatNumbers;
 	}
+	/**
+	 * Sets the seat.
+	 *
+	 * @param index the index variable.
+	 * @param set the set variable to set the name of seat.
+	 */
 	public void setSeat(int index, String set) {
 		seatNumbers[index] = set;
 	}
@@ -83,8 +104,7 @@ class BookYourShow {
 					}
 				}
 			}
-		}
-		else{
+		} else {
 			System.out.println("No show");
 		}
 	}
@@ -103,11 +123,20 @@ class BookYourShow {
 		//print all the available shows
 		for (int i = 0; i < showDetails.size(); i++) {
 
-			System.out.println(showDetails.get(i).toString()+ ","+Arrays.toString(showDetails.get(i).getSeatNumbers()).replace(" ",""));
+			System.out.println(showDetails.get(i).toString() + "," +
+				Arrays.toString(showDetails.get(i).getSeatNumbers()).replace(" ",""));
 		}
 	}
 }
+/**
+ * Class for solution.
+ */
 public class Solution {
+	/**
+	 * main method for class solution.
+	 *
+	 * @param args  The arguments.
+	 */
    public  static void main(final String[] args) {
         BookYourShow bys = new BookYourShow();
         Scanner scan = new Scanner(System.in);
