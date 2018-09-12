@@ -50,9 +50,9 @@ class BookYourShow {
 		showDetails = new List<Show>();
 		bookedTickets = new List<String>();
 	}
-	// public void addAshow(Show obj) {
-	// 	showDetails.add(obj);
-	// }
+	public void addAShow(Show obj) {
+		showDetails.add(obj);
+	}
 	public Show getAShow(String movieName, String dateAndTime) {
 		for (int i = 0; i < showDetails.size(); i++) {
 			if (showDetails.get(i).getMovieName().equals(movieName)&&
@@ -108,9 +108,8 @@ public class Solution {
                     for (int j = 0; j < seats.length; j++) {
                         seats[j] = tokens[k++];
                     }
-                //     bys.addAShow(new Show(check[1], tokens[1], seats));
-                // break;
-
+                    bys.addAShow(new Show(check[1], tokens[1], seats));
+                break;
                 case "book":
                     k = 2 + 2;
                     seats = new String[tokens.length - 2 - 2];
