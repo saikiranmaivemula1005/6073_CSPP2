@@ -5,8 +5,17 @@ import java.util.Arrays;
  * Class for show.
  */
 class Show {
+	/**
+	 *variable that can be accessed within class.
+	 */
 	private String nameOfTheMovie;
+	/**
+	 *variable that can be accessed within class.
+	 */
 	private String dateAndTime;
+	/**
+	 *array that can be accessed within class.
+	 */
 	private String[] seatNumbers;
 	/**
 	 * Constructor for the class show.
@@ -15,9 +24,18 @@ class Show {
 	 * @param      dt date and time.
 	 * @param      s  seats string.
 	 */
-	Show(String m, String dt, String[] s) {
+	Show(final String m, final String dt, final String[] s) {
+		/**
+		 * { item_description }
+		 */
 		this.nameOfTheMovie = m;
+		/**
+		 * { item_description }
+		 */
 		this.dateAndTime = dt;
+		/**
+		 * { item_description }
+		 */
 		this.seatNumbers = s;
 	}
 	/**
@@ -50,7 +68,7 @@ class Show {
 	 * @param index the index variable.
 	 * @param set the set variable to set the name of seat.
 	 */
-	public void setSeat(int index, String set) {
+	public void setSeat(final int index, final String set) {
 		seatNumbers[index] = set;
 	}
 	/**
@@ -105,8 +123,14 @@ class Patron {
  * Class for book your show.
  */
 class BookYourShow {
-	List<Show> showDetails;
-	List<String> bookedTickets;
+	/**
+	 * { var_description }
+	 */
+	private List<Show> showDetails;
+	/**
+	 * { var_description }
+	 */
+	private List<String> bookedTickets;
 	/**
 	 * constructor for book your show class.
 	 */
@@ -128,9 +152,9 @@ class BookYourShow {
 	 * @param  dateAndTime date and time.
 	 * @return    returns the details of the show.
 	 */
-	public Show getAShow(String movieName, String dateAndTime) {
+	public Show getAShow(final String movieName, final String dateAndTime) {
 		for (int i = 0; i < showDetails.size(); i++) {
-			if (showDetails.get(i).getMovieName().equals(movieName)&&
+			if (showDetails.get(i).getMovieName().equals(movieName) &&
 				showDetails.get(i).getDateAndTime().equals(dateAndTime)) {
 				return showDetails.get(i);
 			}
@@ -145,14 +169,16 @@ class BookYourShow {
 	 * @param obj  object for patron class.
 	 * @param seats seats
 	 */
-	public void bookAShow(String movieName, String dateAndTime, Patron obj, String[] seats) {
+	public void bookAShow(final String movieName, final String 
+		dateAndTime, final Patron obj, final String[] seats) {
 		Show movieData = getAShow(movieName, dateAndTime);
 		if (movieData != null) {
 			for (int i = 0; i < movieData.getSeatNumbers().length; i++) {
 				for (int j = 0; j < seats.length; j++) {
 					if (seats[j].equals(movieData.getSeatNumbers()[i])) {
 						movieData.setSeat(i, "N/A");
-						bookedTickets.add(obj.getMobileNumber() + " " + movieName + " " + dateAndTime);
+						bookedTickets.add(obj.getMobileNumber() 
+							+ " " + movieName + " " + dateAndTime);
 					}
 				}
 			}
@@ -166,10 +192,12 @@ class BookYourShow {
 	 * @param  dateAndTime date and time
 	 * @param  mobileNumber mobile number
 	 */
-	public void printTickets(String movieName, String dateAndTime, String mobileNumber) {
+	public void printTickets(final String movieName, final 
+		String dateAndTime, final String mobileNumber) {
 		//print the tickets
 		for (int i = 0; i < bookedTickets.size(); i++) {
-			if ((mobileNumber + " " + movieName + " " + dateAndTime).equals(bookedTickets.get(i))) {
+			if ((mobileNumber + " " + movieName + " " 
+				+ dateAndTime).equals(bookedTickets.get(i))) {
 				System.out.println(mobileNumber + " " + movieName + " " + dateAndTime);
 				return;
 			} 
