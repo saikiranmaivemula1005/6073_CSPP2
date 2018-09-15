@@ -78,7 +78,7 @@ public final class Solution {
                     System.out.println(tokens[0] + " does not have enough answer choices");
                     return;
                 }
-                quiz.addChoices(tokens[1].replace(",", "    "));
+                quiz.addChoices(tokens[1].replace(",", "\t"));
                 if (Integer.parseInt(tokens[2]) > 4) {
                     System.out.println("Error! Correct answer choice number is out of range for question text " + (i + 1));
                     return;
