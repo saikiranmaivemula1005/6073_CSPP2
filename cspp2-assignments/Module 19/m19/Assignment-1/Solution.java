@@ -60,6 +60,7 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
+    String[] questionArray = new String[10];
     public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
@@ -68,6 +69,7 @@ public final class Solution {
        	String line = s.nextLine();
        	String[] tokens = line.split(":");
        	System.out.println(tokens[0] + " " + tokens[1] + " " + tokens[2] + " " + tokens[3] + " " + tokens[4]);
+       	questionArray = tokens;
        }
         if (questionCount == 0) {
         	System.out.println("Quiz does not have questions");
@@ -91,7 +93,7 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         
-        while (s.hasNext()) {
+        for (int i = 0; i < answerCount; i++) {
        	String line = s.nextLine();
        	String[] tokens = line.split(" ");
        	System.out.println(tokens[0] + " " + tokens[1]);
