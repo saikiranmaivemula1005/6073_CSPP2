@@ -94,12 +94,12 @@ System.out.println("Error! Correct answer choice number is out of range for ques
                     System.out.println("Invalid max marks for " + tokens[i]);
                     return;
                 }
-                quiz.addMaximumMarks(Integer.parseInt(tokens[3]));
-                if (Integer.parseInt(tokens[4]) > 0) {
+                quiz.addMaximumMarks(Integer.parseInt(tokens[three]));
+                if (Integer.parseInt(tokens[four]) > 0) {
                     System.out.println("Invalid penalty for " + tokens[i]);
                     return;
                 }
-                quiz.addPenalty(Integer.parseInt(tokens[4]));
+                quiz.addPenalty(Integer.parseInt(tokens[four]));
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Error! Malformed question");
                 return;
