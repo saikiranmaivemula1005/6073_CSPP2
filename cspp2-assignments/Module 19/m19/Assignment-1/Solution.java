@@ -27,6 +27,7 @@ public final class Solution {
             String line = s.nextLine();
              // split the line using space
             String[] tokens = line.split(" ");
+            System.out.println(tokens[0]);
               // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
