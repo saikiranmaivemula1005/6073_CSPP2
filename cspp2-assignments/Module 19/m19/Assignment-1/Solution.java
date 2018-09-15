@@ -108,7 +108,7 @@ public final class Solution {
     /**
      * { item_description }.
      */
-    final static int var2 = 100;
+     static int var2 = 100;
     /**
      * { var_description }.
      */
