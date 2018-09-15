@@ -67,8 +67,9 @@ public final class Solution {
         while (s.hasNext()) {
        	String line = s.nextLine();
        	String[] tokens = line.split(" ");
+       	String[] question = new String[10];
        	for (int i = 0; i < questionCount; i++) {
-	       	System.out.println(tokens[0] + " " +tokens[1] + " " + tokens[2] +" " + tokens[3]);
+	       	question = tokens;
 
        	}
        	// System.out.println(tokens[0] + " " +tokens[1] + " " + tokens[2] +" " + tokens[3]);
@@ -115,5 +116,5 @@ public final class Solution {
     }
 }
 class Quiz {
-	String question;
+	String[] question;
 }
