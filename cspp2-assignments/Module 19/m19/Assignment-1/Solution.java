@@ -59,8 +59,8 @@ public final class Solution {
     /**
      * { var_description }.
      */
-    static final int variable = 100;
-    private static String[] questionArray = new String[variable];
+    static final int variablE1 = 100;
+    private static String[] questionArray = new String[variablE1];
     /**
      * { var_description }.
      */
@@ -71,7 +71,7 @@ public final class Solution {
      * @param      quiz           The quiz
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, 
+    public static void loadQuestions(final Scanner s,
         final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
