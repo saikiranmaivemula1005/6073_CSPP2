@@ -83,7 +83,8 @@ public final class Solution {
                 quiz.addChoices(tokens[1].replace(",", "\t"));
                 final int four = 4;
                 if (Integer.parseInt(tokens[2]) > four) {
-System.out.println("Error! Correct answer choice number is out of range for question text " + (i + 1));
+System.out.println
+("Error! Correct answer choice number is out of range for question text " + (i + 1));
                     return;
                 }
                 int index = Integer.parseInt(tokens[2]) - 1;
@@ -162,7 +163,10 @@ class Quiz {
         penaltyMarks.add(penalty);
     }
     void displayQuizQuestions() {
-        if (questions.size() != 0 && answers.size() != 0 && choices.size() != 0 && maxMarks.size() != 0 && penaltyMarks.size() != 0) {
+        if (questions.size() != 0
+         && answers.size() != 0 && 
+         choices.size() != 0 && maxMarks.size() != 0 
+         && penaltyMarks.size() != 0) {
             for (int i = 0; i < questions.size(); i++) {
                 System.out.println(questions.get(i) + "(" + maxMarks.get(i) + ")");
                 System.out.println(choices.get(i));
