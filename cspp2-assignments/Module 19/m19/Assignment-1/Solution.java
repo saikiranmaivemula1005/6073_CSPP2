@@ -60,8 +60,21 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
+    /**
+     * { var_description }.
+     */
     private static String[] questionArray = new String[100];
+    /**
+     * { var_description }.
+     */
     private static int questionCounter = 0;
+    /**
+     * Loads questions.
+     *
+     * @param      s              { parameter_description }
+     * @param      quiz           The quiz
+     * @param      questionCount  The question count
+     */
     public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
