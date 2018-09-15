@@ -70,7 +70,7 @@ public final class Solution {
        	String line = s.nextLine();
        	String[] tokens = line.split(":");
        	// System.out.println(tokens[0] + " " + tokens[1] + " " + tokens[2] + " " + tokens[3] + " " + tokens[4]);
-       	questionArray[i] = tokens[i];
+       	questionArray = tokens;
        }
        questionCounter = questionCount;
         if (questionCount == 0) {
