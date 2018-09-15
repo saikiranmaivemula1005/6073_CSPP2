@@ -52,10 +52,8 @@ public final class Solution {
             }
         }
     }
-    
     /**
      * Loads questions.
-     *
      * @param      s              The scanner object for user input
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
@@ -70,7 +68,6 @@ public final class Solution {
     private static int questionCounter = 0;
     /**
      * Loads questions.
-     *
      * @param      s              { parameter_description }
      * @param      quiz           The quiz
      * @param      questionCount  The question count
@@ -80,25 +77,24 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         for (int i = 0; i < questionCount; i++) {
-       	String line = s.nextLine();
-       	String[] tokens = line.split(":");
-       	// System.out.println(tokens[0] + " " + tokens[1] + " " + tokens[2] + " " + tokens[3] + " " + tokens[4]);
-       	questionArray = tokens;
+        String line = s.nextLine();
+        String[] tokens = line.split(":");
+        // System.out.println(tokens[0] + " " + tokens[1] + " " + tokens[2] + " " + tokens[3] + " " + tokens[4]);
+        questionArray = tokens;
        }
        questionCounter = questionCount;
         if (questionCount == 0) {
-        	System.out.println("Quiz does not have questions");
-        	return;
+            System.out.println("Quiz does not have questions");
+            return;
         }
         if (questionCount == 1) {
-        	System.out.println("Error! Malformed question");
-        	return;
+            System.out.println("Error! Malformed question");
+            return;
         }
         System.out.println(questionCount + " are added to the quiz");
     }
     /**
      * Starts a quiz.
-     *
      * @param      s            The scanner object for user input
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
@@ -118,7 +114,6 @@ public final class Solution {
     private static String[] answersArray = new String[var2];
     /**
      * Starts a quiz.
-     *
      * @param      s            { parameter_description }
      * @param      quiz         The quiz
      * @param      answerCount  The answer count
@@ -129,35 +124,34 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         if (questionCounter == 1) {
-        	return;
+            return;
         }
         String[] newArray = questionArray[1].split(",");
         for (int k = 0; k < questionCounter; k++) {
-        	System.out.println("question text" + " "
-        	 + (k + 1) + "(" + (k + 1) + ")");
-        	System.out.println(newArray[0] + "	"
-        	 + newArray[1] + "	" + newArray[2]
-        	  + "	" + newArray[var1]);
-        	System.out.println();
+            System.out.println("question text" + " "
+             + (k + 1) + "(" + (k + 1) + ")");
+            System.out.println(newArray[0] + "  "
+             + newArray[1] + "  " + newArray[2]
+              + "   " + newArray[var1]);
+            System.out.println();
         }
         for (int j = 0; j < answerCount; j++) {
-       	String line = s.nextLine();
-       	String[] tokens = line.split(" ");
-       	answersArray = tokens;
-       	// System.out.println(tokens[0] + " " + tokens[1]);
+        String line = s.nextLine();
+        String[] tokens = line.split(" ");
+        answersArray = tokens;
+        // System.out.println(tokens[0] + " " + tokens[1]);
        }
        answerCounter = answerCount;
     }
 
     /**
      * Displays the score report.
-     *
      * @param      quiz     The quiz object
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
         // for (int i = 0; i < questionCounter; i++) {
-        // 	System.out.println(questionArray[0]);
+        //  System.out.println(questionArray[0]);
         // }
     }
 }
@@ -165,8 +159,8 @@ public final class Solution {
  * Class for quiz.
  */
 class Quiz {
-	/**
-	 * { var_description }.
-	 */
-	 private String question;
+    /**
+     * { var_description }.
+     */
+     private String question;
 }
