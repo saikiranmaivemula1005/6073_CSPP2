@@ -91,9 +91,9 @@ public final class Solution {
        	System.out.println(tokens[0]);
        	System.out.println(tokens[1]);
        }
-        for (int i = 0; i < answerCount; i++) {
-        	System.out.println(quiz);
-        }
+        // for (int i = 0; i < answerCount; i++) {
+        // 	System.out.println(quiz);
+        // }
     }
 
     /**
