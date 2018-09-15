@@ -152,7 +152,7 @@ class Quiz {
      *
      * @param      question  The question
      */
-    void addQuestion(String question) {
+    void addQuestion(final String question) {
         questions.add(question);
     }
     /**
@@ -160,7 +160,7 @@ class Quiz {
      *
      * @param      answer  The answer
      */
-    void addAnswer(String answer) {
+    void addAnswer(final String answer) {
         answers.add(answer);
     }
     /**
@@ -168,7 +168,7 @@ class Quiz {
      *
      * @param      choice  The choice
      */
-    void addChoices(String choice) {
+    void addChoices(final String choice) {
         choices.add(choice);
     }
     /**
@@ -176,7 +176,7 @@ class Quiz {
      *
      * @param      maximumMarks  The maximum marks
      */
-    void addMaximumMarks(int maximumMarks) {
+    void addMaximumMarks(final int maximumMarks) {
         maxMarks.add(maximumMarks);
     }
     /**
@@ -184,7 +184,7 @@ class Quiz {
      *
      * @param      penalty  The penalty
      */
-    void addPenalty(int penalty) {
+    void addPenalty(final int penalty) {
         penaltyMarks.add(penalty);
     }
     /**
@@ -192,8 +192,8 @@ class Quiz {
      */
     void displayQuizQuestions() {
         if (questions.size() != 0
-         && answers.size() != 0 &&
-         choices.size() != 0 && maxMarks.size() != 0
+         && answers.size() != 0
+          && choices.size() != 0 && maxMarks.size() != 0
          && penaltyMarks.size() != 0) {
             for (int i = 0; i < questions.size(); i++) {
                 System.out.println(questions.get(i)
