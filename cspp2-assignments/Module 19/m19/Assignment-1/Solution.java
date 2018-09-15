@@ -86,7 +86,7 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         for (int i = 0; i < answerCount; i++) {
-        	System.out.println(quiz);
+        	System.out.println(s);
         }
     }
 
@@ -98,4 +98,7 @@ public final class Solution {
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
     }
+}
+class Quiz {
+	String question;
 }
