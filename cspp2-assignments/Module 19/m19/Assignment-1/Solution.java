@@ -103,7 +103,7 @@ public final class Solution {
                 return;
             }
         }
-        System.out.println(questionCount + "are added to the quiz");
+        System.out.println(questionCount + " are added to the quiz");
     }
     /**
      * Starts a quiz.
