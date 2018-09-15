@@ -60,8 +60,8 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    static String[] questionArray = new String[100];
-    static int questionCounter = 0;
+    private static String[] questionArray = new String[100];
+    private static int questionCounter = 0;
     public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
@@ -94,15 +94,15 @@ public final class Solution {
     /**
      * { item_description }.
      */
-    final static int three = 3;
+    final static int var1 = 3;
     /**
      * { item_description }.
      */
-    final static int hundred = 100;
+    final static int var2 = 100;
     /**
      * { var_description }.
      */
-    static String[] answersArray = new String[hundred];
+    private static String[] answersArray = new String[var2];
     /**
      * Starts a quiz.
      *
@@ -124,7 +124,7 @@ public final class Solution {
         	 + (k + 1) + "(" + (k + 1) + ")");
         	System.out.println(newArray[0] + "	"
         	 + newArray[1] + "	" + newArray[2]
-        	  + "	" + newArray[three]);
+        	  + "	" + newArray[var1]);
         	System.out.println();
         }
         for (int j = 0; j < answerCount; j++) {
