@@ -136,12 +136,12 @@ public final class Solution {
  * Class for quiz.
  */
 class Quiz {
-    List<String> questions = new List<String>();
-    List<String> answers = new List<String>();
-    List<Integer> maxMarks = new List<Integer>();
-    List<Integer> penaltyMarks = new List<Integer>();
-    List<String> choices = new List<String>();
-    List<String> inputAnswers = new List<String>();
+    private List<String> questions = new List<String>();
+    private List<String> answers = new List<String>();
+    private List<Integer> maxMarks = new List<Integer>();
+    private List<Integer> penaltyMarks = new List<Integer>();
+    private List<String> choices = new List<String>();
+    private List<String> inputAnswers = new List<String>();
     void addQuestion(String question) {
         questions.add(question);
     }
