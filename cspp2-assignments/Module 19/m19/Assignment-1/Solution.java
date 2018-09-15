@@ -60,7 +60,7 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    static String[] questionArray = new String[10];
+    static String[] questionArray = new String[100];
     static int questionCounter = 0;
     public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
