@@ -74,19 +74,22 @@ public final class Solution {
                     throw new Exception();
                 }
                 quiz.addQuestion(tokens[0]);
-                if (tokens[1].length() < 17) {
+                final int seventeen = 17;
+                if (tokens[1].length() < seventeen) {
                     System.out.println(tokens[0] + " does not have enough answer choices");
                     return;
                 }
                 quiz.addChoices(tokens[1].replace(",", "\t"));
-                if (Integer.parseInt(tokens[2]) > 4) {
+                final int four = 4;
+                if (Integer.parseInt(tokens[2]) > four) {
                     System.out.println("Error! Correct answer choice number is out of range for question text " + (i + 1));
                     return;
                 }
                 int index = Integer.parseInt(tokens[2]) - 1;
                 String[] temporaryArray = tokens[1].split(",");
                 quiz.addAnswer(temporaryArray[index]);
-                if (Integer.parseInt(tokens[3]) < 0) {
+                final int three = 3;
+                if (Integer.parseInt(tokens[three]) < 0) {
                     System.out.println("Invalid max marks for " + tokens[i]);
                     return;
                 }
