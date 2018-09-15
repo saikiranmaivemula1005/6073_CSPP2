@@ -90,23 +90,26 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
+    static int answerCounter = 0;
+    static String[] answersArray = new String[answerCounter];
     public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
         String[] newArray = questionArray[1].split(",");
-        String line = s.nextLine();
-       	String[] tokens = line.split(" ");
-        for (int i = 0; i < questionCounter; i++) {
-        	System.out.println(questionArray[0] + i + " " + "(" + questionArray[3] + ")" );
+        for (int k = 0; k < questionCounter; k++) {
+        	int x =0;
+        	System.out.println(questionArray[0] + x + " " + "(" + questionArray[3] + ")" );
         	System.out.println(newArray[0] + "	" +newArray[1] +"	"+newArray[2] + "	"+newArray[3]);
-   	       	System.out.println(tokens[0] + " " + tokens[1]);
-
+        	x++;
         }
-    //     for (int j = 0; j < answerCount; j++) {
-    //    	String line = s.nextLine();
-    //    	String[] tokens = line.split(" ");
-    //    }
+        for (int j = 0; j < answerCount; j++) {
+       	String line = s.nextLine();
+       	String[] tokens = line.split(" ");
+       	answersArray = tokens;
+       	// System.out.println(tokens[0] + " " + tokens[1]);
+       }
+       answerCounter = answerCount;
     }
 
     /**
