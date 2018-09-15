@@ -91,8 +91,18 @@ public final class Solution {
      * @param      answerCount  The answer count
      */
     static int answerCounter = 0;
+    /**
+     * { item_description }.
+     */
     final static int three = 3;
-    static String[] answersArray = new String[100];
+    /**
+     * { item_description }.
+     */
+    final static int hundred = 100;
+    /**
+     * { var_description }.
+     */
+    static String[] answersArray = new String[hundred];
     /**
      * Starts a quiz.
      *
@@ -112,8 +122,8 @@ public final class Solution {
         for (int k = 0; k < questionCounter; k++) {
         	System.out.println("question text" + " "
         	 + (k + 1) + "(" + (k + 1) + ")");
-        	System.out.println(newArray[0] + "	" +
-        	 newArray[1] + "	" + newArray[2]
+        	System.out.println(newArray[0] + "	"
+        	 + newArray[1] + "	" + newArray[2]
         	  + "	" + newArray[three]);
         	System.out.println();
         }
