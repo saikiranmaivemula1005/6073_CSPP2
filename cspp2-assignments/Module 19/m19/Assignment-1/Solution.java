@@ -94,9 +94,10 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        String[] newArray = questionArray[1].split(",");
         for (int i = 0; i < questionCounter; i++) {
-        	System.out.println(questionArray[0] + i + " " + "(" + questionArray[2] + ")" );
-        	System.out.println(questionArray[1]);
+        	System.out.println(questionArray[0] + i + " " + "(" + questionArray[3] + ")" );
+        	System.out.println(newArray[0] + "	" +newArray[1] +"	"+newArray[2] + "	"+newArray[3]);
         }
         for (int j = 0; j < answerCount; j++) {
        	String line = s.nextLine();
