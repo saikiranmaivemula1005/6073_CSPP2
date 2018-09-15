@@ -90,6 +90,7 @@ public final class Solution {
                     System.out.println("Invalid max marks for " + tokens[i]);
                     return;
                 }
+                quiz.addMaximumMarks(Integer.parseInt(tokens[3]));
                 if (Integer.parseInt(tokens[4]) > 0) {
                     System.out.println("Invalid penalty for " + tokens[i]);
                     return;
@@ -118,7 +119,7 @@ public final class Solution {
         quiz.displayQuizQuestions();
         for (int i = 0; i < answerCount; i++) {
             String line = s.nextLine();
-            quiz.addAnswer(line);
+            quiz.addUserAnswer(line);
         }
     }
 
