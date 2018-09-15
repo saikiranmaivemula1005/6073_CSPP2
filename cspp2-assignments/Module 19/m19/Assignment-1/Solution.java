@@ -170,11 +170,21 @@ class Quiz {
             }
         }
     }
+    /**
+     * Adds an user answer.
+     *
+     * @param      answer  The answer
+     */
     void addUserAnswer(final String answer) {
         inputAnswers.add(answer);
     }
+    /**
+     * displays the score.
+     */
     void displayScore() {
-        if (questions.size() != 0 &&  answers.size() != 0 && choices.size() != 0 && maxMarks.size() != 0 && penaltyMarks.size() != 0) {
+        if (questions.size() != 0 &&  answers.size()
+         != 0 && choices.size() != 0 && maxMarks.size() 
+         != 0 && penaltyMarks.size() != 0) {
             int score = 0;
             for (int i = 0; i < answers.size(); i++) {
                 System.out.println(questions.get(i));
