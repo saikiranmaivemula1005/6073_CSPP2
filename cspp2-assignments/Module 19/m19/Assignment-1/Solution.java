@@ -95,15 +95,18 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         String[] newArray = questionArray[1].split(",");
+        String line = s.nextLine();
+       	String[] tokens = line.split(" ");
         for (int i = 0; i < questionCounter; i++) {
         	System.out.println(questionArray[0] + i + " " + "(" + questionArray[3] + ")" );
         	System.out.println(newArray[0] + "	" +newArray[1] +"	"+newArray[2] + "	"+newArray[3]);
+   	       	System.out.println(tokens[0] + " " + tokens[1]);
+
         }
-        for (int j = 0; j < answerCount; j++) {
-       	String line = s.nextLine();
-       	String[] tokens = line.split(" ");
-       	System.out.println(tokens[0] + " " + tokens[1]);
-       }
+    //     for (int j = 0; j < answerCount; j++) {
+    //    	String line = s.nextLine();
+    //    	String[] tokens = line.split(" ");
+    //    }
     }
 
     /**
