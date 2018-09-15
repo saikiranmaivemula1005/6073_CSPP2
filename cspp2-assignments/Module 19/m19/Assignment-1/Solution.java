@@ -173,7 +173,7 @@ class Quiz {
         if (questions.size() != 0 &&  answers.size() != 0 && choices.size() != 0 && maxMarks.size() != 0 && penaltyMarks.size() != 0) {
             int score = 0;
             for (int i = 0; i < answers.size(); i++) {
-                System.out.println(inputAnswers.get(i));
+                System.out.println(questions.get(i));
                 if (answers.get(i).equals(inputAnswers.get(i))) {
                     System.out.println(" Correct Answer! - Marks Awarded: " + maxMarks.get(i));
                     score += maxMarks.get(i);
