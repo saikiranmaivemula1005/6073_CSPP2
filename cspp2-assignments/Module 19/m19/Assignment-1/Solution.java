@@ -67,7 +67,7 @@ public final class Solution {
         while (s.hasNext()) {
        	String line = s.nextLine();
        	String[] tokens = line.split(" ");
-       	String[] tokensSplit = tokens[1].split(",");
+       	String[] tokensSplit = tokens[2].split(",");
        	System.out.println(tokensSplit[1]);
        }
         if (questionCount == 0) {
