@@ -95,7 +95,9 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         for (int i = 0; i < questionCounter; i++) {
-        	System.out.println(questionArray[0] + " " + questionArray[1] + " " + questionArray[2] + " " + questionArray[3] + " " + questionArray[4]);
+        	System.out.println(questionArray[0] + i + " " + "(" + questionArray[4] + ")" +
+        	 questionArray[1] + " " + questionArray[2] + " " + questionArray[3]);
+        	System.out.println();
         }
         for (int i = 0; i < answerCount; i++) {
        	String line = s.nextLine();
