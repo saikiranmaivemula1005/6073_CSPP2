@@ -64,12 +64,12 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        while (s.hasNext()) {
-       	String line = s.nextLine();
-       	String[] tokens = line.split(" ");
-       	// String[] tokensSplit = tokens[2].split(",");
-       	System.out.println(tokens[0] + " " + tokens[1]);
-       }
+       //  while (s.hasNext()) {
+       // 	String line = s.nextLine();
+       // 	String[] tokens = line.split(":");
+       // 	// String[] tokensSplit = tokens[2].split(",");
+       // 	System.out.println(tokens[0] + " " + tokens[1]);
+       // }
         if (questionCount == 0) {
         	System.out.println("Quiz does not have questions");
         	return;
