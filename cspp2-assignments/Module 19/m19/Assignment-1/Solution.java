@@ -81,6 +81,7 @@ public final class Solution {
         String[] tokens = line.split(":");
         questionArray = tokens;
        }
+       System.out.println(quiz);
        questionCounter = questionCount;
         if (questionCount == 0) {
             System.out.println("Quiz does not have questions");
