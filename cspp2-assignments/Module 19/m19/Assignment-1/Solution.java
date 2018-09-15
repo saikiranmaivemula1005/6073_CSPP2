@@ -61,7 +61,8 @@ public final class Solution {
     /**
      * { var_description }.
      */
-    private static String[] questionArray = new String[100];
+    static final int variable = 100;
+    private static String[] questionArray = new String[variable];
     /**
      * { var_description }.
      */
@@ -72,14 +73,14 @@ public final class Solution {
      * @param      quiz           The quiz
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s, 
+        final Quiz quiz, final int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         for (int i = 0; i < questionCount; i++) {
         String line = s.nextLine();
         String[] tokens = line.split(":");
-        // System.out.println(tokens[0] + " " + tokens[1] + " " + tokens[2] + " " + tokens[3] + " " + tokens[4]);
         questionArray = tokens;
        }
        questionCounter = questionCount;
