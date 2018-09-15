@@ -126,6 +126,9 @@ public final class Solution {
         }
     }
 }
+/**
+ * Class for quiz.
+ */
 class Quiz {
-	String question;
+	 private String question;
 }
