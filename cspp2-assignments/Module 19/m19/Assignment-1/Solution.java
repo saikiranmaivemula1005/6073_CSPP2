@@ -75,7 +75,7 @@ public final class Solution {
                 }
                 quiz.addQuestion(tokens[0]);
                 if (tokens[1].length() < 17) {
-                    System.out.println(tokens[0] + "does not have enough answer choices");
+                    System.out.println(tokens[0] + " does not have enough answer choices");
                     return;
                 }
                 quiz.addChoices(tokens[1].replace(",", "\t"));
