@@ -67,7 +67,8 @@ public final class Solution {
        while (s.hasNext()) {
        	String line = s.nextLine();
        	String[] tokens = line.split(" ");
-       	System.out.printf(tokens[0], tokens[1]);
+       	System.out.println(tokens[0]);
+       	System.out.println(tokens[1]);
        }
         if (questionCount == 0) {
         	System.out.println("Quiz does not have questions");
