@@ -147,29 +147,57 @@ class Quiz {
     private List<Integer> penaltyMarks = new List<Integer>();
     private List<String> choices = new List<String>();
     private List<String> inputAnswers = new List<String>();
+    /**
+     * Adds a question.
+     *
+     * @param      question  The question
+     */
     void addQuestion(String question) {
         questions.add(question);
     }
+    /**
+     * Adds an answer.
+     *
+     * @param      answer  The answer
+     */
     void addAnswer(String answer) {
         answers.add(answer);
     }
+    /**
+     * Adds choices.
+     *
+     * @param      choice  The choice
+     */
     void addChoices(String choice) {
         choices.add(choice);
     }
+    /**
+     * Adds maximum marks.
+     *
+     * @param      maximumMarks  The maximum marks
+     */
     void addMaximumMarks(int maximumMarks) {
         maxMarks.add(maximumMarks);
     }
+    /**
+     * Adds a penalty.
+     *
+     * @param      penalty  The penalty
+     */
     void addPenalty(int penalty) {
         penaltyMarks.add(penalty);
     }
+    /**
+     * displays the quiz questions.
+     */
     void displayQuizQuestions() {
         if (questions.size() != 0
-         && answers.size() != 0 && 
-         choices.size() != 0 && maxMarks.size() != 0 
+         && answers.size() != 0 &&
+         choices.size() != 0 && maxMarks.size() != 0
          && penaltyMarks.size() != 0) {
             for (int i = 0; i < questions.size(); i++) {
-                System.out.println(questions.get(i) +
-                 "(" + maxMarks.get(i) + ")");
+                System.out.println(questions.get(i)
+                 + "(" + maxMarks.get(i) + ")");
                 System.out.println(choices.get(i));
                 System.out.println();
             }
