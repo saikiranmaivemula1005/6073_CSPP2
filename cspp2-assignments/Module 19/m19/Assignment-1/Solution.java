@@ -98,7 +98,7 @@ public final class Solution {
         	System.out.println(questionArray[0] + i + " " + "(" + questionArray[2] + ")" );
         	System.out.println(questionArray[1]);
         }
-        for (int i = 0; i < answerCount; i++) {
+        for (int j = 0; j < answerCount; j++) {
        	String line = s.nextLine();
        	String[] tokens = line.split(" ");
        	System.out.println(tokens[0] + " " + tokens[1]);
