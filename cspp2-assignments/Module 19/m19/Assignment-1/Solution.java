@@ -94,8 +94,7 @@ public final class Solution {
         while (s.hasNext()) {
        	String line = s.nextLine();
        	String[] tokens = line.split(" ");
-       	System.out.println(tokens[0]);
-       	System.out.println(tokens[1]);
+       	System.out.println(tokens[0] + " " + tokens[1]);
        }
         // for (int i = 0; i < answerCount; i++) {
         // 	System.out.println(quiz);
