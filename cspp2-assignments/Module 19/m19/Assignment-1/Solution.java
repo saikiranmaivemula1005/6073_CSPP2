@@ -91,7 +91,7 @@ public final class Solution {
      * @param      answerCount  The answer count
      */
     static int answerCounter = 0;
-    static String[] answersArray = new String[answerCounter];
+    static String[] answersArray = new String[100];
     public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
