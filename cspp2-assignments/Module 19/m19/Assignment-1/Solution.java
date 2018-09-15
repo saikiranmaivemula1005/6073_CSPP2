@@ -93,7 +93,8 @@ public final class Solution {
     static int answerCounter = 0;
     final static int three = 3;
     static String[] answersArray = new String[100];
-    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner s, final Quiz quiz,
+     final int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
@@ -102,8 +103,10 @@ public final class Solution {
         }
         String[] newArray = questionArray[1].split(",");
         for (int k = 0; k < questionCounter; k++) {
-        	System.out.println("question text" + " " + (k + 1) + "(" + (k + 1) + ")" );
-        	System.out.println(newArray[0] + "	" +newArray[1] + "	" + newArray[2] + "	" + newArray[three]);
+        	System.out.println("question text" + " " +
+        	 (k + 1) + "(" + (k + 1) + ")");
+        	System.out.println(newArray[0] + "	" +
+        	 newArray[1] + "	" + newArray[2] + "	" + newArray[three]);
         	System.out.println();
         }
         for (int j = 0; j < answerCount; j++) {
@@ -116,7 +119,7 @@ public final class Solution {
     }
 
     /**
-     * Displays the score report
+     * Displays the score report.
      *
      * @param      quiz     The quiz object
      */
@@ -131,5 +134,8 @@ public final class Solution {
  * Class for quiz.
  */
 class Quiz {
+	/**
+	 * { var_description }
+	 */
 	 private String question;
 }
