@@ -178,7 +178,7 @@ class Quiz {
                     System.out.println(" Correct Answer! - Marks Awarded: " + maxMarks.get(i));
                     score += maxMarks.get(i);
                 } else {
-                    System.out.println(" Wrong Answer! - penalty: " + penaltyMarks.get(i));
+                    System.out.println(" Wrong Answer! - Penalty: " + penaltyMarks.get(i));
                     score += penaltyMarks.get(i);
                 }
             }
