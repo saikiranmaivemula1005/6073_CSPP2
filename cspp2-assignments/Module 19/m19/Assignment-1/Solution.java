@@ -91,6 +91,7 @@ public final class Solution {
      * @param      answerCount  The answer count
      */
     static int answerCounter = 0;
+    final static int three = 3;
     static String[] answersArray = new String[100];
     public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
         // write your code here to display the quiz questions
@@ -101,8 +102,8 @@ public final class Solution {
         }
         String[] newArray = questionArray[1].split(",");
         for (int k = 0; k < questionCounter; k++) {
-        	System.out.println("question text" +" " + (k+1) + "(" + (k+1) + ")" );
-        	System.out.println(newArray[0] + "	" +newArray[1] +"	"+newArray[2] + "	"+newArray[3]);
+        	System.out.println("question text" + " " + (k + 1) + "(" + (k + 1) + ")" );
+        	System.out.println(newArray[0] + "	" +newArray[1] + "	" + newArray[2] + "	" + newArray[three]);
         	System.out.println();
         }
         for (int j = 0; j < answerCount; j++) {
