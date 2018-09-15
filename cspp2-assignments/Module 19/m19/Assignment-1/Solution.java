@@ -98,10 +98,8 @@ public final class Solution {
         // store the user respones in the quiz object
         String[] newArray = questionArray[1].split(",");
         for (int k = 0; k < questionCounter; k++) {
-        	int x =0;
-        	System.out.println(questionArray[0] +" " + "(" + x + ")" );
+        	System.out.println(questionArray[0] +" " + "(" + k + ")" );
         	System.out.println(newArray[0] + "	" +newArray[1] +"	"+newArray[2] + "	"+newArray[3]);
-        	x++;
         }
         for (int j = 0; j < answerCount; j++) {
        	String line = s.nextLine();
