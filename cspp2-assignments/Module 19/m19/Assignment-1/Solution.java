@@ -99,7 +99,7 @@ public final class Solution {
         String[] newArray = questionArray[1].split(",");
         for (int k = 0; k < questionCounter; k++) {
         	int x =0;
-        	System.out.println(questionArray[0] + x + " " + "(" + questionArray[3] + ")" );
+        	System.out.println(questionArray[0] +" " + "(" + x + ")" );
         	System.out.println(newArray[0] + "	" +newArray[1] +"	"+newArray[2] + "	"+newArray[3]);
         	x++;
         }
