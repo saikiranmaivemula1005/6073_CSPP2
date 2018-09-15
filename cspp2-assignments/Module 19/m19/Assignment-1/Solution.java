@@ -117,6 +117,9 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
+        for (int i = 0; i < questionCounter; i++) {
+        	System.out.println(questionArray[0]);
+        }
     }
 }
 class Quiz {
