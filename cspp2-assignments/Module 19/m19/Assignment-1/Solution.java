@@ -69,7 +69,7 @@ public final class Solution {
        	String line = s.nextLine();
        	String[] tokens = line.split(" ");
        	// String[] tokensSplit = tokens[2].split(",");
-       	System.out.println(tokens[1]);
+       	// System.out.println(tokens[1]);
        }
         if (questionCount == 0) {
         	System.out.println("Quiz does not have questions");
