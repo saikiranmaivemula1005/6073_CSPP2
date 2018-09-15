@@ -182,7 +182,7 @@ class Quiz {
                     score += penaltyMarks.get(i);
                 }
             }
-            System.out.println("Total Score:" + score);
+            System.out.println("Total Score: " + score);
         }
     }
 
