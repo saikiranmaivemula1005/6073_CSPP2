@@ -76,13 +76,14 @@ public final class Solution {
                 quiz.addQuestion(tokens[0]);
                 final int seventeen = 17;
                 if (tokens[1].length() < seventeen) {
-                    System.out.println(tokens[0] + " does not have enough answer choices");
+                    System.out.println(tokens[0] +
+                        " does not have enough answer choices");
                     return;
                 }
                 quiz.addChoices(tokens[1].replace(",", "\t"));
                 final int four = 4;
                 if (Integer.parseInt(tokens[2]) > four) {
-                    System.out.println("Error! Correct answer choice number is out of range for question text " + (i + 1));
+System.out.println("Error! Correct answer choice number is out of range for question text " + (i + 1));
                     return;
                 }
                 int index = Integer.parseInt(tokens[2]) - 1;
