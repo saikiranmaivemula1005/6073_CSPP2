@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 /**
  * Solution class for code-eval.
@@ -17,8 +18,7 @@ public final class Solution {
      */
     public static void main(final String[] args) {
          // instantiate this Quiz
-        QuizImplementation q = new QuizImplementation();
-        Quiz quiz = new Quiz();
+        Quiz q = new Quiz();
          // code to read the test cases input file
         Scanner s = new Scanner(System.in);
         // check if there is one more line to process
@@ -33,62 +33,26 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                q.loadQuestions(s, quiz, Integer.parseInt(tokens[1]));
+                loadQuestions(s, q, Integer.parseInt(tokens[1]));
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
                 System.out.println("| Start Quiz |");
                 System.out.println("|------------|");
-                q.startQuiz(s, quiz, Integer.parseInt(tokens[1]));
+                startQuiz(s, q, Integer.parseInt(tokens[1]));
                 break;
                 case "SCORE_REPORT":
                 System.out.println("|--------------|");
                 System.out.println("| Score Report |");
                 System.out.println("|--------------|");
-                q.displayScore(quiz);
+                displayScore(q);
                 break;
                 default:
                 break;
             }
         }
     }
-}
-    class Quiz {
-    	private String question;
-    	private String choice;
-    	private String answer;
-    	private int maximumMarks;
-    	private int penaltyMarks;
-    	Quiz() {
-    		
-    	}
-    	Quiz(String question, String choice, String answer, int maximumMarks, int penaltyMarks) {
-    		this.question = question;
-    		this.choice = choice;
-    		this.answer = answer;
-    		this.maximumMarks = maximumMarks;
-    		this.penaltyMarks = penaltyMarks;
-
-    	}
-    	public String getQuestion() {
-    		return this.question;
-    	}
-    	public String getChoice() {
-    		return this.choice;
-    	}
-    	public String getAnswer() {
-    		return this.answer;
-    	}
-    	public int getMaximumMarks() {
-    		return this.maximumMarks;
-    	}
-    	public int getPenaltyMarks() {
-    		return this.penaltyMarks;
-    	}
-
-    }
-    class QuizImplementation {
-    static List<Quiz> quizObject = new List<Quiz>();
+    
     /**
      * Loads questions.
      *
@@ -122,7 +86,7 @@ public final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         for (int i = 0; i < answerCount; i++) {
-        	System.out.println(quizObject.get(i).getQuestion());
+        	System.out.println(quiz);
         }
     }
 
