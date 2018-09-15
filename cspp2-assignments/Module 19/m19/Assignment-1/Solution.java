@@ -183,16 +183,18 @@ class Quiz {
      */
     void displayScore() {
         if (questions.size() != 0 &&  answers.size()
-         != 0 && choices.size() != 0 && maxMarks.size() 
+         != 0 && choices.size() != 0 && maxMarks.size()
          != 0 && penaltyMarks.size() != 0) {
             int score = 0;
             for (int i = 0; i < answers.size(); i++) {
                 System.out.println(questions.get(i));
                 if (answers.get(i).equals(inputAnswers.get(i))) {
-                    System.out.println(" Correct Answer! - Marks Awarded: " + maxMarks.get(i));
+                    System.out.println
+            (" Correct Answer! - Marks Awarded: " + maxMarks.get(i));
                     score += maxMarks.get(i);
                 } else {
-                    System.out.println(" Wrong Answer! - Penalty: " + penaltyMarks.get(i));
+                    System.out.println
+            (" Wrong Answer! - Penalty: " + penaltyMarks.get(i));
                     score += penaltyMarks.get(i);
                 }
             }
