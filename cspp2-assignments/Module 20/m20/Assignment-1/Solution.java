@@ -133,7 +133,7 @@ class Quiz {
     /**
      * { var_description }.
      */
-    private Question[] questions;
+    private  List <Question> questions = new List<Question>();
     /**
      * { var_description }.
      */
@@ -150,7 +150,7 @@ class Quiz {
      * @param      q     The question
      */
     public void addQuestion(final Question q) {
-
+    	questions.add(q);
     }
     /**
      * Gets the question.
@@ -170,6 +170,9 @@ class Quiz {
     public String showReport() {
         String s = "";
         return s;
+    }
+    public void displayQuizQuestions() {
+
     }
 
 }
@@ -237,12 +240,13 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        final int three = 3, four = 4;
         for (int i = 0; i < q; i++) {
         	String line = scan.nextLine();
         	String[] tokens = line.split(":");
         	// System.out.println(tokens[0]);
         	String[] choices = tokens[1].split(",");
-        	Question que = new Question(tokens[0], choices, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+        	Question que = new Question(tokens[0], choices, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[three]), Integer.parseInt(tokens[four]));
         	quiz.addQuestion(que);
         }
     }
@@ -258,6 +262,7 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
+        quiz.displayQuizQuestions();
     }
     /**
      * Displays the score report.
