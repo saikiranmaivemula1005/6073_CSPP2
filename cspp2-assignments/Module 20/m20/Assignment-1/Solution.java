@@ -263,7 +263,7 @@ public final class Solution {
         // add the question objects to the quiz class
         if (q <= 0) {
         	noQuestions = false;
-        	System.out.println("Quiz doenot have questions");
+        	System.out.println("Quiz does not have questions");
         	return;
         }
         try {
@@ -278,7 +278,7 @@ public final class Solution {
         		final int minimumLength = 17;
         		if (tokens[1].length() < minimumLength) {
         			System.out.println(tokens[0]
-        				 + "does not have enough answer choices");
+        				 + " does not have enough answer choices");
         			noQuestions = false;
         			return;
         		}
