@@ -341,12 +341,9 @@ public final class Solution {
         if (!noQuestions) {
             return;
         }
-        for (int j = 0; j < quiz.size(); j++) {
-            Question que = quiz.getQuestion(j);
-            System.out.println(que);
-        }
         for (int i = 0; i < q; i++) {
             Question que = quiz.getQuestion(i);
+            System.out.println(quiz.getQuestion(i));
             String line = scan.nextLine();
             que.setResponse(line);
         }
