@@ -340,7 +340,7 @@ public final class Solution {
         }
         for (int i = 0; i < q; i++) {
             Question que = quiz.getQuestion(i);
-            System.out.println(que);
+            System.out.println(que.toString());
             String line = scan.nextLine();
             que.setResponse(line);
         }
