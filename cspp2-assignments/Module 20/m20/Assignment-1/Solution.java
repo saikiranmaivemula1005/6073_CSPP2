@@ -66,7 +66,7 @@ class Question {
      * @return     The correct answer.
      */
     public String getCorrectAnswer() {
-        return this.choices[this.correctAnswer-1];
+        return this.choices[this.correctAnswer - 1];
     }
     /**
      * Gets the question text.
