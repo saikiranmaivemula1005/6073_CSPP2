@@ -122,13 +122,13 @@ class Question {
    * @return   String representation of the object.
    */
   public String toString() {
-    String s = this.getQuestionText()
+    String result = this.getQuestionText()
     + "(" + this.getMaxMarks() + ")" + "\n";
     for (int i = 0; i < this.choices.length - 1; i++) {
-      s += this.choices[i] + "\t";
+      result += this.choices[i] + "\t";
     }
-    s += this.choices[this.choices.length - 1] + "\n";
-    return s;
+    result += this.choices[this.choices.length - 1] + "\n";
+    return result;
   }
 }
 /**
@@ -178,21 +178,21 @@ class Quiz {
    */
   public String showReport() {
     int score = 0;
-    String s = "";
+    String result = "";
     for (int i = 0; i < this.size; i++) {
-      s += questions[i].getQuestionText() + "\n";
+      result += questions[i].getQuestionText() + "\n";
       if (questions[i].evaluateResponse(questions[i].getResponse())) {
-        s += " Correct Answer! - Marks Awarded: "
+        result += " Correct Answer! - Marks Awarded: "
         + questions[i].getMaxMarks() + "\n";
         score += questions[i].getMaxMarks();
       } else {
-        s += " Wrong Answer! - Penalty: "
+        result += " Wrong Answer! - Penalty: "
         + questions[i].getPenalty() + "\n";
         score += questions[i].getPenalty();
       }
     }
-    s += "Total Score: " + score;
-    return s;
+    result += "Total Score: " + score;
+    return result;
   }
 }
 /**
@@ -208,7 +208,7 @@ public final class Solution {
   /**
    * flag for error checking.
    */
-  private static boolean noprobInLoadque = true;
+  private static boolean noQuestions = true;
   /**
    * main function to execute test cases.
    *
@@ -264,7 +264,7 @@ public final class Solution {
     // tokenize the question line and create the question object
     // add the question objects to the quiz class
     if (q <= 0) {
-      noprobInLoadque = false;
+      noQuestions = false;
       System.out.println("Quiz does not have questions");
       return;
     }
@@ -274,35 +274,35 @@ public final class Solution {
         String[] tokens = line.split(":");
         if (tokens[0].equals("")) {
           System.out.println("Error! Malformed question");
-          noprobInLoadque = false;
+          noQuestions = false;
           return;
         }
-        final int minlength = 17;
-        if (tokens[1].length() < minlength) {
+        final int minLength = 17;
+        if (tokens[1].length() < minLength) {
           System.out.println(tokens[0]
             + " does not have enough answer choices");
-          noprobInLoadque = false;
+          noQuestions = false;
           return;
         }
-        final int maxchoiceno = 4;
-        if (Integer.parseInt(tokens[2]) > maxchoiceno) {
+        final int maximumChoice = 4;
+        if (Integer.parseInt(tokens[2]) > maximumChoice) {
           System.out.println("Error! Correct answer choice number "
             + "is out of range for question text " + (i + 1));
-          noprobInLoadque = false;
+          noQuestions = false;
           return;
         }
-        final int minmarknum = 0;
+        final int minimumMarks = 0;
         final int marksindex = 3;
-        if (Integer.parseInt(tokens[marksindex]) < minmarknum) {
+        if (Integer.parseInt(tokens[marksindex]) < minimumMarks) {
           System.out.println("Invalid max marks for " + tokens[i]);
-          noprobInLoadque = false;
+          noQuestions = false;
           return;
         }
         final int maxpenalty = 0;
         final int penaltyindex = 4;
         if (Integer.parseInt(tokens[penaltyindex]) > maxpenalty) {
           System.out.println("Invalid penalty for " + tokens[i]);
-          noprobInLoadque = false;
+          noQuestions = false;
           return;
         }
         quiz.addQuestion(new Question(tokens[0], tokens[1].split(","),
@@ -312,7 +312,7 @@ public final class Solution {
       }
     } catch (ArrayIndexOutOfBoundsException e) {
       System.out.println("Error! Malformed question");
-      noprobInLoadque = false;
+      noQuestions = false;
       return;
     }
     System.out.println(q + " are added to the quiz");
@@ -329,7 +329,7 @@ public final class Solution {
     // write your code here to display the quiz questions on the console.
     // read the user responses from the console using scanner object.
     // store the user respone in the question object
-    if (!noprobInLoadque) {
+    if (!noQuestions) {
       return;
     }
     for (int i = 0; i < q; i++) {
@@ -346,7 +346,7 @@ public final class Solution {
    */
   public static void displayScore(final Quiz quiz) {
     // write your code here to display the score report using quiz object.
-    if (!noprobInLoadque) {
+    if (!noQuestions) {
       return;
     }
     System.out.println(quiz.showReport());
