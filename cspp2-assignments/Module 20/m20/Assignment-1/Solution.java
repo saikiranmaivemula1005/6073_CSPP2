@@ -123,7 +123,8 @@ class Question {
      * @return     String representation of the object.
      */
     public String toString() {
-        String result = this.getQuestionText() + "(" + this.getMaxMarks() + ")" + "\n";
+        String result = this.getQuestionText()
+         + "(" + this.getMaxMarks() + ")" + "\n";
         for (int i = 0; i < this.choices.length - 1; i++) {
         	result += this.choices[i] + "\t";
         }
@@ -181,7 +182,7 @@ class Quiz {
         String s = "";
         for (int i = 0; i < this.size; i++) {
         	s += questions[i].getQuestionText() + "\n";
-        	if (questions[i].evaluateResponse(questions[i].getResponse())) {
+    if (questions[i].evaluateResponse(questions[i].getResponse())) {
         		s += "Correct Answer! - Marks Awarded: "
         	+ questions[i].getMaxMarks() + "\n";
         	score += questions[i].getMaxMarks();
@@ -222,7 +223,6 @@ public final class Solution {
             String line = s.nextLine();
              // split the line using space
             String[] tokens = line.split(" ");
-              // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "LOAD_QUESTIONS":
                 System.out.println("|----------------|");
@@ -290,7 +290,7 @@ public final class Solution {
         			return;
         		}
         		final int minMarks = 0;
-        		final int marksIndex = 3;      
+        		final int marksIndex = 3;
          if (Integer.parseInt(tokens[marksIndex]) < minMarks) {
                     System.out.println("Invalid max marks for " + tokens[i]);
                     noQuestions = false;
