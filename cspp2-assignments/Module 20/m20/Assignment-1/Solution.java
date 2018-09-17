@@ -240,8 +240,10 @@ public final class Solution {
         for (int i = 0; i < q; i++) {
         	String line = scan.nextLine();
         	String[] tokens = line.split(":");
-        	System.out.println(tokens[0]);
-        	// quiz.addQuestion(tokens[0]);
+        	// System.out.println(tokens[0]);
+        	String[] choices = tokens[1].split(",");
+        	Question que = new Question(tokens[0], choices, Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4]));
+        	quiz.addQuestion(que);
         }
     }
     /**
