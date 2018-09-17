@@ -44,7 +44,11 @@ class Question {
      */
     Question(final String question1, final String[] choices1,
         final int correctAnswer1, final int maxMarks1, final int penalty1) {
-
+    	this.questiontext = question1;
+    	this.choices = choices1;
+    	this.correctAnswer = correctAnswer1;
+    	this.maxMarks = maxMarks1;
+    	this.penalty = penalty1;
     }
     /**
      * { function_description }.
@@ -54,6 +58,9 @@ class Question {
      * @return     { description_of_the_return_value }
      */
     public boolean evaluateResponse(final String choice) {
+    	if (choice == response) {
+    		return true;
+    	}
         return false;
     }
     /**
@@ -61,8 +68,8 @@ class Question {
      *
      * @return     The correct answer.
      */
-    public String getCorrectAnswer() {
-        return null;
+    public int getCorrectAnswer() {
+        return this.correctAnswer;
     }
     /**
      * Gets the question text.
@@ -70,7 +77,7 @@ class Question {
      * @return     The question text.
      */
     public String getQuestionText() {
-        return null;
+        return this.questiontext;
     }
     /**
      * Gets the choice.
@@ -78,7 +85,7 @@ class Question {
      * @return     The choice.
      */
     public String[] getChoice() {
-        return null;
+        return this.choices;
     }
     /**
      * Gets the maximum marks.
@@ -86,7 +93,7 @@ class Question {
      * @return     The maximum marks.
      */
     public int getMaxMarks() {
-        return 1;
+        return this.maxMarks;
     }
     /**
      * Gets the penalty.
@@ -94,7 +101,7 @@ class Question {
      * @return     The penalty.
      */
     public int getPenalty() {
-        return 1;
+        return this.penalty;
     }
     /**
      * Sets the response.
@@ -102,6 +109,7 @@ class Question {
      * @param      answer  The answer
      */
     public void setResponse(final String answer) {
+    	response = answer;
 
     }
     /**
@@ -110,7 +118,7 @@ class Question {
      * @return     The response.
      */
     public String getResponse() {
-        return null;
+        return response;
     }
     /**
      * Returns a string representation of the object.
@@ -171,8 +179,13 @@ class Quiz {
         String s = "";
         return s;
     }
+    Question que = new Question();
     public void displayQuizQuestions() {
-
+    	for (int i = 0; i < questions.size(); i++) {
+    		System.out.println(questions.get(i) + "(" + que.getMaxMarks() + ")");
+    		System.out.println(que.getChoice());
+    		System.out.println();
+    	}
     }
 
 }
