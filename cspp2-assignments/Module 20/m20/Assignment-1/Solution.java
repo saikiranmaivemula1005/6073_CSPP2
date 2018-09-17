@@ -4,27 +4,27 @@ import java.util.Scanner;
  */
 class Question {
     /**
-     * { var_description }.
+     * question text variable.
      */
     private String questiontext;
     /**
-     * { var_description }.
+     *choices string.
      */
     private String[] choices;
     /**
-     * { var_description }.
+     * correct answer.
      */
     private int correctAnswer;
     /**
-     * { var_description }.
+     * maximum marks.
      */
     private int maxMarks;
     /**
-     * { var_description }.
+     * penalty marks.
      */
     private int penalty;
     /**
-     * { var_description }.
+     * response of user.
      */
     private String response;
     /**
@@ -51,7 +51,7 @@ class Question {
         this.penalty = penalty1;
     }
     /**
-     * { function_description }.
+     * method to evaluate the response.
      *
      * @param      choice  The choice
      *
@@ -137,15 +137,15 @@ class Question {
  */
 class Quiz {
     /**
-     * { var_description }.
+     * variable for 100.
      */
     private final int onehundred = 100;
     /**
-     * { var_description }.
+     * questions array of question type.
      */
     private  Question[] questions;
     /**
-     * { var_description }.
+     * integer variable size.
      */
     private int size;
     /**
@@ -194,6 +194,9 @@ class Quiz {
         }
         s += "Total Score: " + score;
         return s;
+    }
+    public int size() {
+        return size;
     }
 }
 /**
@@ -340,7 +343,7 @@ public final class Solution {
         }
         for (int i = 0; i < q; i++) {
             Question que = quiz.getQuestion(i);
-            System.out.println(que.toString());
+            System.out.println(que);
             String line = scan.nextLine();
             que.setResponse(line);
         }
