@@ -32,9 +32,9 @@ public class Fibonacci extends List {
     /**
      * fibonacci function to print the series.
      *
-     * @param      n     { parameter_description }
+     * @param      n   variable n.
      *
-     * @return     { description_of_the_return_value }
+     * @return returns the fibonacci series.
      */
     public static List fib(final int n) {
         // todo - complete this method
