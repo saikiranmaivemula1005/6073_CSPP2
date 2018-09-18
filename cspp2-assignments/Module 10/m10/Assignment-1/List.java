@@ -166,7 +166,7 @@ public class List {
     /**
      * returns the size of the list.
      *
-     * @return     { description_of_the_return_value }
+     * @return returns the size of the list.
      */
     public int size() {
         return size;
@@ -229,7 +229,7 @@ public class List {
      *
      * @param      index  The index
      *
-     * @return     { description_of_the_return_value }
+     * @return returns the element at the given index.
      */
     public int get(final int index) {
         if (index < 0 || index >= size) {
@@ -286,7 +286,7 @@ public class List {
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return  returns true if the item is in the list.
      */
     public boolean contains(final int item) {
         return indexOf(item) == -1;
@@ -302,7 +302,7 @@ public class List {
      *
      * @param      item  The item
      *
-     * @return     { description_of_the_return_value }
+     * @return Returns the index of the given item.
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
@@ -335,7 +335,7 @@ public class List {
     /**
      * increases the size of the array.
      *
-     * @return     { description_of_the_return_value }
+     * @return  increases the size of the array.}
      */
     private int[] resize() {
         return Arrays.copyOf(list, list.length * 2);
