@@ -61,7 +61,7 @@ class Document {
         	secondSum += Math.pow(mapTwo.get(inmapTwo),2);
         }
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
-        double output = (numerator / denominator);
+        double output = (numerator / denominator) * 100;
         return  Math.round(output * 100D) / 100D ;
 	}
 	
