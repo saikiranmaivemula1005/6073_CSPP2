@@ -75,12 +75,13 @@ class Project {
 		path = scan.nextLine();
 		File folder = new File(path);
 		File[] list = folder.listFiles();
-		for(int i = 0; i < list.length; i++) {
-			System.out.println(list[i].toString());
+		for(File t : list) {
+			// System.out.println(t);
 		}
 		int length = list.length;
 		int[][] matrix = new int[length][length];
 		for (int i = 0; i < length; i++) {
+			System.out.println(list[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
 				matrix[i][j] = Document.compare(Document.DocumentToString(list[i]),Document.DocumentToString(list[j]));
 			}
