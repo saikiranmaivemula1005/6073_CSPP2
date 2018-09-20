@@ -81,12 +81,12 @@ class Project {
 		int length = list.length;
 		int[][] matrix = new int[length][length];
 		for (int i = 0; i < length; i++) {
-			System.out.println(list[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
 				matrix[i][j] = Document.compare(Document.DocumentToString(list[i]),Document.DocumentToString(list[j]));
 			}
 		}
 		for (int i = 0; i < length; i++) {
+			System.out.println(list[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
 				System.out.print(matrix[i][j] + "		");
 			}
