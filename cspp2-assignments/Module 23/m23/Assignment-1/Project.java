@@ -61,7 +61,7 @@ class Document {
         	secondSum += mapTwo.get(inmapTwo) ^ 2;
         }
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
-        return numerator / denominator;
+        return (numerator / denominator) * 100;
 	}
 	
 }
@@ -77,7 +77,7 @@ class Project {
 		File folder = new File(path);
 		File[] list = folder.listFiles();
 		for(File t : list) {
-			System.out.println(t);
+			// System.out.println(t);
 		}
 		int length = list.length;
 		double[][] matrix = new double[length][length];
