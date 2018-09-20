@@ -75,8 +75,8 @@ class Project {
 		path = scan.nextLine();
 		File folder = new File(path);
 		File[] list = folder.listFiles();
-		for(File t : list) {
-			// System.out.println(t);
+		for(int i = 0; i < list.length; i++) {
+			System.out.println(list[i].toString());
 		}
 		int length = list.length;
 		int[][] matrix = new int[length][length];
