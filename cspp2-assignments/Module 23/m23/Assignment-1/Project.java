@@ -11,13 +11,13 @@ class Document {
 	public static String DocumentToString(File doc) {
 		String fileToString = "";
 		try {
-			Scanner in = new Scanner(new FileReader(doc));
+			Scanner s = new Scanner(new FileReader(doc));
 			StringBuilder sb = new StringBuilder();
-			while (in.hasNext()) {
-				sb.append(in.next());
+			while (s.hasNext()) {
+				sb.append(s.next());
 				sb.append(" ");
 			}
-			in.close();
+			s.close();
 			fileToString = sb.toString();
 		} catch(FileNotFoundException e) {
 			System.out.println("no file");
@@ -37,28 +37,28 @@ class Document {
 		}
 		return map;
 	}
-	public static int compare(String textOne, String textTwo) {
+	public static int compare(String stringOne, String stringTwo) {
 		float numerator = 0;
 		double denominator = 0;
 		float firstSum = 0;
 		float secondSum = 0;
-		Map <String,Integer> mapOne = removewords(textOne);
-        Map <String,Integer> mapTwo = removewords(textTwo);
-        for (String inmapOne : mapOne.keySet()) {
-        	for (String inmapTwo : mapTwo.keySet()) {
+		Map <String,Integer> firstMap = removewords(stringOne);
+        Map <String,Integer> secondMap = removewords(stringTwo);
+        for (String inmapOne : firstMap.keySet()) {
+        	for (String inmapTwo : secondMap.keySet()) {
         		if (inmapOne.equals(inmapTwo)) {
-        			numerator += mapOne.get(inmapOne) * mapTwo.get(inmapTwo);
+        			numerator += firstMap.get(inmapOne) * secondMap.get(inmapTwo);
         		}
         	}
         }
-        for (String inmapOne : mapOne.keySet()) {
-        	firstSum += Math.pow(mapOne.get(inmapOne),2) ;
+        for (String inmapOne : firstMap.keySet()) {
+        	firstSum += Math.pow(firstMap.get(inmapOne),2) ;
         }
-        for (String inmapTwo : mapTwo.keySet()) {
-        	secondSum += Math.pow(mapTwo.get(inmapTwo),2);
+        for (String inmapTwo : secondMap.keySet()) {
+        	secondSum += Math.pow(secondMap.get(inmapTwo),2);
         }
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
-        double output = Math.round((numerator / denominator) * 100);
+        double output = (numerator / denominator) * 100;
         return  (int) ((output * 100D) / 100D) ;
 	}
 	
@@ -68,6 +68,7 @@ class Project {
 
 	}
 	public static void main(String[] args) {
+		try {
 		Document d = new Document();
 		String path;
 		Scanner scan = new Scanner(System.in);
@@ -90,6 +91,9 @@ class Project {
 			}
 			System.out.println();
 		}
+	} catch (NoSuchElementException e) {
+		System.out.println("empty directory");
+	}
 	
 	}
 }
