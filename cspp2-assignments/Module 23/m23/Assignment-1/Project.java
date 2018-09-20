@@ -1,18 +1,30 @@
 import java.util.*;
 import java.lang.Math.*;
 import java.io.*;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
 class Document {
 	String text1;
 	String text2;
-	Document(String t1, String t2) {
-		this.text1 = t1;
-		this.text2 = t2;
+	Document() {
+		text1 = "";
+		text2 = "";
 	}
-	public Map removewords(String text) {
+	public static String DocumentToString(File doc) {
+		String fileToString = "";
+		try {
+			Scanner in = new Scanner(new FileReader(doc));
+			StringBuilder sb = new StringBuilder();
+			while (in.hasNext()) {
+				sb.append(in.next());
+				sb.append(" ");
+			}
+			in.close();
+			fileToString = sb.toString();
+		} catch(FileNotFoundException e) {
+			System.out.println("no file");
+		}
+		return fileToString;
+	}
+	public static Map removewords(String text) {
 		text = text.toLowerCase();
 		String[] words = text.replaceAll("[!@#$%^&*()<>,.:;?/]", "").split(" ");
 		Map <String, Integer> map = new HashMap<>();
@@ -28,7 +40,7 @@ class Document {
 		// }
 		return map;
 	}
-	public void compare(String textOne, String textTwo) {
+	public static int compare(String textOne, String textTwo) {
 		float numerator = 0;
 		double denominator = 0;
 		float firstSum = 0;
@@ -50,6 +62,7 @@ class Document {
         }
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
         System.out.println(numerator / denominator);
+        return 0;
 	}
 	
 }
@@ -58,20 +71,28 @@ class Project {
 
 	}
 	public static void main(String[] args) {
-		Scanner reader = new Scanner(System.in);
-		String fileOne = reader.next();
-		String fileTwo = reader.next();
-		try {
-		String stringOne = new String(Files.readAllBytes(Paths.get(fileOne)));
-		String stringTwo = new String(Files.readAllBytes(Paths.get(fileTwo)));
-		Document d = new Document(stringOne, stringTwo);
-		d.compare(stringOne, stringTwo);
-	} catch (NoSuchElementException ee) {
-		System.out.println("found");
-	}  
-	catch (IOException e) {
-		System.out.println("Exception");
-	}
-
+		Document d = new Document();
+		String path;
+		Scanner scan = new Scanner(System.in);
+		path = scan.nextLine();
+		File folder = new File(path);
+		File[] list = folder.listFiles();
+		for(File t : list) {
+			System.out.println(t);
+		}
+		int length = list.length;
+		int[][] matrix = new int[length][length];
+		for (int i = 0; i < length; i++) {
+			for (int j = 0; j < length; j++) {
+				matrix[i][j] = Document.compare(Document.DocumentToString(list[i]),Document.DocumentToString(list[j]));
+			}
+		}
+		for (int i = 0; i < length; i++) {
+			for (int j = 0; j < length; j++) {
+				System.out.println(matrix[i][j] + " ");
+			}
+			System.out.println();
+		}
+	
 	}
 }
