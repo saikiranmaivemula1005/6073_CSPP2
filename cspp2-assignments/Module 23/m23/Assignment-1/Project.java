@@ -26,7 +26,7 @@ class Document {
 	}
 	public static Map removewords(String text) {
 		text = text.toLowerCase();
-		String[] words = text.replaceAll("[^a-zA-Z\\s ]", "").split(" ");
+		String[] words = text.replaceAll("[^a-zA-Z\\s0-9 ]", "").split(" ");
 		Map <String, Integer> map = new HashMap<>();
 		for (int i = 0; i  < words.length; i++) {
 			if(!map.containsKey(words[i])) {
