@@ -85,11 +85,13 @@ class Project {
 				matrix[i][j] = Document.compare(Document.DocumentToString(list[i]),Document.DocumentToString(list[j]));
 			}
 		}
+		for (int i = 0; i < list.length; i++) {
+			System.out.print("\t" + list[i].getName());
+		}
 		for (int i = 0; i < length; i++) {
 			System.out.print(list[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
 				System.out.print(matrix[i][j] + "		");
-				System.out.print(list[j].getName() + "\t");
 			}
 			System.out.println();
 		}
