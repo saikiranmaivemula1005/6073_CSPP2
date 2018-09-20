@@ -80,6 +80,7 @@ class Project {
 		}
 		int length = list.length;
 		int[][] matrix = new int[length][length];
+		ArrayList<Integer> array= new ArrayList<Integer>();
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				matrix[i][j] = Document.compare(Document.DocumentToString(list[i]),Document.DocumentToString(list[j]));
@@ -90,13 +91,17 @@ class Project {
 			System.out.print("\t" + list[i].getName());
 		}
 		System.out.println("\t" + list[length - 1].getName());
+		int k = 0;
 		for (int i = 0; i < length; i++) {
 			System.out.print(list[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
 				System.out.print(matrix[i][j] + "		");
+				array.add(matrix[i][j]);
+				k++;
 			}
 			System.out.println();
 		}
+		System.out.println(Collections.max(array));
 	} catch (NoSuchElementException e) {
 		System.out.println("empty directory");
 	}
