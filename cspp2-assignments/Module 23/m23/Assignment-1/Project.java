@@ -55,10 +55,10 @@ class Document {
         	}
         }
         for (String inmapOne : mapOne.keySet()) {
-        	firstSum += mapOne.get(inmapOne) ^ 2;
+        	firstSum += Math.pow(mapOne.get(inmapOne),2) ;
         }
         for (String inmapTwo : mapTwo.keySet()) {
-        	secondSum += mapTwo.get(inmapTwo) ^ 2;
+        	secondSum += Math.pow(mapTwo.get(inmapTwo),2);
         }
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
         return (numerator / denominator) * 100;
