@@ -35,9 +35,6 @@ class Document {
 				map.put(words[i],map.get(words[i]) + 1);
 			}
 		}
-		// for (Map.Entry m:map.entrySet()) {
-		// 	System.out.println(m.getKey() + " " + m.getValue());
-		// }
 		return map;
 	}
 	public static int compare(String textOne, String textTwo) {
@@ -61,7 +58,7 @@ class Document {
         	secondSum += Math.pow(mapTwo.get(inmapTwo),2);
         }
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
-        double output = (numerator / denominator) * 100;
+        double output = Math.round((numerator / denominator) * 100);
         return  (int) ((output * 100D) / 100D) ;
 	}
 	
