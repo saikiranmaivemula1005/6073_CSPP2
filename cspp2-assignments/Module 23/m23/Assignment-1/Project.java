@@ -61,7 +61,6 @@ class Document {
         	secondSum += mapTwo.get(inmapTwo) ^ 2;
         }
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
-        System.out.println(numerator / denominator);
         return numerator / denominator;
 	}
 	
