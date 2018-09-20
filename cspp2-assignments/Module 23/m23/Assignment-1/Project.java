@@ -62,7 +62,7 @@ class Document {
         }
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
         double output = (numerator / denominator) * 100;
-        return  Math.round(output * 100D) / 100D ;
+        return  (int) ((output * 100D) / 100D) ;
 	}
 	
 }
