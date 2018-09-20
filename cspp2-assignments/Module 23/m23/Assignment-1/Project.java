@@ -40,7 +40,7 @@ class Document {
 		// }
 		return map;
 	}
-	public static int compare(String textOne, String textTwo) {
+	public static double compare(String textOne, String textTwo) {
 		float numerator = 0;
 		double denominator = 0;
 		float firstSum = 0;
@@ -62,7 +62,7 @@ class Document {
         }
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
         System.out.println(numerator / denominator);
-        return 0;
+        return numerator / denominator;
 	}
 	
 }
@@ -81,7 +81,7 @@ class Project {
 			System.out.println(t);
 		}
 		int length = list.length;
-		int[][] matrix = new int[length][length];
+		double[][] matrix = new double[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				matrix[i][j] = Document.compare(Document.DocumentToString(list[i]),Document.DocumentToString(list[j]));
