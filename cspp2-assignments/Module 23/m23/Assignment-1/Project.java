@@ -86,7 +86,7 @@ class Project {
 			}
 		}
 		for (int i = 0; i < list.length - 1; i++) {
-			System.out.print("\t" + list[i].getName());
+			System.out.print("\t\t" + list[i].getName());
 		}
 		System.out.println("\t" + list[length - 1].getName());
 		for (int i = 0; i < length; i++) {
