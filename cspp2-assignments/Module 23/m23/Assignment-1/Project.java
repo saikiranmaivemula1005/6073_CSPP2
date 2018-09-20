@@ -66,7 +66,10 @@ class Project {
 		String stringTwo = new String(Files.readAllBytes(Paths.get(fileTwo)));
 		Document d = new Document(stringOne, stringTwo);
 		d.compare(stringOne, stringTwo);
-	} catch (IOException e) {
+	} catch (NoSuchElementException ee) {
+		System.out.println("found");
+	}  
+	catch (IOException e) {
 		System.out.println("Exception");
 	}
 
