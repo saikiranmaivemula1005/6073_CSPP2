@@ -30,7 +30,7 @@ class Document {
 		// text = text.toLowerCase();
 		// String[] words = text.replaceAll("[0-9_;:''.,?!@#$%^&*()]", "").split(" ");
 		String word = "";
-		Pattern p = Pattern.compile("[^0-9_]");
+		Pattern p = Pattern.compile("[^0-9_ ]");
 		Matcher match = p.matcher(text);
 		while(match.find()) {
 			word += match.group(); 
