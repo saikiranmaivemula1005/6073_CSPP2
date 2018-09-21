@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 import java.lang.Math.*;
 import java.io.*;
 class Document {
@@ -25,8 +27,16 @@ class Document {
 		return fileToString;
 	}
 	public static Map removewords(String text) {
-		text = text.toLowerCase();
-		String[] words = text.replaceAll("[0-9_;:''.,?!@#$%^&*()]", "").split(" ");
+		// text = text.toLowerCase();
+		// String[] words = text.replaceAll("[0-9_;:''.,?!@#$%^&*()]", "").split(" ");
+		String word = "";
+		Pattern p = Pattern.compile("[^0-9_]");
+		Matcher match = p.matcher(text);
+		while(match.find()) {
+			word += match.group(); 
+		}
+		word = word.toLowerCase();
+		String[] words = word.split(" ");
 		Map <String, Integer> map = new HashMap<>();
 		for (int i = 0; i  < words.length; i++) {
 			if(!map.containsKey(words[i])) {
