@@ -37,10 +37,11 @@ class Task {
      * @param      important  The important
      * @param      urgency    The urgency
      * @param      status     The status
+     * @throws Exception throws exceptions.
      */
     Task(final String title, final String name, final int time,
      final boolean important, final boolean urgency,
-      final String status) throws Exception{
+      final String status) throws Exception {
         this.title = title;
         this.name = name;
         this.important = important;
@@ -58,7 +59,7 @@ class Task {
         }
         try {
             if (time < 0) {
-                throw new Exception ("Invalid timeToComplete");
+                throw new Exception("Invalid timeToComplete");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage() + " " + time);
@@ -145,7 +146,7 @@ public class TodoistMain {
     /**
      * Constructs the object.
      */
-    TodoistMain() {
+    protected TodoistMain() {
 
     }
 
