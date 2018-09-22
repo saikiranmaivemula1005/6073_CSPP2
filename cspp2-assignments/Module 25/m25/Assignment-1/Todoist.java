@@ -42,7 +42,6 @@ public class Todoist {
     		if (listOfTasks.get(i).getName().equals(name)) {
     			tasks[i] = listOfTasks.get(i);
     		}
-    		break;
     	}
     	return tasks;
     }
