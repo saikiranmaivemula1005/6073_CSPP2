@@ -35,7 +35,7 @@ class Task {
         return status;
     }
     public String toString() {
-        return getTitle() + "," + getName()  + "," + getTime()  + "," + getImportant()  + "," + getUrgent()  + "," + getStatus();
+        return getTitle() + ", " + getName()  + ", " + getTime()  + ", " + getImportant()  + ", " + getUrgent()  + ", " + getStatus();
     }
 }
 
