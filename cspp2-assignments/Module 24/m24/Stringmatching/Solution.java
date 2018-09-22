@@ -20,7 +20,7 @@ class Substring {
 		}
 		return result;
 	}
-	public int findLCS(String firstString, String secondString) {
+	public double findLCS(String firstString, String secondString) {
 	int lengthOne = firstString.length();
 	int lengthTwo = secondString.length();
 	double totalLength = lengthOne + lengthTwo;
@@ -43,7 +43,7 @@ class Substring {
 	}
 	lcsValue = ((result*2)/totalLength)*100;
 	// System.out.println((int)lcsValue);
-	return (int)lcsValue;
+	return lcsValue;
 	}
 }
 
@@ -61,7 +61,7 @@ class Solution{
 		File folder = new File(path);
 		File[] filesList = folder.listFiles();
 		int length = filesList.length;
-		int[][] matrix = new int[length][length];
+		double[][] matrix = new double[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				matrix[i][j] = s.findLCS(s.toString(filesList[i]),s.toString(filesList[j]));
@@ -80,7 +80,7 @@ class Solution{
 			System.out.println();
 		}
 	} catch (NoSuchElementException e) {
-		System.out.println("empty directory");
+		System.out.println("empty Directory");
 	}
 
 	}
