@@ -41,6 +41,7 @@ public class Todoist {
     	for (int i = 0; i < listOfTasks.size(); i++) {
     		if (listOfTasks.get(i).getName().equals(name)) {
     			tasks[i] = listOfTasks.get(i);
+    			break;
     		}
     	}
     	return tasks;
