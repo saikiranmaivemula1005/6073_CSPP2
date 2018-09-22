@@ -21,6 +21,7 @@ class Task {
         }
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            System.exit(1);
         }
         try {
             if (time < 0) {
@@ -28,6 +29,14 @@ class Task {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage() + " " + time);
+            System.exit(1);
+        }
+        try {
+            if (status == "dud") {
+                throw new Exception("Invalid status");
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage() + " " + status);
             System.exit(1);
         }
         
