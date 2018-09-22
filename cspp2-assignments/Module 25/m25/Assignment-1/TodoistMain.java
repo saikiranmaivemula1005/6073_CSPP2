@@ -14,7 +14,15 @@ class Task {
         this.time = time;
         this.urgency = urgency;
         this.status = status;
+        try {
 
+        if (title == "") {
+            throw new Exception("Title not provided");
+        }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        
     }
     public String getTitle() {
         return title;
@@ -126,17 +134,6 @@ public class TodoistMain {
      */
     public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
-        try {
-
-        if (tokens[1] == "") {
-             title = tokens[1];
-        } else {
-            throw new Exception("Title not provided");
-            }
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
         boolean important = tokens[4].equals("y");
