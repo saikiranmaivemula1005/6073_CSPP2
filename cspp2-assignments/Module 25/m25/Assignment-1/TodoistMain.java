@@ -32,7 +32,7 @@ class Task {
             System.exit(1);
         }
         try {
-            if (status == "dud") {
+            if (status.length() != 4) {
                 throw new Exception("Invalid status");
             }
         } catch (Exception e) {
