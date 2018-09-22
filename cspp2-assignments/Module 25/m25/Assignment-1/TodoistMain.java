@@ -27,7 +27,8 @@ class Task {
                 throw new Exception ("Invalid timeToComplete");
             }
         } catch (Exception e) {
-            System.out.println(e.getMessage() + time);
+            System.out.println(e.getMessage() + " " + time);
+            System.exit(1);
         }
         
     }
