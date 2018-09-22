@@ -7,7 +7,7 @@ class Task {
     boolean important;
     boolean urgency;
     String status;
-    Task(String title, String name, int time, boolean important, boolean urgency, String status) {
+    Task(String title, String name, int time, boolean important, boolean urgency, String status) throws Exception{
         this.title = title;
         this.name = name;
         this.important = important;
@@ -38,12 +38,7 @@ class Task {
         return "Not Urgent";
     }
     public String getStatus() {
-        if (status == "todo" || status == "done"){
-            return status;    
-        } else {
-            System.out.println("Invalid status" + status);
-        }
-        return "";
+        return status;
     }
     public String toString() {
         return getTitle() + ", " + getName()  + ", " + getTime()  + ", " + getImportant()  + ", " + getUrgent()  + ", " + getStatus();
@@ -131,6 +126,10 @@ public class TodoistMain {
      */
     public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
+        if (tokens[1].length() == 0) {
+            System.out.println("Title not provided");
+            return null;
+        }
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
         boolean important = tokens[4].equals("y");
