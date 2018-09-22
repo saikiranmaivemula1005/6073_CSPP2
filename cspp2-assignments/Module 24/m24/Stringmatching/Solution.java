@@ -80,7 +80,7 @@ class Solution{
 			System.out.println();
 		}
 	} catch (NoSuchElementException e) {
-		System.out.println("empty Directory");
+		System.out.println("Empty Directory");
 	}
 
 	}
