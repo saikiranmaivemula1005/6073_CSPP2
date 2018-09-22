@@ -36,8 +36,8 @@ public class Todoist {
     	}
     }
     List<Task> tasklist = new List<Task>();
-    Task[] tasks = new Task[10];
     public Task[] getNextTask(String name, int count) {
+    Task[] tasks = new Task[count];
     	for (int i = 0; i < listOfTasks.size(); i++) {
     		if (listOfTasks.get(i).getName().equals(name)) {
     			tasks[i] = listOfTasks.get(i);
