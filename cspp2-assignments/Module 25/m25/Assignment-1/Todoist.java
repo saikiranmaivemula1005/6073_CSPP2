@@ -20,8 +20,10 @@ public class Todoist {
     				System.out.println(listOfTasks.get(i));
     				check = true;
     				return;
-    			} 
+    			} else {
+    				System.out.println("null");
     			 
+    			}
     		}
     	}
     	// for (int i = 0; i < listOfTasks.size(); i++) {
