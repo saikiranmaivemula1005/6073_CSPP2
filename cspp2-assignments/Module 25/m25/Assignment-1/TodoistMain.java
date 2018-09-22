@@ -183,7 +183,6 @@ public class TodoistMain {
             System.out.println(e.getMessage());
         }
     }
-    final static int six = 6, five = 5, four = 4, three = 3;
     /**
      * Creates a task object.
      *
@@ -194,6 +193,7 @@ public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
+        final int six = 6, five = 5, four = 4, three = 3;
         String title = tokens[1];
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[three]);
