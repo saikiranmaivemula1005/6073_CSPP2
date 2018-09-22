@@ -13,27 +13,26 @@ public class Todoist {
     	}
     }
     public void getNextTask(String name) {
+    	boolean check = false;
     	for (int i = 0; i < listOfTasks.size(); i++) {
     		if (name.equals(listOfTasks.get(i).getName())) {
     			if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Not Urgent") && listOfTasks.get(i).getStatus().equals("todo")) {
     				System.out.println(listOfTasks.get(i));
+    				check = true;
     				return;
-    			} else {
-    				System.out.println("null");
-    				return;
-    			}
+    			} 
     			 
     		}
     	}
     	for (int i = 0; i < listOfTasks.size(); i++) {
     		if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Urgent")) {
     				System.out.println(listOfTasks.get(i));
+    				 check = true;
     				return;
     			}
-    			else {
-    				System.out.println("null");
-    				return;
-    			}
+    	}
+    	if (check = false) {
+    		System.out.println("null");
     	}
     }
     // public Task getNextTask(String name, int count) {
