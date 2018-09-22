@@ -4,12 +4,30 @@ import java.util.Arrays;
  * Class for task.
  */
 class Task {
-    String title;
-    String name;
-    int time;
-    boolean important;
-    boolean urgency;
-    String status;
+    /**
+     * title of task.
+     */
+    private String title;
+    /**
+     * name of the person.
+     */
+    private String name;
+    /**
+     * time for task.
+     */
+    private int time;
+    /**
+     * variable for importance of task.
+     */
+    private boolean important;
+    /**
+     * variable for urgency of task.
+     */
+    private boolean urgency;
+    /**
+     * variable for status of task.
+     */
+    private String status;
     /**
      * Constructor for class task.
      *
@@ -20,7 +38,9 @@ class Task {
      * @param      urgency    The urgency
      * @param      status     The status
      */
-    Task(String title, String name, int time, boolean important, boolean urgency, String status) throws Exception{
+    Task(final String title, final String name, final int time,
+     final boolean important, final boolean urgency,
+      final String status) throws Exception{
         this.title = title;
         this.name = name;
         this.important = important;
@@ -44,15 +64,15 @@ class Task {
             System.out.println(e.getMessage() + " " + time);
             System.exit(1);
         }
+        final int four = 4;
         try {
-            if (status.length() != 4) {
+            if (status.length() != four) {
                 throw new Exception("Invalid status");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage() + " " + status);
             System.exit(1);
         }
-        
     }
     /**
      * Gets the title.
@@ -114,13 +134,20 @@ class Task {
      * @return     String representation of the object.
      */
     public String toString() {
-        return getTitle() + ", " + getName()  + ", " + getTime()  + ", " + getImportant()  + ", " + getUrgent()  + ", " + getStatus();
+        return getTitle() + ", " + getName()  + ", " + getTime()  + ", "
+         + getImportant()  + ", " + getUrgent()  + ", " + getStatus();
     }
 }
 /**
  * Class for todoist main.
  */
 public class TodoistMain {
+    /**
+     * Constructs the object.
+     */
+    TodoistMain() {
+
+    }
 
     /**
      * Starts a test.
