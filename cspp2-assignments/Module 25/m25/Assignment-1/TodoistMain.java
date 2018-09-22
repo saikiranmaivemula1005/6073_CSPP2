@@ -16,11 +16,18 @@ class Task {
         this.status = status;
         try {
 
-        if (name == "") {
+        if (title == "") {
             throw new Exception("Title not provided");
         }
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        }
+        try {
+            if (time < 0) {
+                throw new Exception ("Invalid timeToComplete");
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage() + time);
         }
         
     }
