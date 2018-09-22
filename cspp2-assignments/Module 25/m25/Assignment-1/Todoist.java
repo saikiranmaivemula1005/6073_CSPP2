@@ -17,11 +17,14 @@ public class Todoist {
     		if (name.equals(listOfTasks.get(i).getName())) {
     			if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Not Urgent")) {
     				System.out.println(listOfTasks.get(i));
+    				return;
     			}
     			if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Urgent")) {
     				System.out.println(listOfTasks.get(i));
+    				return;
     			} else {
     				System.out.println("null");
+    				return;
     			}
     		}
     	}
