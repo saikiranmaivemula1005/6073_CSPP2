@@ -38,7 +38,12 @@ class Task {
         return "Not Urgent";
     }
     public String getStatus() {
-        return status;
+        if (status == "todo" || status == "done"){
+            return status;    
+        } else {
+            System.out.println("Invalid status" + status);
+        }
+        return "";
     }
     public String toString() {
         return getTitle() + ", " + getName()  + ", " + getTime()  + ", " + getImportant()  + ", " + getUrgent()  + ", " + getStatus();
