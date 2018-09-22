@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+import java.lang.Math;
 class Substring {
 	Substring() {
 
@@ -43,7 +44,7 @@ class Substring {
 	}
 	lcsValue = ((result*2)/totalLength)*100;
 	// System.out.println((int)lcsValue);
-	return lcsValue;
+	return Math.round(lcsValue * 100D) / 100;
 	}
 }
 
