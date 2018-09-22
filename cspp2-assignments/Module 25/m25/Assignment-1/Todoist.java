@@ -33,7 +33,7 @@ public class Todoist {
     int taskssize=0;
     	for (int i = 0; i < listOfTasks.size(); i++) {
     		if (taskssize<count) {
-    			tasks[i] = listOfTasks.get(i);
+    			tasks[i] = getNextTask(name);
     		}
     	}
     	return tasks;
