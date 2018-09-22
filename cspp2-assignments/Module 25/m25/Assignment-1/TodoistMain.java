@@ -128,7 +128,6 @@ public class TodoistMain {
         String title = tokens[1];
         if (tokens[1].length() == 0) {
             System.out.println("Title not provided");
-            return null;
         }
         String assignedTo = tokens[2];
         int timeToComplete = Integer.parseInt(tokens[3]);
