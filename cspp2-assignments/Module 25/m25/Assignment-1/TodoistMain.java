@@ -7,7 +7,7 @@ class Task {
     /**
      * title of task.
      */
-    private String title;
+    private static String title;
     /**
      * name of the person.
      */
