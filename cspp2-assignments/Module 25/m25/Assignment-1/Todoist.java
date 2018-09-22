@@ -18,6 +18,9 @@ public class Todoist {
     			if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Not Urgent") && listOfTasks.get(i).getStatus().equals("todo")) {
     				System.out.println(listOfTasks.get(i));
     				return;
+    			} else {
+    				System.out.println("null");
+    				return;
     			}
     			 
     		}
