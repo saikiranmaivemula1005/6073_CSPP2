@@ -12,33 +12,27 @@ public class Todoist {
     		System.out.println(listOfTasks.get(i).toString());
     	}
     }
-    public void getNextTask(String name) {
-    	boolean check = false;
+    public Task getNextTask(String name) {
     	for (int i = 0; i < listOfTasks.size(); i++) {
     		if (name.equals(listOfTasks.get(i).getName())) {
     			if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Not Urgent") && listOfTasks.get(i).getStatus().equals("todo")) {
-    				System.out.println(listOfTasks.get(i));
-    				check = true;
-    				return;
+    				return listOfTasks.get(i);
     			}
     		}
     	}
     	for (int i = 0; i < listOfTasks.size(); i++) {
     		if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Urgent") && listOfTasks.get(i).getStatus().equals("todo")) {
-    				System.out.println(listOfTasks.get(i));
-    				 check = true;
-    				return;
+    				return listOfTasks.get(i);
     			}
     	}
-    	if (check = false) {
-    		System.out.println("null");
-    	}
+    	return null;
     }
     List<Task> tasklist = new List<Task>();
     public Task[] getNextTask(String name, int count) {
     Task[] tasks = new Task[count];
-    	for (int i = 0; i < count; i++) {
-    		if (listOfTasks.get(i).getName().equals(name)) {
+    int taskssize=0;
+    	for (int i = 0; i < listOfTasks.size(); i++) {
+    		if (taskssize<count) {
     			tasks[i] = listOfTasks.get(i);
     		}
     	}
