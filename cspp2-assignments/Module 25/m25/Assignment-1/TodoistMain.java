@@ -1,5 +1,8 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for task.
+ */
 class Task {
     String title;
     String name;
@@ -7,6 +10,16 @@ class Task {
     boolean important;
     boolean urgency;
     String status;
+    /**
+     * Constructor for class task.
+     *
+     * @param      title      The title
+     * @param      name       The name
+     * @param      time       The time
+     * @param      important  The important
+     * @param      urgency    The urgency
+     * @param      status     The status
+     */
     Task(String title, String name, int time, boolean important, boolean urgency, String status) throws Exception{
         this.title = title;
         this.name = name;
@@ -41,38 +54,69 @@ class Task {
         }
         
     }
+    /**
+     * Gets the title.
+     *
+     * @return     The title.
+     */
     public String getTitle() {
         return title;
     }
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {
         return name;
     }
+    /**
+     * Gets the time.
+     *
+     * @return     The time.
+     */
     public int getTime() {
         return time;
     }
+    /**
+     * Gets the importantance of task.
+     *
+     * @return     The important.
+     */
     public String getImportant() {
        if (important) {
         return "Important";
        }
        return "Not Important";
     }
+    /**
+     * Gets the urgency of task.
+     *
+     * @return     The urgent.
+     */
     public String getUrgent() {
         if (urgency) {
             return "Urgent";
         }
         return "Not Urgent";
     }
+    /**
+     * Gets the status of the task.
+     *
+     * @return     The status.
+     */
     public String getStatus() {
         return status;
     }
+    /**
+     * Returns a string representation of the task.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return getTitle() + ", " + getName()  + ", " + getTime()  + ", " + getImportant()  + ", " + getUrgent()  + ", " + getStatus();
     }
 }
-
-
-
-
 /**
  * Class for todoist main.
  */
@@ -101,7 +145,7 @@ public class TodoistMain {
                 break;
                 case "get-next-n":
                     int n = Integer.parseInt(tokens[2]);
-                    Task[][] tasks = todo.getNextTask(tokens[1], n);
+                    Task[] tasks = todo.getNextTask(tokens[1], n);
                     System.out.println(Arrays.deepToString(tasks));
                 break;
                 case "total-time":
@@ -139,7 +183,7 @@ public class TodoistMain {
             System.out.println(e.getMessage());
         }
     }
-
+    final static int six = 6, five = 5, four = 4, three = 3;
     /**
      * Creates a task object.
      *
@@ -152,10 +196,10 @@ public class TodoistMain {
     public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
         String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[3]);
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+        int timeToComplete = Integer.parseInt(tokens[three]);
+        boolean important = tokens[four].equals("y");
+        boolean urgent = tokens[five].equals("y");
+        String status = tokens[six];
         return new Task(
             title, assignedTo, timeToComplete, important, urgent, status);
     }
