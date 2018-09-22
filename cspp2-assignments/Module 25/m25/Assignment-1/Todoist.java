@@ -35,9 +35,16 @@ public class Todoist {
     		System.out.println("null");
     	}
     }
-    // public Task getNextTask(String name, int count) {
-    	// return "";
-    // }
+    List<Task> tasklist = new List<Task>();
+    Task[] tasks = new Task[10];
+    public Task[] getNextTask(String name, int count) {
+    	for (int i = 0; i < listOfTasks.size(); i++) {
+    		if (listOfTasks.get(i).equals(name)) {
+    			tasks[i] = listOfTasks.get(i);
+    		}
+    	}
+    	return tasks;
+    }
     public int totalTime4Completion() {
     	int count = 0;
     	for (int i = 0; i < listOfTasks.size(); i++) {
