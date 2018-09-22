@@ -1,5 +1,5 @@
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 class Substring {
 	Substring() {
 
@@ -42,7 +42,7 @@ class Substring {
 		}
 	}
 	lcsValue = ((result*2)/totalLength)*100;
-	System.out.println((int)lcsValue);
+	// System.out.println((int)lcsValue);
 	return (int)lcsValue;
 	}
 }
@@ -53,6 +53,7 @@ class Solution{
 
 	}
 	public static void main(String[] args) {
+		try {
 		Substring s = new Substring();
 		String path;
 		Scanner scan = new Scanner(System.in);
@@ -78,5 +79,9 @@ class Solution{
 			}
 			System.out.println();
 		}
+	} catch (NoSuchElementException e) {
+		System.out.println("empty directory");
+	}
+
 	}
 }
