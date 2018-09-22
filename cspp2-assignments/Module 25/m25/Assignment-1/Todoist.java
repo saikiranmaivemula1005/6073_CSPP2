@@ -33,8 +33,11 @@ public class Todoist {
     int taskssize=0;
     	for (int i = 0; i < listOfTasks.size(); i++) {
     		if (taskssize<count) {
-    			tasks[i] = getNextTask(name);
-    		}
+if (name.equals(listOfTasks.get(i).getName())) {
+    			if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Not Urgent") && listOfTasks.get(i).getStatus().equals("todo")) {
+    				tasks[taskssize++]=listOfTasks.get(i);
+    			}
+    		}    		}
     	}
     	return tasks;
     }
