@@ -15,11 +15,11 @@ public class Todoist {
     public void getNextTask(String name) {
     	for (int i = 0; i < listOfTasks.size(); i++) {
     		if (name.equals(listOfTasks.get(i).getName())) {
-    			if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Not Urgent")) {
+    			if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Urgent")) {
     				System.out.println(listOfTasks.get(i));
     				return;
     			}
-    			if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Urgent")) {
+    			if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Not Urgent")) {
     				System.out.println(listOfTasks.get(i));
     				return;
     			} else {
@@ -28,5 +28,8 @@ public class Todoist {
     			}
     		}
     	}
+    }
+    public void getNextTask(String name, int count) {
+
     }
 }
