@@ -16,7 +16,7 @@ class Task {
         this.status = status;
         try {
 
-        if (title == "") {
+        if (title.length() == 0) {
             throw new Exception("Title not provided");
         }
         } catch (Exception e) {
