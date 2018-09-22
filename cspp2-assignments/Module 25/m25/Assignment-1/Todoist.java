@@ -29,7 +29,14 @@ public class Todoist {
     		}
     	}
     }
-    public void getNextTask(String name, int count) {
-
+    // public Task getNextTask(String name, int count) {
+    	// return "";
+    // }
+    public int totalTime4Completion() {
+    	int count = 0;
+    	for (int i = 0; i < listOfTasks.size(); i++) {
+    		count += listOfTasks.get(i).getTime();
+    	}
+    	return count;
     }
 }
