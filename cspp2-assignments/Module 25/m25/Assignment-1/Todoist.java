@@ -24,13 +24,13 @@ public class Todoist {
     			 
     		}
     	}
-    	for (int i = 0; i < listOfTasks.size(); i++) {
-    		if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Urgent") && listOfTasks.get(i).getStatus().equals("todo")) {
-    				System.out.println(listOfTasks.get(i));
-    				 check = true;
-    				return;
-    			}
-    	}
+    	// for (int i = 0; i < listOfTasks.size(); i++) {
+    	// 	if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Urgent") && listOfTasks.get(i).getStatus().equals("todo")) {
+    	// 			System.out.println(listOfTasks.get(i));
+    	// 			 check = true;
+    	// 			return;
+    	// 		}
+    	// }
     	if (check = false) {
     		System.out.println("null");
     	}
