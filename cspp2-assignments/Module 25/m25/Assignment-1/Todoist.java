@@ -7,4 +7,9 @@ public class Todoist {
     	listOfTasks.add(task);
     	return listOfTasks;
     }
+    public void print() {
+    	for (int i = 0; i < listOfTasks.size(); i++) {
+    		System.out.println(listOfTasks.get(i).toString());
+    	}
+    }
 }
