@@ -25,20 +25,17 @@ class Task {
     public int getTime() {
         return time;
     }
-    public String getImportant(String imp) {
-        if (imp == "y") {
-            return "Important";
-        } 
-        return "Not Important";
+    public boolean getImportant() {
+       return important;
     }
-    public String getUrgent(String urgent) {
-        if (urgent == "y") {
-            return "Urgent";
-        }
-        return "Not Urgent";
+    public boolean getUrgent() {
+        return urgency;
     }
-    public String getStatus(String status) {
+    public String getStatus() {
         return status;
+    }
+    public String toString() {
+        return getTitle() + "," + getName()  + "," + getTime()  + "," + getImportant()  + "," + getUrgent()  + "," + getStatus();
     }
 }
 
