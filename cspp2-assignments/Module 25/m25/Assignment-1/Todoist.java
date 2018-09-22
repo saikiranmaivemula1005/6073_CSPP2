@@ -21,9 +21,7 @@ public class Todoist {
     				check = true;
     				return;
     			}
-    		}  else {
-    				System.out.println("null");
-    			}
+    		} 
     	}
     	// for (int i = 0; i < listOfTasks.size(); i++) {
     	// 	if(listOfTasks.get(i).getImportant().equals("Important") && listOfTasks.get(i).getUrgent().equals("Urgent") && listOfTasks.get(i).getStatus().equals("todo")) {
