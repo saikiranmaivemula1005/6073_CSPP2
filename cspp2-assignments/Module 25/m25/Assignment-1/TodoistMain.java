@@ -128,7 +128,7 @@ public class TodoistMain {
         String title = tokens[1];
         try {
 
-        if (tokens[1].length() == 0) {
+        if (tokens[1] == "") {
              title = tokens[1];
         } else {
             throw new Exception("Title not provided");
