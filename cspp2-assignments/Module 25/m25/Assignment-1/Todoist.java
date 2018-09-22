@@ -35,7 +35,9 @@ public class Todoist {
     public int totalTime4Completion() {
     	int count = 0;
     	for (int i = 0; i < listOfTasks.size(); i++) {
-    		count += listOfTasks.get(i).getTime();
+    		if (listOfTasks.get(i).getStatus().equals("todo")){
+    			count += listOfTasks.get(i).getTime();
+    		}
     	}
     	return count;
     }
