@@ -1,3 +1,12 @@
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.io.File;
+import java.io.FileReader;
+import java.util.Map;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.NoSuchElementException;
 /**
  * Class for document.
  */
