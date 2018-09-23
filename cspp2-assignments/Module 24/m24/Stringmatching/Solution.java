@@ -55,7 +55,8 @@ class Substring {
         for (int j = 0; j <= lengthTwo; j++) {
             if (i == 0 || j == 0) {
                 tempMatrix[i][j] = 0;
-            } else if (firstString.charAt(i - 1) == secondString.charAt(j - 1)) {
+            } else if (firstString.charAt(i - 1)
+             == secondString.charAt(j - 1)) {
                 tempMatrix[i][j] =
                  tempMatrix[i - 1][j - 1] + 1;
             } else {
