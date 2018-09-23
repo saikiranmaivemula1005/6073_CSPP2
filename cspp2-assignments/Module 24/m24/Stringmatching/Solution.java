@@ -50,13 +50,22 @@ class Substring {
 	return Math.round(lcsValue * 100D) / 100;
 	}
 }
-
-
+/**
+ * Class for solution.
+ */
 class Solution{
+	/**
+	 * constructor for solution class.
+	 */
 	Solution() {
 
 	}
-	public static void main(String[] args) {
+	/**
+	 * main method for solution class.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		try {
 		Substring s = new Substring();
 		String path;
@@ -68,7 +77,9 @@ class Solution{
 		double[][] matrix = new double[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
-				matrix[i][j] = s.findLCS(s.toString(filesList[i]),s.toString(filesList[j]));
+				matrix[i][j] = s.findLCS(
+					s.toString(filesList[i]),
+					 s.toString(filesList[j]));
 			}
 		}
 		System.out.print("     \t");
@@ -79,7 +90,8 @@ class Solution{
 		for (int i = 0; i < length; i++) {
 			System.out.print(filesList[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
-				System.out.print(matrix[i][j] + "		");
+				System.out.print(
+					matrix[i][j] + "		");
 			}
 			System.out.println();
 		}
