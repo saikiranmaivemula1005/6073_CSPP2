@@ -70,7 +70,7 @@ class Substring {
     final int hundred = 100;
     lcsValue = ((result * 2) / totalLength) * hundred;
     // System.out.println((int)lcsValue);
-    return lcsValue;
+    return Math.round(lcsValue * hundred) / hundred;
     }
 }
 /**
@@ -105,7 +105,7 @@ class Solution {
                      s.toString(filesList[j]));
             }
         }
-        System.out.print("      \t");
+        System.out.print("     \t");
         for (int i = 0; i < filesList.length - 1; i++) {
             System.out.print("\t" + filesList[i].getName());
         }
@@ -114,7 +114,7 @@ class Solution {
             System.out.print(filesList[i].getName() + "\t");
             for (int j = 0; j < length; j++) {
                 System.out.print(
-                    String.format( "%.1f", matrix[i][j] + "\t\t"));
+                    matrix[i][j] + "        ");
             }
             System.out.println();
         }
