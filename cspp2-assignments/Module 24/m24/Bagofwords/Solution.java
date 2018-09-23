@@ -1,8 +1,11 @@
 import java.util.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
-import java.lang.Math.*;
+import java.lang.Math;
 import java.io.*;
+/**
+ * Class for document.
+ */
 class Document {
 	String text1;
 	String text2;
@@ -10,6 +13,13 @@ class Document {
 		text1 = "";
 		text2 = "";
 	}
+	/**
+	 * method to convert from file to string.
+	 *
+	 * @param      doc   The document
+	 *
+	 * @return  returns string format of a file.
+	 */
 	public static String DocumentToString(File doc) {
 		String fileToString = "";
 		try {
@@ -26,6 +36,13 @@ class Document {
 		}
 		return fileToString;
 	}
+	/**
+	 * method to remove unnecessary characters.
+	 *
+	 * @param      text  The text
+	 *
+	 * @return  returns the cleaned up string.
+	 */
 	public static Map removewords(String text) {
 		// text = text.toLowerCase();
 		// String[] words = text.replaceAll("[0-9_;:''.,?!@#$%^&*()]", "").split(" ");
@@ -47,6 +64,14 @@ class Document {
 		}
 		return map;
 	}
+	/**
+	 * method to compare two strings.
+	 *
+	 * @param      stringOne  The string one
+	 * @param      stringTwo  The string two
+	 *
+	 * @return  returns the plagiarism percentage of given strings.
+	 */
 	public static int compare(String stringOne, String stringTwo) {
 		float numerator = 0;
 		double denominator = 0;
@@ -73,10 +98,21 @@ class Document {
 	}
 	
 }
+/**
+ * Class for solution.
+ */
 class Solution {
+	/**
+	 * constructor fro solution class.
+	 */
 	Solution() {
 
 	}
+	/**
+	 * main method for solution class.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		try {
 		Document d = new Document();
