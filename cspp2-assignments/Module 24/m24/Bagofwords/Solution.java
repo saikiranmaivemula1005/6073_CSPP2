@@ -1,8 +1,6 @@
 import java.util.Scanner;
 import java.io.File;
-import java.io.FileReader;
 import java.util.NoSuchElementException;
-
 /**
  * Class for solution.
  */
