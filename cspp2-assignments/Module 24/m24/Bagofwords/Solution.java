@@ -10,11 +10,11 @@ class Document {
 	/**
 	 * text 1.
 	 */
-	String text1;
+	private String text1;
 	/**
 	 * text 2.
 	 */
-	String text2;
+	private String text2;
 	/**
 	 * constructor for document class.
 	 */
@@ -105,7 +105,7 @@ class Document {
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
         double output = (numerator / denominator) * hundred;
         return  (int) ((output * hundred) / hundred);
-	}	
+	}
 }
 /**
  * Class for solution.
@@ -134,8 +134,8 @@ class Solution {
 		int[][] matrix = new int[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
-				matrix[i][j] = Document.compare
-				(Document.DocumentToString(list[i]),
+				matrix[i][j] = Document.compare(
+				Document.DocumentToString(list[i]),
 				 Document.DocumentToString(list[j]));
 			}
 		}
