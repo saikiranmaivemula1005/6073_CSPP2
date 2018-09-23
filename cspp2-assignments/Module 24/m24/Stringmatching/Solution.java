@@ -45,19 +45,20 @@ class Substring {
 			}
 		}
 	}
-	lcsValue = ((result*2)/totalLength)*100;
+	final int hundred = 100;
+	lcsValue = ((result * 2) / totalLength) * hundred;
 	// System.out.println((int)lcsValue);
-	return Math.round(lcsValue * 100D) / 100;
+	return Math.round(lcsValue * hundred) / hundred;
 	}
 }
 /**
  * Class for solution.
  */
-class Solution{
+class Solution {
 	/**
 	 * constructor for solution class.
 	 */
-	Solution() {
+	protected Solution() {
 
 	}
 	/**
