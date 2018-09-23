@@ -1,5 +1,8 @@
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.util.Scanner;
+import java.util.NoSuchElementException;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
 import java.lang.Math;
 class Substring {
 	Substring() {
