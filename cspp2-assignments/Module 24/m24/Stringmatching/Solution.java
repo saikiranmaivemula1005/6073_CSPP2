@@ -3,7 +3,6 @@ import java.util.Scanner;
 import java.util.NoSuchElementException;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
-import java.lang.Math;
 /**
  * Class for substring.
  */
@@ -25,11 +24,19 @@ class Substring {
             }
             s.close();
             result = sb.toString();
-        } catch(FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             System.out.println("no file");
         }
         return result;
     }
+    /**
+     * method to find longest common substring.
+     *
+     * @param      firstString   The first string
+     * @param      secondString  The second string
+     *
+     * @return     returns the lcs value.
+     */
     public double findLCS(final String firstString, final String secondString) {
     int lengthOne = firstString.length();
     int lengthTwo = secondString.length();
@@ -41,7 +48,7 @@ class Substring {
         for (int j = 0; j <= lengthTwo; j++) {
             if (i == 0 || j == 0) {
                 tempMatrix[i][j] = 0;
-            } else if (firstString.charAt(i-1) == secondString.charAt(j - 1)) {
+            } else if (firstString.charAt(i - 1) == secondString.charAt(j - 1)) {
                 tempMatrix[i][j] = tempMatrix[i - 1][j - 1] + 1;
             } else {
                 tempMatrix[i][j] = 0;
