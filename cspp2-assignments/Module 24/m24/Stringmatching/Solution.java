@@ -105,7 +105,7 @@ class Solution {
                      s.toString(filesList[j]));
             }
         }
-        System.out.print("     \t");
+        System.out.print(" \t");
         for (int i = 0; i < filesList.length - 1; i++) {
             System.out.print("\t" + filesList[i].getName());
         }
