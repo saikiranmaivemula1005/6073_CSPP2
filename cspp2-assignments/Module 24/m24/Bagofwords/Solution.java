@@ -7,8 +7,17 @@ import java.io.*;
  * Class for document.
  */
 class Document {
+	/**
+	 * text 1.
+	 */
 	String text1;
+	/**
+	 * text 2.
+	 */
 	String text2;
+	/**
+	 * constructor for document class.
+	 */
 	Document() {
 		text1 = "";
 		text2 = "";
@@ -20,7 +29,7 @@ class Document {
 	 *
 	 * @return  returns string format of a file.
 	 */
-	public static String DocumentToString(File doc) {
+	public static String DocumentToString(final File doc) {
 		String fileToString = "";
 		try {
 			Scanner s = new Scanner(new FileReader(doc));
@@ -31,7 +40,7 @@ class Document {
 			}
 			s.close();
 			fileToString = sb.toString();
-		} catch(FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 			System.out.println("no file");
 		}
 		return fileToString;
@@ -43,23 +52,22 @@ class Document {
 	 *
 	 * @return  returns the cleaned up string.
 	 */
-	public static Map removewords(String text) {
+	public static Map removewords(final String text) {
 		// text = text.toLowerCase();
-		// String[] words = text.replaceAll("[0-9_;:''.,?!@#$%^&*()]", "").split(" ");
 		String word = "";
 		Pattern p = Pattern.compile("[^0-9_.,]");
 		Matcher match = p.matcher(text);
-		while(match.find()) {
-			word += match.group(); 
+		while (match.find()) {
+			word += match.group();
 		}
 		word = word.toLowerCase();
 		String[] words = word.split(" ");
-		Map <String, Integer> map = new HashMap<>();
+		Map<String, Integer> map = new HashMap<>();
 		for (int i = 0; i  < words.length; i++) {
-			if(!map.containsKey(words[i])) {
+			if (!map.containsKey(words[i])) {
 				map.put(words[i], 1);
 			} else {
-				map.put(words[i],map.get(words[i]) + 1);
+				map.put(words[i], map.get(words[i]) + 1);
 			}
 		}
 		return map;
@@ -72,13 +80,13 @@ class Document {
 	 *
 	 * @return  returns the plagiarism percentage of given strings.
 	 */
-	public static int compare(String stringOne, String stringTwo) {
+	public static int compare(final String stringOne, final String stringTwo) {
 		float numerator = 0;
 		double denominator = 0;
 		float firstSum = 0;
 		float secondSum = 0;
-		Map<String,Integer> firstMap = removewords(stringOne);
-        Map<String,Integer> secondMap = removewords(stringTwo);
+		Map<String, Integer> firstMap = removewords(stringOne);
+        Map<String, Integer> secondMap = removewords(stringTwo);
         for (String inmapOne : firstMap.keySet()) {
         	for (String inmapTwo : secondMap.keySet()) {
         		if (inmapOne.equals(inmapTwo)) {
@@ -89,7 +97,7 @@ class Document {
         }
         final int hundred = 100;
         for (String inmapOne : firstMap.keySet()) {
-        	firstSum += Math.pow(firstMap.get(inmapOne), 2) ;
+        	firstSum += Math.pow(firstMap.get(inmapOne), 2);
         }
         for (String inmapTwo : secondMap.keySet()) {
         	secondSum += Math.pow(secondMap.get(inmapTwo), 2);
@@ -97,8 +105,7 @@ class Document {
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
         double output = (numerator / denominator) * hundred;
         return  (int) ((output * hundred) / hundred);
-	}
-	
+	}	
 }
 /**
  * Class for solution.
@@ -127,7 +134,8 @@ class Solution {
 		int[][] matrix = new int[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
-				matrix[i][j] = Document.compare(Document.DocumentToString(list[i]),
+				matrix[i][j] = Document.compare
+				(Document.DocumentToString(list[i]),
 				 Document.DocumentToString(list[j]));
 			}
 		}
