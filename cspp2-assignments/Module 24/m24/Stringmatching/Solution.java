@@ -13,6 +13,13 @@ class Substring {
     Substring() {
 
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @param      givenFile  The given file
+     *
+     * @return     String representation of the object.
+     */
     public String toString(final File givenFile) {
         String result = "";
         try {
@@ -49,7 +56,8 @@ class Substring {
             if (i == 0 || j == 0) {
                 tempMatrix[i][j] = 0;
             } else if (firstString.charAt(i - 1) == secondString.charAt(j - 1)) {
-                tempMatrix[i][j] = tempMatrix[i - 1][j - 1] + 1;
+                tempMatrix[i][j] =
+                 tempMatrix[i - 1][j - 1] + 1;
             } else {
                 tempMatrix[i][j] = 0;
             }
