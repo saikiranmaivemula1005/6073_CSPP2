@@ -77,24 +77,26 @@ class Document {
 		double denominator = 0;
 		float firstSum = 0;
 		float secondSum = 0;
-		Map <String,Integer> firstMap = removewords(stringOne);
-        Map <String,Integer> secondMap = removewords(stringTwo);
+		Map<String,Integer> firstMap = removewords(stringOne);
+        Map<String,Integer> secondMap = removewords(stringTwo);
         for (String inmapOne : firstMap.keySet()) {
         	for (String inmapTwo : secondMap.keySet()) {
         		if (inmapOne.equals(inmapTwo)) {
-        			numerator += firstMap.get(inmapOne) * secondMap.get(inmapTwo);
+        			numerator += firstMap.get(inmapOne)
+        			 * secondMap.get(inmapTwo);
         		}
         	}
         }
+        final int hundred = 100;
         for (String inmapOne : firstMap.keySet()) {
-        	firstSum += Math.pow(firstMap.get(inmapOne),2) ;
+        	firstSum += Math.pow(firstMap.get(inmapOne), 2) ;
         }
         for (String inmapTwo : secondMap.keySet()) {
-        	secondSum += Math.pow(secondMap.get(inmapTwo),2);
+        	secondSum += Math.pow(secondMap.get(inmapTwo), 2);
         }
         denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
-        double output = (numerator / denominator) * 100;
-        return  (int) ((output * 100D) / 100D) ;
+        double output = (numerator / denominator) * hundred;
+        return  (int) ((output * hundred) / hundred);
 	}
 	
 }
@@ -105,7 +107,7 @@ class Solution {
 	/**
 	 * constructor fro solution class.
 	 */
-	Solution() {
+	protected Solution() {
 
 	}
 	/**
@@ -113,7 +115,7 @@ class Solution {
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		try {
 		Document d = new Document();
 		String path;
@@ -121,14 +123,12 @@ class Solution {
 		path = scan.nextLine();
 		File folder = new File(path);
 		File[] list = folder.listFiles();
-		for(File t : list) {
-			// System.out.println(t);
-		}
 		int length = list.length;
 		int[][] matrix = new int[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
-				matrix[i][j] = Document.compare(Document.DocumentToString(list[i]),Document.DocumentToString(list[j]));
+				matrix[i][j] = Document.compare(Document.DocumentToString(list[i]),
+				 Document.DocumentToString(list[j]));
 			}
 		}
 		System.out.print("      \t");
@@ -139,13 +139,12 @@ class Solution {
 		for (int i = 0; i < length; i++) {
 			System.out.print(list[i].getName() + "\t");
 			for (int j = 0; j < length; j++) {
-				System.out.print(matrix[i][j] + "		");
+	System.out.print(matrix[i][j] + "		");
 			}
 			System.out.println();
 		}
 	} catch (NoSuchElementException e) {
 		System.out.println("empty directory");
 	}
-	
 	}
 }
